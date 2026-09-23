@@ -2699,6 +2699,26 @@ a {
   .site-footer-social { justify-content: center; }
 }
 
+
+/* ONLINE PROGRAMS DROPDOWN */
+.site-nav-dropdown{position:relative;display:flex;align-items:center}
+.site-nav-dropdown-trigger{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#e3e3e3;font-family:inherit;font-size:10px;font-weight:800;letter-spacing:1.45px;text-transform:uppercase;white-space:nowrap;cursor:pointer;padding:0}
+.site-nav-dropdown-trigger:hover,.site-nav-dropdown:focus-within .site-nav-dropdown-trigger,.site-nav-dropdown.open .site-nav-dropdown-trigger{color:var(--gold)}
+.site-nav-chevron{font-size:10px;transition:transform .2s ease}
+.site-nav-dropdown:hover .site-nav-chevron,.site-nav-dropdown:focus-within .site-nav-chevron,.site-nav-dropdown.open .site-nav-chevron{transform:rotate(180deg)}
+.site-nav-dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:270px;padding:10px;border:1px solid rgba(215,170,87,.22);border-radius:14px;background:rgba(8,8,8,.99);box-shadow:0 22px 60px rgba(0,0,0,.55);opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease}
+.site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown:focus-within .site-nav-dropdown-menu,.site-nav-dropdown.open .site-nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.site-nav-dropdown-menu a{display:block;padding:13px 14px!important;border:0!important;border-radius:9px;text-align:left!important;line-height:1.35}
+.site-nav-dropdown-menu a:hover{background:rgba(215,170,87,.07);color:var(--gold)}
+.site-nav-free{display:inline-block;margin-right:7px;color:var(--gold);font-size:8px;letter-spacing:1.5px}
+@media(max-width:1180px){
+ .site-nav-dropdown{display:block;width:100%}
+ .site-nav-dropdown-trigger{width:100%;justify-content:center;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.055)}
+ .site-nav-dropdown-menu{position:static;transform:none!important;min-width:0;width:100%;padding:4px 0 8px;border:0;border-radius:0;background:#0b0b0b;box-shadow:none;opacity:1;visibility:visible;pointer-events:auto;display:none}
+ .site-nav-dropdown.open .site-nav-dropdown-menu{display:block}
+ .site-nav-dropdown-menu a{text-align:center!important;color:#bdbdbd}
+}
+
 </style>
 <link rel="icon" href="/assets/gold-logo.svg">
 </head>
@@ -2714,7 +2734,13 @@ a {
     <nav class="site-links" aria-label="Main navigation">
       <a href="/" aria-current="page">Home</a>
       <a href="/about-us">About</a>
-      <a href="/online-programs">Online Programs</a>
+      <div class="site-nav-dropdown">
+<button class="site-nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Online Programs <span class="site-nav-chevron">⌄</span></button>
+<div class="site-nav-dropdown-menu">
+<a href="/peak-state-starter/"><span class="site-nav-free">FREE</span>Peak State Starter</a>
+<a href="/game-plan/">The G.A.M.E. Plan</a>
+</div>
+</div>
       <a href="/basketball-training">Basketball Training</a>
       <a href="/film-room">Film Room</a>
       <a href="/school-team-workshops">Schools &amp; Teams</a>
@@ -3630,11 +3656,22 @@ a {
     button.setAttribute('aria-expanded', String(open));
     button.textContent = open ? '×' : '☰';
   });
+  header.querySelectorAll('.site-nav-dropdown-trigger').forEach(function(trigger){
+    trigger.addEventListener('click', function(e){
+      if(window.innerWidth <= 1180){
+        e.preventDefault();
+        const dropdown = trigger.closest('.site-nav-dropdown');
+        const open = dropdown.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(open));
+      }
+    });
+  });
   header.querySelectorAll('.site-links a').forEach(function(link){
     link.addEventListener('click', function(){
       header.classList.remove('is-open');
       button.setAttribute('aria-expanded','false');
       button.textContent = '☰';
+      header.querySelectorAll('.site-nav-dropdown').forEach(function(d){ d.classList.remove('open'); });
     });
   });
 })();
