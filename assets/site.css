@@ -119,3 +119,22 @@ img{max-width:100%}
  .footer-brand{justify-content:center}.footer-copy{text-align:center;margin-left:auto;margin-right:auto}
  .footer-bottom{flex-direction:column;align-items:center;text-align:center}.footer-social{justify-content:center}
 }
+
+/* ONLINE PROGRAMS DROPDOWN */
+.nav-dropdown{position:relative;display:flex;align-items:center}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#dedede;font:inherit;font-size:9.5px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;white-space:nowrap;cursor:pointer;padding:0}
+.nav-dropdown-trigger:hover,.nav-dropdown:focus-within .nav-dropdown-trigger,.nav-dropdown.open .nav-dropdown-trigger{color:var(--gold)}
+.nav-chevron{font-size:10px;transition:transform .2s ease}
+.nav-dropdown:hover .nav-chevron,.nav-dropdown:focus-within .nav-chevron,.nav-dropdown.open .nav-chevron{transform:rotate(180deg)}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(-6px);min-width:260px;padding:10px;border:1px solid rgba(215,170,87,.22);border-radius:14px;background:rgba(8,8,8,.985);box-shadow:0 22px 60px rgba(0,0,0,.55);opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu,.nav-dropdown.open .nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.nav-dropdown-menu a{display:block!important;padding:13px 14px!important;border-radius:9px!important;border:0!important;text-align:left!important;line-height:1.35}
+.nav-dropdown-menu a:hover{background:rgba(215,170,87,.07)}
+.nav-free{display:inline-block;margin-right:7px;color:var(--gold);font-size:8px;letter-spacing:1.5px}
+@media(max-width:1100px){
+ .nav-dropdown{display:block;width:100%}
+ .nav-dropdown-trigger{width:100%;justify-content:center;padding:12px!important;border-bottom:1px solid rgba(255,255,255,.05)}
+ .nav-dropdown-menu{position:static;transform:none!important;min-width:0;width:100%;padding:4px 0 8px;border:0;border-radius:0;background:#0b0b0b;box-shadow:none;opacity:1;visibility:visible;pointer-events:auto;display:none}
+ .nav-dropdown.open .nav-dropdown-menu{display:block}
+ .nav-dropdown-menu a{padding:12px 18px!important;text-align:center!important;color:#bdbdbd!important}
+}
