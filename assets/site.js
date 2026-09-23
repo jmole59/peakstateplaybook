@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  if(header&&btn){btn.addEventListener('click',()=>{const o=header.classList.toggle('open');btn.setAttribute('aria-expanded',String(o));btn.textContent=o?'×':'☰'});}
  document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger=>{
    trigger.addEventListener('click',e=>{
-     if(window.innerWidth<=1100){e.preventDefault();trigger.closest('.nav-dropdown')?.classList.toggle('open');}
+     if(window.innerWidth<=1100){e.preventDefault();trigger.closest('.nav-dropdown')?.classList.toggle('open');} else { trigger.blur(); }
    });
  });
  document.querySelectorAll('.site-links a').forEach(a=>a.addEventListener('click',()=>{
