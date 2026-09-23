@@ -1591,6 +1591,28 @@ a {
 
 }
 
+
+/* =========================================================
+   GAME PLAN PREMIUM REFINEMENTS
+========================================================= */
+.hero-title,.story-heading,.section-title,.goal-line-one,.goal-line-two,.final-title{ text-wrap:balance; }
+.story-section{background:
+  radial-gradient(circle at 14% 18%,rgba(255,255,255,.035),transparent 22%),
+  linear-gradient(180deg,#171717 0%,#101010 52%,#080808 100%)}
+.areas-section{background:
+  radial-gradient(ellipse at 50% 110%,rgba(215,170,87,.07),transparent 40%),
+  linear-gradient(180deg,#090909,#0d0d0d 55%,#070707)}
+.system-section{background:
+  radial-gradient(circle at 82% 15%,rgba(215,170,87,.055),transparent 24%),
+  linear-gradient(145deg,#1b1b1b 0%,#111 50%,#080808 100%)}
+.faq-section{background:linear-gradient(180deg,#090909,#131313 48%,#080808)}
+.area-card,.system-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.area-card:hover,.system-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.30),0 0 26px rgba(215,170,87,.045)}
+.final-title{max-width:1350px;margin-left:auto;margin-right:auto}
+.final-gold-line{font-size:clamp(39px,4.35vw,68px)!important}
+@media(max-width:650px){
+ .final-gold-line{font-size:clamp(31px,8vw,40px)!important}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 <link rel="stylesheet" href="/assets/chrome.css">
@@ -2185,8 +2207,8 @@ a {
         YOUR GAME IS ALREADY IN YOU
       </span>
 
-      <span class="gold">
-        BUILD THE MINDSET TO TRUST IT
+      <span class="gold final-gold-line">
+        BUILD THE MINDSET TO TRUST&nbsp;IT
       </span>
 
     </h2>
