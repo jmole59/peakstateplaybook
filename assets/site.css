@@ -264,3 +264,6 @@ img{max-width:100%}
  .starter-how-wrap{padding:32px 20px}.starter-how-grid{grid-template-columns:1fr}.starter-how-item{border-bottom:1px solid rgba(255,255,255,.06);padding:22px 8px}.starter-how-item:last-child{border-bottom:0}
  .photo-band{min-height:360px}.photo-band-inner{padding:48px 0}
 }
+
+/* TYPOGRAPHIC BALANCE */
+.display,.section-title,.card-title,.lead,.quote,.film-row h3,.impact-copy,h1,h2,h3{ text-wrap:balance; }
