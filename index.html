@@ -1,118 +1,3643 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Peak State Playbook helps serious athletes build confidence, handle pressure and perform at their best when it counts.">
-<title>Peak State Playbook</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Peak State Playbook | Basketball Mental Performance</title>
+
+<meta
+  name="description"
+  content="Peak State Playbook helps basketball players build confidence, handle pressure and perform when it counts."
+>
+
 <style>
-:root{--bg:#050606;--panel:#0c0d0d;--panel2:#111313;--text:#f5f3ec;--muted:#a5a59f;--line:rgba(255,255,255,.1);--gold:#d7ad61;--gold2:#f1cd82}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.section{padding:105px 0}.eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:800}h1,h2,h3{font-family:Arial Black,Arial,sans-serif;text-transform:uppercase;line-height:.95;margin:0;letter-spacing:-.04em}h1{font-size:clamp(4rem,8.6vw,8rem)}h2{font-size:clamp(3rem,5.8vw,5.5rem)}h3{font-size:1.65rem}p{margin:0;color:var(--muted)}.gold{color:var(--gold2)}
-header{position:fixed;inset:0 0 auto;z-index:20;background:linear-gradient(#050606ee,#050606aa,transparent);backdrop-filter:blur(8px)}.nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.mark{width:42px;height:42px;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold2);font-family:Arial Black;font-size:1rem;transform:skew(-5deg)}.brand small{display:block;font-size:.62rem;letter-spacing:.32em;color:#a8a8a2;margin-top:2px}.links{display:flex;gap:27px;align-items:center;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700}.links a{color:#d7d7d1}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--gold2),#b88239);color:#080909;font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:.78rem;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.ghost{background:transparent;color:white;border-color:#ffffff40}.menu{display:none;background:none;color:white;border:1px solid var(--line);width:46px;height:46px;font-size:1.2rem}
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 75px;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 77% 30%,#d7ad6124,transparent 27%),linear-gradient(90deg,#d7ad610c 1px,transparent 1px),linear-gradient(#d7ad610c 1px,transparent 1px);background-size:auto,70px 70px,70px 70px;mask-image:linear-gradient(#000,transparent 90%)}.hero:after{content:"";position:absolute;width:62vw;height:62vw;border:1px solid #d7ad612b;border-radius:50%;right:-22vw;top:12vh;z-index:-1;box-shadow:0 0 0 80px #d7ad6108,0 0 0 160px #d7ad6105}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}.hero h1{margin:14px 0 25px}.lead{font-size:clamp(1rem,1.5vw,1.2rem);max-width:690px;color:#c9c9c2}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.micro{margin-top:23px;color:#898b86;font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;font-weight:700}.hero-art{aspect-ratio:1;border:1px solid #d7ad6133;background:linear-gradient(145deg,#d7ad610c,#ffffff04);display:grid;place-items:center;position:relative}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff12}.hero-art:before{inset:22px}.hero-art:after{width:65%;height:65%;border-radius:50%;border-color:#d7ad612d}.hero-monogram{font-family:Arial Black;font-size:clamp(5rem,10vw,9rem);line-height:.75;color:var(--gold2);letter-spacing:-.18em;padding-right:.18em;z-index:1}
-.bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#080909}.proof{display:grid;grid-template-columns:repeat(4,1fr)}.proof div{padding:25px 22px;border-right:1px solid var(--line)}.proof div:last-child{border-right:0}.proof strong{display:block;text-transform:uppercase;font-weight:900;font-size:1.2rem}.proof small{color:#7f817c;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
-.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px}.copy{display:grid;gap:20px;font-size:1.05rem}.quote{border-left:3px solid var(--gold);padding-left:20px;color:#eee9dd;font-weight:700}
-.dark{background:linear-gradient(#090a0a,#050606)}.head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:44px}.head p{max-width:510px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{min-height:340px;border:1px solid var(--line);background:linear-gradient(160deg,#111313,#080909);padding:28px;position:relative;overflow:hidden}.card:after{content:attr(data-letter);position:absolute;right:-5px;bottom:-35px;font-size:11rem;font-family:Arial Black;color:#d7ad610c}.card .k{color:var(--gold2);font-size:.7rem;font-weight:900;letter-spacing:.15em}.card h3{margin:18px 0 13px}.card p{font-size:.9rem}.card .tag{position:absolute;left:28px;bottom:25px;font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;color:#848681}
-.feature{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.feature-main{border:1px solid #d7ad6140;background:linear-gradient(150deg,#121313,#090a0a);padding:48px;position:relative;overflow:hidden}.feature-main:after{content:"GAME";position:absolute;right:-22px;top:-45px;font-size:10rem;font-family:Arial Black;color:#d7ad6108}.feature-main h2{margin:10px 0 18px}.list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:27px}.list div{border-top:1px solid var(--line);padding-top:13px;color:#d7d7d1;font-size:.88rem}.list b{color:var(--gold2);margin-right:7px}.steps{display:grid;gap:13px}.step{border:1px solid var(--line);background:#0b0c0c;padding:22px;display:flex;gap:17px}.step>strong{font-size:2rem;color:var(--gold2);line-height:1}.step h4{margin:0 0 4px;text-transform:uppercase;font-size:.9rem;letter-spacing:.06em}.step p{font-size:.84rem}
-.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini{border:1px solid var(--line);background:#0f1111;padding:26px;min-height:205px;display:flex;flex-direction:column;justify-content:space-between}.mini h3{margin:8px 0 10px}.arr{color:var(--gold2);font-size:1.3rem;font-weight:900}
-.path{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.path article{padding:39px;border-right:1px solid var(--line);min-height:245px}.path article:last-child{border-right:0}.num{font-size:3.7rem;font-weight:900;color:var(--gold2);line-height:1}.path h3{margin:15px 0 9px}
-.cta{padding:120px 0}.cta-box{text-align:center;border:1px solid #d7ad6144;background:radial-gradient(circle at 80% 0,#d7ad611b,transparent 30%),#0b0c0c;padding:70px}.cta-box h2{max-width:850px;margin:12px auto 18px}.cta-box p{max-width:600px;margin:auto}.cta-box .actions{justify-content:center}
-footer{border-top:1px solid var(--line);padding:42px 0 30px}.foot{display:flex;justify-content:space-between;align-items:end;gap:35px}.footlinks{display:flex;gap:20px;flex-wrap:wrap;color:#858782;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}.copyr{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:#62645f;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
-@media(max-width:960px){.links{display:none}.nav>.btn{display:none}.menu{display:block}.open .links{display:flex;position:absolute;top:86px;left:20px;right:20px;background:#0b0c0c;border:1px solid var(--line);padding:22px;flex-direction:column;align-items:flex-start}.hero-grid,.two,.feature{grid-template-columns:1fr}.hero-art{display:none}.cards{grid-template-columns:1fr 1fr}.minis{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(2){border-right:0}.proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}.head{flex-direction:column;align-items:start}}
-@media(max-width:650px){.wrap{width:calc(100% - 28px)}.section{padding:76px 0}.nav{height:74px}.open .links{top:74px}.hero{min-height:auto;padding:128px 0 80px}h1{font-size:clamp(3.5rem,19vw,5.5rem)}h2{font-size:clamp(2.9rem,14vw,4.5rem)}.actions{flex-direction:column}.actions .btn{width:100%}.proof,.cards,.minis{grid-template-columns:1fr}.proof div{border-right:0!important;border-bottom:1px solid var(--line)!important;padding:19px 4px}.proof div:last-child{border-bottom:0!important}.feature-main{padding:32px 22px}.list{grid-template-columns:1fr}.path{grid-template-columns:1fr}.path article{border-right:0;border-bottom:1px solid var(--line);padding:29px}.path article:last-child{border-bottom:0}.cta-box{padding:46px 20px}.foot{flex-direction:column;align-items:flex-start}.brand b{font-size:.8rem}}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #080808;
+  --black-deep: #060606;
+  --black-soft: #101010;
+
+  --white: #ffffff;
+
+  --grey: #c4c4c4;
+  --grey-dark: #777777;
+
+  --gold: #d7aa57;
+
+  --body-size: 16px;
+  --body-line: 1.7;
+
+  --max-width: 1360px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+  background: var(--black);
+
+  color: var(--white);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SHARED
+========================================================= */
+
+.section-divider {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: min(1100px, 82%);
+  height: 1px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(215,170,87,0.14),
+      rgba(215,170,87,0.50),
+      rgba(215,170,87,0.14),
+      transparent
+    );
+}
+
+
+.section-heading {
+  width: 100%;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.eyebrow {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+.section-title {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size:
+    clamp(50px, 5vw, 76px);
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+
+.title-line {
+  display: block;
+
+  width: 100%;
+
+  text-align: center;
+}
+
+
+.gold {
+  color: var(--gold);
+}
+
+
+.section-copy {
+  width: 100%;
+
+  max-width: 980px;
+
+  margin:
+    26px auto 0;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 52px;
+
+  padding:
+    0 34px;
+
+  border-radius: 100px;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.button:hover {
+  transform:
+    translateY(-3px);
+}
+
+
+.button-white {
+  border:
+    1px solid #ffffff;
+
+  background: #ffffff;
+
+  color: #080808;
+}
+
+
+.button-white:hover {
+  box-shadow:
+    0 14px 34px
+    rgba(255,255,255,0.13);
+}
+
+
+.button-outline {
+  border:
+    1px solid
+    rgba(215,170,87,0.58);
+
+  background:
+    rgba(0,0,0,0.28);
+
+  color: var(--gold);
+}
+
+
+.button-outline:hover {
+  border-color: var(--gold);
+
+  background:
+    rgba(215,170,87,0.07);
+}
+
+
+/* =========================================================
+   01 HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.88) 25%,
+      rgba(0,0,0,0.54) 52%,
+      rgba(0,0,0,0.14) 76%,
+      rgba(0,0,0,0.08) 100%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.10) 0%,
+      rgba(0,0,0,0) 55%,
+      rgba(0,0,0,0.35) 100%
+    ),
+
+    url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+
+  background-size: cover;
+
+  background-position:
+    center center;
+
+  background-repeat: no-repeat;
+}
+
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(215,170,87,0.18),
+      rgba(215,170,87,0.55),
+      rgba(215,170,87,0.18),
+      transparent
+    );
+}
+
+
+.hero-wrap {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(var(--max-width), 90%);
+
+  margin: 0 auto;
+}
+
+
+.hero-content {
+  width:
+    min(760px, 58%);
+
+  text-align: left;
+}
+
+
+.hero-eyebrow {
+  margin-bottom: 22px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+.hero-title {
+  margin: 0;
+
+  font-size:
+    clamp(58px, 5.5vw, 88px);
+
+  line-height: 0.93;
+
+  font-weight: 900;
+
+  letter-spacing: -3.5px;
+
+  text-transform: uppercase;
+}
+
+
+.hero-title span {
+  display: block;
+}
+
+
+.hero-title .gold {
+  margin-top: 8px;
+}
+
+
+.hero-tagline {
+  margin-top: 30px;
+
+  color: var(--white);
+
+  font-size:
+    clamp(17px, 1.7vw, 24px);
+
+  line-height: 1.4;
+
+  font-weight: 800;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+
+.hero-copy {
+  max-width: 650px;
+
+  margin-top: 22px;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.hero-buttons {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+
+/* =========================================================
+   02 INTRO
+========================================================= */
+
+.intro-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 610px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    80px 6%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(215,170,87,0.035),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #0b0b0b 52%,
+      #080808 100%
+    );
+}
+
+
+.intro-inner {
+  width:
+    min(1400px, 96%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.intro-title {
+  margin: 0;
+
+  font-size:
+    clamp(54px, 5.7vw, 88px);
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+
+.intro-title span {
+  display: block;
+
+  text-align: center;
+}
+
+
+.intro-title .gold {
+  margin-top: 12px;
+}
+
+
+.intro-copy {
+  max-width: 1180px;
+
+  margin:
+    55px auto 0;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   03 FEATURED G.A.M.E. PLAN
+========================================================= */
+
+.featured-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 760px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      rgba(255,255,255,0.18),
+      transparent 11%
+    ),
+
+    radial-gradient(
+      circle at 84% 5%,
+      rgba(255,255,255,0.14),
+      transparent 9%
+    ),
+
+    linear-gradient(
+      180deg,
+      #1b1b1b 0%,
+      #111111 38%,
+      #0a0a0a 100%
+    );
+}
+
+
+.featured-wrap {
+  width:
+    min(var(--max-width), 92%);
+
+  min-height: 760px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    0.92fr 1.08fr;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+
+.featured-content {
+  max-width: 580px;
+
+  text-align: left;
+}
+
+
+.featured-title {
+  margin: 0;
+
+  font-size:
+    clamp(56px, 5vw, 84px);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+}
+
+
+.featured-title span {
+  display: block;
+}
+
+
+.featured-title .gold {
+  margin-top: 8px;
+}
+
+
+.featured-pillars {
+  margin-top: 24px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.8px;
+
+  line-height: 1.6;
+
+  text-transform: uppercase;
+}
+
+
+.featured-copy {
+  max-width: 540px;
+
+  margin-top: 26px;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.featured-button {
+  margin-top: 32px;
+}
+
+
+/* =========================================================
+   BOOK MOCKUP
+========================================================= */
+
+.book-stage {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+
+  padding-right: 24px;
+
+  perspective: 1800px;
+}
+
+
+.book-glow {
+  position: absolute;
+
+  right: 130px;
+  top: 125px;
+
+  width: 410px;
+  height: 410px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.08),
+      rgba(215,170,87,0.06) 20%,
+      rgba(215,170,87,0.02) 45%,
+      transparent 72%
+    );
+
+  filter: blur(16px);
+}
+
+
+.book-floor-shadow {
+  position: absolute;
+
+  right: 80px;
+  bottom: 58px;
+
+  width: 380px;
+  height: 56px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(0,0,0,0.68),
+      rgba(0,0,0,0.40) 45%,
+      transparent 76%
+    );
+
+  filter: blur(10px);
+}
+
+
+.book {
+  position: relative;
+
+  width: 405px;
+  height: 575px;
+
+  transform:
+    rotateY(-14deg)
+    rotateX(2deg)
+    rotateZ(0.6deg);
+
+  transform-style: preserve-3d;
+
+  filter:
+    drop-shadow(
+      18px 28px 34px
+      rgba(0,0,0,0.45)
+    );
+}
+
+
+.book-pages {
+  position: absolute;
+
+  top: 10px;
+  left: 22px;
+
+  width: 396px;
+  height: 565px;
+
+  border-radius:
+    4px 12px 12px 4px;
+
+  background:
+    repeating-linear-gradient(
+      180deg,
+      #fbfbf8 0px,
+      #fbfbf8 2px,
+      #ecece8 3px,
+      #f8f8f5 4px
+    );
+
+  transform:
+    translateZ(-18px)
+    translateX(8px);
+
+  box-shadow:
+    8px 0 0
+    rgba(255,255,255,0.10),
+
+    14px 16px 24px
+    rgba(0,0,0,0.35);
+}
+
+
+.book-cover {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius:
+    3px 10px 10px 3px;
+
+  background:
+    url("https://static.wixstatic.com/media/f6209e_e2e016cfb0994a0ab647d332484417b6~mv2.png")
+    center center / cover no-repeat;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(255,255,255,0.05),
+
+    inset -10px 0 18px
+    rgba(255,255,255,0.03),
+
+    inset 12px 0 14px
+    rgba(0,0,0,0.14);
+
+  transform:
+    translateZ(8px);
+}
+
+
+.spiral {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 18px;
+  left: -18px;
+
+  width: 46px;
+  height: 535px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+
+.ring {
+  position: relative;
+
+  width: 38px;
+  height: 16px;
+}
+
+
+.ring::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 1px;
+
+  width: 29px;
+  height: 12px;
+
+  border:
+    3px solid #d6d6d3;
+
+  border-right-color: #8d8d89;
+
+  border-radius: 50%;
+
+  transform:
+    rotate(-8deg);
+
+  box-shadow:
+    1px 2px 2px
+    rgba(0,0,0,0.72),
+
+    inset 1px 0 1px
+    rgba(255,255,255,0.75);
+}
+
+
+/* =========================================================
+   04 P.E.A.K. SERIES
+========================================================= */
+
+.peak-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    95px 6% 105px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 46%,
+      rgba(215,170,87,0.055),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #101010 50%,
+      #080808 100%
+    );
+}
+
+
+.peak-wrap {
+  width:
+    min(1320px, 100%);
+
+  margin: 0 auto;
+}
+
+
+.peak-copy {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin:
+    25px auto 0;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+
+  text-align: center;
+}
+
+
+.peak-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-top: 58px;
+}
+
+
+.peak-card {
+  position: relative;
+
+  min-height: 330px;
+
+  padding:
+    30px 25px 28px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.08);
+
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 50% 15%,
+      rgba(255,255,255,0.025),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(25,25,25,0.98),
+      rgba(8,8,8,0.98)
+    );
+}
+
+
+.peak-card.active {
+  border-color:
+    rgba(215,170,87,0.48);
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(215,170,87,0.10),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(34,29,20,0.98),
+      rgba(9,9,9,0.98)
+    );
+}
+
+
+.peak-card.active::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 22px;
+  right: 22px;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+}
+
+
+.peak-letter {
+  color:
+    rgba(255,255,255,0.10);
+
+  font-size: 95px;
+
+  line-height: 0.9;
+
+  font-weight: 900;
+
+  letter-spacing: -5px;
+}
+
+
+.peak-card.active .peak-letter {
+  color:
+    rgba(215,170,87,0.26);
+}
+
+
+.playbook-title {
+  margin-top: 34px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(16px, 1.45vw, 21px);
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+.peak-card.active .playbook-title {
+  color: var(--gold);
+}
+
+
+.program-name {
+  margin-top: 12px;
+
+  color: #888888;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.3px;
+
+  text-transform: uppercase;
+}
+
+
+.status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 28px;
+
+  margin-top: 31px;
+
+  padding:
+    0 12px;
+
+  border:
+    1px solid
+    rgba(255,255,255,0.10);
+
+  border-radius: 100px;
+
+  color: #686868;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.status.available {
+  border-color:
+    rgba(215,170,87,0.30);
+
+  color: var(--gold);
+
+  background:
+    rgba(215,170,87,0.035);
+}
+
+
+.prime-link {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   05 RESEARCH
+========================================================= */
+
+.performance-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    95px 5% 105px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(215,170,87,0.05),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #101010 52%,
+      #080808 100%
+    );
+}
+
+
+.performance-wrap {
+  width:
+    min(1420px, 100%);
+
+  margin: 0 auto;
+}
+
+
+.performance-title {
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  font-size:
+    clamp(44px, 4.4vw, 67px);
+
+  line-height: 0.98;
+
+  font-weight: 900;
+
+  letter-spacing: -2.8px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+
+.performance-title span {
+  display: block;
+}
+
+
+.performance-title .gold {
+  margin-top: 9px;
+}
+
+
+.research-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0,1fr));
+
+  gap: 18px;
+
+  margin-top: 58px;
+}
+
+
+.research-card {
+  position: relative;
+
+  min-height: 395px;
+
+  padding:
+    32px 30px 30px;
+
+  border:
+    1px solid
+    rgba(215,170,87,0.20);
+
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(215,170,87,0.045),
+      transparent 32%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(24,24,24,0.98),
+      rgba(8,8,8,0.98)
+    );
+}
+
+
+.research-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+
+  width: 52px;
+  height: 2px;
+
+  background: var(--gold);
+}
+
+
+.research-title {
+  color: var(--gold);
+
+  font-size: 18px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.7px;
+
+  text-transform: uppercase;
+}
+
+
+.research-rule {
+  width: 42px;
+  height: 1px;
+
+  margin:
+    18px 0 25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--gold),
+      rgba(215,170,87,0.10)
+    );
+}
+
+
+.research-copy {
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.stat-row {
+  display: grid;
+
+  grid-template-columns:
+    145px minmax(0,1fr);
+
+  column-gap: 28px;
+
+  align-items: center;
+
+  min-height: 88px;
+
+  padding:
+    14px 0;
+}
+
+
+.stat-row + .stat-row {
+  border-top:
+    1px solid
+    rgba(255,255,255,0.07);
+}
+
+
+.stat-number {
+  color: var(--gold);
+
+  font-size: 46px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -2px;
+}
+
+
+.stat-description {
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: 1.5;
+}
+
+
+.source {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 24px;
+
+  padding-top: 17px;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,0.055);
+}
+
+
+.source-citation {
+  color: var(--grey-dark);
+
+  font-size: 9px;
+
+  line-height: 1.45;
+}
+
+
+.source-link {
+  display: inline-block;
+
+  margin-top: 7px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   06 TAKE YOUR GAME FURTHER
+========================================================= */
+
+.work-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    95px 6% 105px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(215,170,87,0.045),
+      transparent 34%
+    ),
+
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #101010 52%,
+      #080808 100%
+    );
+}
+
+
+.work-wrap {
+  width:
+    min(1320px,100%);
+
+  margin: 0 auto;
+}
+
+
+.work-main-title {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size:
+    clamp(42px, 4.3vw, 66px);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -3px;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+.work-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 18px;
+
+  margin-top: 58px;
+}
+
+
+.work-card {
+  position: relative;
+
+  min-height: 350px;
+
+  padding:
+    32px 30px;
+
+  border:
+    1px solid
+    rgba(215,170,87,0.22);
+
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 80% 8%,
+      rgba(215,170,87,0.06),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      145deg,
+      rgba(24,24,24,0.98),
+      rgba(8,8,8,0.98)
+    );
+}
+
+
+.work-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 28px;
+
+  width: 52px;
+  height: 2px;
+
+  background: var(--gold);
+}
+
+
+.work-number {
+  color:
+    rgba(215,170,87,0.45);
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.work-card-title {
+  margin-top: 58px;
+
+  color: var(--white);
+
+  font-size: 25px;
+
+  line-height: 1.1;
+
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+
+.work-card-copy {
+  margin-top: 20px;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.work-link {
+  display: inline-block;
+
+  margin-top: 27px;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   07 TESTIMONIALS
+========================================================= */
+
+.testimonial-section {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    90px 6% 100px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(215,170,87,0.045),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #0b0b0b 0%,
+      #101010 52%,
+      #080808 100%
+    );
+}
+
+
+.testimonial-wrap {
+  width:
+    min(1320px,100%);
+
+  margin: 0 auto;
+}
+
+
+.testimonial-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap: 18px;
+
+  margin-top: 55px;
+}
+
+
+.testimonial-card {
+  position: relative;
+
+  min-height: 310px;
+
+  padding:
+    32px 30px 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid
+    rgba(215,170,87,0.28);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(24,24,24,0.98),
+      rgba(7,7,7,0.98)
+    );
+}
+
+
+.testimonial-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+
+  width: 54px;
+  height: 2px;
+
+  background: var(--gold);
+}
+
+
+.quote-mark {
+  color: var(--gold);
+
+  font-family: Georgia, serif;
+
+  font-size: 52px;
+
+  line-height: 0.8;
+}
+
+
+.quote-text {
+  margin-top: 22px;
+
+  color: var(--white);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.quote-meta {
+  margin-top: auto;
+
+  padding-top: 28px;
+}
+
+
+.quote-person {
+  color: var(--white);
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.quote-service {
+  margin-top: 5px;
+
+  color: var(--grey-dark);
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   08 FINAL CTA
+========================================================= */
+
+.final-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 620px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    80px 6%;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(215,170,87,0.065),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #070707 100%
+    );
+
+  text-align: center;
+}
+
+
+.final-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 590px;
+  height: 590px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  border:
+    1px solid
+    rgba(215,170,87,0.055);
+
+  border-radius: 50%;
+}
+
+
+.final-content {
+  position: relative;
+
+  z-index: 4;
+
+  width: 100%;
+
+  max-width: 1250px;
+}
+
+
+.final-title {
+  margin: 0;
+
+  font-size:
+    clamp(40px, 4vw, 61px);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -2.5px;
+
+  text-transform: uppercase;
+}
+
+
+.final-title span {
+  display: block;
+}
+
+
+.final-title .gold {
+  margin-top: 10px;
+}
+
+
+.final-copy {
+  max-width: 700px;
+
+  margin:
+    30px auto 0;
+
+  color: var(--grey);
+
+  font-size: var(--body-size);
+
+  line-height: var(--body-line);
+}
+
+
+.final-button {
+  margin-top: 34px;
+}
+
+
+.final-brand {
+  margin-top: 22px;
+
+  color: #666666;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-content {
+    width: 60%;
+  }
+
+
+  .featured-wrap {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    padding:
+      80px 0;
+  }
+
+
+  .featured-content {
+    max-width: 700px;
+  }
+
+
+  .book-stage {
+    justify-content: center;
+
+    padding-right: 0;
+  }
+
+
+  .peak-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+
+  .research-grid,
+  .work-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .research-grid,
+  .work-grid,
+  .testimonial-grid {
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .source {
+    position: static;
+
+    margin-top: 30px;
+  }
+
+
+  .work-main-title {
+    white-space: normal;
+  }
+
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  :root {
+    --body-size: 14px;
+    --body-line: 1.65;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 760px;
+
+    align-items: flex-end;
+
+    padding:
+      0 7% 58px;
+
+    background-position:
+      68% center;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.15) 23%,
+        rgba(0,0,0,0.60) 55%,
+        rgba(0,0,0,0.93) 77%,
+        rgba(0,0,0,1) 100%
+      ),
+
+      url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+  }
+
+
+  .hero-wrap {
+    width: 100%;
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .hero-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3.5px;
+  }
+
+
+  .hero-title {
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size:
+      clamp(35px, 9.6vw, 48px);
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    text-align: center;
+  }
+
+
+  .hero-title span {
+    text-align: center;
+  }
+
+
+  .hero-tagline {
+    max-width: 420px;
+
+    margin:
+      26px auto 0;
+
+    font-size: 14px;
+
+    text-align: center;
+  }
+
+
+  .hero-copy {
+    max-width: 430px;
+
+    margin:
+      20px auto 0;
+
+    text-align: center;
+  }
+
+
+  .hero-buttons {
+    max-width: 430px;
+
+    margin:
+      27px auto 0;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+
+  /* SHARED */
+
+  .eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3.5px;
+  }
+
+
+  .section-title {
+    font-size:
+      clamp(34px, 8.5vw, 42px);
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .section-copy {
+    max-width: 440px;
+  }
+
+
+  /* INTRO */
+
+  .intro-section {
+    min-height: auto;
+
+    padding:
+      74px 7% 80px;
+  }
+
+
+  .intro-title {
+    font-size:
+      clamp(34px, 8.8vw, 41px);
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .intro-copy {
+    max-width: 440px;
+
+    margin-top: 29px;
+  }
+
+
+  /* FEATURED */
+
+  .featured-section {
+    min-height: auto;
+  }
+
+
+  .featured-wrap {
+    width: 100%;
+
+    min-height: 0;
+
+    padding:
+      74px 7% 85px;
+
+    display: block;
+  }
+
+
+  .featured-content {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  .featured-title {
+    font-size:
+      clamp(37px, 9vw, 45px);
+
+    letter-spacing: -2px;
+  }
+
+
+  .featured-title span,
+  .featured-pillars,
+  .featured-copy {
+    text-align: center;
+  }
+
+
+  .featured-pillars {
+    letter-spacing: 1.35px;
+  }
+
+
+  .featured-copy {
+    max-width: 445px;
+
+    margin:
+      22px auto 0;
+  }
+
+
+  .featured-button {
+    margin-top: 27px;
+
+    width: 100%;
+
+    max-width: 420px;
+  }
+
+
+  .book-stage {
+    min-height: 455px;
+
+    margin-top: 42px;
+  }
+
+
+  .book {
+    width: 275px;
+    height: 390px;
+
+    transform:
+      rotateY(-10deg)
+      rotateX(2deg);
+  }
+
+
+  .book-pages {
+    width: 268px;
+    height: 382px;
+  }
+
+
+  .spiral {
+    height: 365px;
+  }
+
+
+  /* PEAK */
+
+  .peak-section,
+  .performance-section,
+  .work-section,
+  .testimonial-section {
+    padding:
+      74px 7% 84px;
+  }
+
+
+  .peak-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+
+    margin:
+      40px auto 0;
+  }
+
+
+  .peak-card {
+    min-height: 225px;
+
+    text-align: center;
+  }
+
+
+  .peak-card.active::before {
+    left: 50%;
+    right: auto;
+
+    width: 52px;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .peak-letter,
+  .playbook-title,
+  .program-name {
+    text-align: center;
+  }
+
+
+  .status,
+  .prime-link {
+    display: table;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* RESEARCH */
+
+  .performance-title {
+    max-width: 500px;
+
+    font-size:
+      clamp(32px, 8.4vw, 40px);
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .performance-title .gold {
+    font-size:
+      clamp(30px, 7.8vw, 38px);
+
+    white-space: nowrap;
+  }
+
+
+  .research-grid {
+    max-width: 500px;
+
+    margin:
+      42px auto 0;
+
+    gap: 14px;
+  }
+
+
+  .research-card {
+    min-height: auto;
+
+    padding:
+      29px 23px 30px;
+
+    text-align: center;
+  }
+
+
+  .research-card::before {
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .research-title {
+    text-align: center;
+  }
+
+
+  .research-rule {
+    margin:
+      16px auto 22px;
+  }
+
+
+  .research-copy {
+    max-width: 410px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+
+  /* MOBILE STAT FIX */
+
+  .stat-row {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-height: 0;
+
+    padding:
+      23px 10px;
+  }
+
+
+  .stat-number {
+    width: 100%;
+
+    font-size:
+      clamp(42px, 12vw, 58px);
+
+    text-align: center;
+  }
+
+
+  .stat-description {
+    width: 100%;
+
+    max-width: 280px;
+
+    text-align: center;
+  }
+
+
+  .source {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 28px;
+
+    text-align: center;
+  }
+
+
+  .source-citation,
+  .source-link {
+    text-align: center;
+  }
+
+
+  /* WORK */
+
+  .work-main-title {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size:
+      clamp(34px, 8.8vw, 41px);
+
+    letter-spacing: -1.8px;
+
+    white-space: normal;
+  }
+
+
+  .work-grid {
+    max-width: 500px;
+
+    margin:
+      42px auto 0;
+
+    gap: 14px;
+  }
+
+
+  .work-card {
+    min-height: auto;
+
+    padding:
+      27px 23px 30px;
+
+    text-align: center;
+  }
+
+
+  .work-card::before {
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .work-number,
+  .work-card-title,
+  .work-card-copy {
+    text-align: center;
+  }
+
+
+  .work-card-title {
+    margin-top: 31px;
+
+    font-size: 21px;
+  }
+
+
+  .work-card-copy {
+    max-width: 410px;
+
+    margin:
+      17px auto 0;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonial-grid {
+    max-width: 500px;
+
+    margin:
+      40px auto 0;
+
+    gap: 14px;
+  }
+
+
+  .testimonial-card {
+    min-height: 245px;
+
+    padding:
+      27px 23px 25px;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  .testimonial-card::before {
+    left: 50%;
+
+    transform:
+      translateX(-50%);
+  }
+
+
+  .quote-text {
+    max-width: 410px;
+
+    text-align: center;
+  }
+
+
+  .quote-meta,
+  .quote-person,
+  .quote-service {
+    text-align: center;
+  }
+
+
+  /* FINAL */
+
+  .final-section {
+    min-height: 570px;
+
+    padding:
+      70px 7%;
+  }
+
+
+  .final-title {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    font-size:
+      clamp(33px, 8.6vw, 40px);
+
+    letter-spacing: -1.8px;
+  }
+
+
+  .final-copy {
+    max-width: 400px;
+
+    margin:
+      24px auto 0;
+  }
+
+
+  .final-button {
+    width: 100%;
+
+    max-width: 420px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .hero-title {
+    font-size: 34px;
+  }
+
+
+  .hero-tagline {
+    font-size: 12px;
+  }
+
+
+  .performance-title {
+    font-size: 30px;
+  }
+
+
+  .performance-title .gold {
+    font-size: 28px;
+  }
+
+
+  .featured-title {
+    font-size: 35px;
+  }
+
+
+  .section-title,
+  .intro-title,
+  .work-main-title {
+    font-size: 32px;
+  }
+
+
+  .final-title {
+    font-size: 31px;
+  }
+
+}
+
+
+/* =========================================================
+   SITE HEADER + FOOTER
+   Added for standalone hosting outside Wix
+========================================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid rgba(215,170,87,0.12);
+  background: rgba(8,8,8,0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.site-nav {
+  width: min(1420px, 94%);
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.site-logo {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+.site-logo img {
+  display: block;
+  width: 164px;
+  height: 64px;
+  object-fit: contain;
+}
+.site-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  margin-left: auto;
+}
+.site-links a {
+  color: #e3e3e3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.45px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color .2s ease;
+}
+.site-links a:hover,
+.site-links a[aria-current="page"] {
+  color: var(--gold);
+}
+.site-login {
+  color: var(--gold) !important;
+}
+.site-menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(215,170,87,0.28);
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.site-footer {
+  border-top: 1px solid rgba(215,170,87,0.14);
+  background: #060606;
+  padding: 52px 5% 30px;
+}
+.site-footer-inner {
+  width: min(1320px,100%);
+  margin: 0 auto;
+}
+.site-footer-top {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.site-footer-logo img {
+  display: block;
+  width: 205px;
+  max-width: 100%;
+  height: auto;
+}
+.site-footer-copy {
+  max-width: 460px;
+  margin-top: 16px;
+  color: #8e8e8e;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.site-footer-links {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 13px 28px;
+}
+.site-footer-links a,
+.site-footer-social a {
+  color: #bdbdbd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.site-footer-links a:hover,
+.site-footer-social a:hover {
+  color: var(--gold);
+}
+.site-footer-contact {
+  margin-top: 28px;
+  color: #8b8b8b;
+  font-size: 12px;
+}
+.site-footer-contact a { color: var(--gold); text-decoration: none; }
+.site-footer-bottom {
+  margin-top: 38px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: #666;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.site-footer-social {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1180px) {
+  .site-nav { width: min(100% - 32px, 1100px); min-height: 72px; }
+  .site-logo img { width: 145px; height: 58px; }
+  .site-menu-button { display: inline-grid; place-items: center; }
+  .site-links {
+    display: none;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 72px;
+    margin: 0;
+    padding: 24px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid rgba(215,170,87,0.18);
+    background: rgba(8,8,8,0.985);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.45);
+  }
+  .site-header.is-open .site-links { display: flex; }
+  .site-links a {
+    padding: 13px 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.055);
+    text-align: center;
+  }
+  .site-links a:last-child { border-bottom: 0; }
+}
+@media (max-width: 650px) {
+  .site-nav { min-height: 66px; }
+  .site-logo img { width: 126px; height: 50px; }
+  .site-links { top: 66px; }
+  .site-footer { padding: 42px 7% 26px; }
+  .site-footer-top { grid-template-columns: 1fr; gap: 34px; }
+  .site-footer-logo img { width: 175px; margin: 0 auto; }
+  .site-footer-copy, .site-footer-contact { text-align: center; margin-left: auto; margin-right: auto; }
+  .site-footer-links { grid-template-columns: 1fr; text-align: center; }
+  .site-footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .site-footer-social { justify-content: center; }
+}
+
 </style>
 </head>
+
+
 <body>
-<header id="header">
-<div class="wrap nav">
-<a class="brand" href="#top"><span class="mark">PS</span><span><b>Peak State</b><small>Playbook</small></span></a>
-<nav class="links"><a href="#framework">Playbooks</a><a href="#game">The G.A.M.E. Plan</a><a href="#minis">Mini Playbooks</a><a href="#path">How It Works</a><a href="#join">Login</a></nav>
-<a class="btn" href="#framework">Explore Programs</a>
-<button class="menu" id="menu" aria-label="Open menu">☰</button>
-</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="site-nav">
+    <a class="site-logo" href="/" aria-label="Peak State Playbook home">
+      <img src="https://static.wixstatic.com/media/5db4ae_41bd942450ba4a2f80a2ce243c9f7f6c~mv2.png" alt="Peak State Playbook">
+    </a>
+    <nav class="site-links" aria-label="Main navigation">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/about-us">About</a>
+      <a href="/online-programs">Online Programs</a>
+      <a href="/basketball-training">Basketball Training</a>
+      <a href="/film-room">Film Room</a>
+      <a href="/school-team-workshops">Schools &amp; Teams</a>
+      <a href="/contact">Contact</a>
+      <a class="site-login" href="/login">Log In</a>
+    </nav>
+    <button class="site-menu-button" id="siteMenuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
 </header>
 
-<main id="top">
+
+<div class="page">
+
+
+<!-- =======================================================
+     01 HERO
+======================================================= -->
+
 <section class="hero">
-<div class="wrap hero-grid">
-<div>
-<div class="eyebrow">High-Performance Mental Training For Athletes</div>
-<h1>Train the part of your game that <span class="gold">controls everything.</span></h1>
-<p class="lead">Build confidence, handle pressure and compete with clarity through practical systems designed for the moments that decide games.</p>
-<div class="actions"><a class="btn" href="#framework">Explore The Playbooks</a><a class="btn ghost" href="#game">Start With The G.A.M.E. Plan</a></div>
-<div class="micro">Identity · Control · Preparation · Leadership</div>
-</div>
-<div class="hero-art" aria-hidden="true"><div class="hero-monogram">PS</div></div>
-</div>
+
+  <div class="hero-wrap">
+
+    <div class="hero-content">
+
+
+      <div class="hero-eyebrow">
+        Peak State Playbook
+      </div>
+
+
+      <h1 class="hero-title">
+
+        <span>
+          MASTER THE
+        </span>
+
+        <span>
+          MENTAL SIDE
+        </span>
+
+        <span class="gold">
+          OF BASKETBALL
+        </span>
+
+      </h1>
+
+
+      <div class="hero-tagline">
+        BUILD CONFIDENCE · TRUST YOUR GAME
+      </div>
+
+
+      <div class="hero-copy">
+        Mental performance training built to help basketball players
+        handle pressure, respond better to mistakes and perform with
+        more confidence when it counts.
+      </div>
+
+
+      <div class="hero-buttons">
+
+        <a
+          href="/peak-state-starter"
+          class="button button-white"
+        >
+          Start Free
+        </a>
+
+        <a
+          href="/game-plan"
+          class="button button-outline"
+        >
+          Explore The G.A.M.E. Plan
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="bar"><div class="wrap proof">
-<div><strong>Identity</strong><small>Know who shows up</small></div>
-<div><strong>Composure</strong><small>Stay steady under pressure</small></div>
-<div><strong>Preparation</strong><small>Enter games ready</small></div>
-<div><strong>Leadership</strong><small>Raise your standard</small></div>
-</div></section>
 
-<section class="section"><div class="wrap two">
-<div><div class="eyebrow">The Competitive Edge</div><h2 style="margin-top:12px">Most athletes train their skills.<br><span class="gold">Few train what drives them.</span></h2></div>
-<div class="copy"><p>Peak State Playbook is a high-performance system built to help serious athletes perform with confidence, handle pressure and become more consistent competitors.</p><p>The work goes beyond motivation. Each Playbook gives you practical tools to train how you think, prepare, respond and compete when the game gets difficult.</p><div class="quote">Your skill matters. Your ability to access it when the pressure rises matters just as much.</div></div>
-</div></section>
+<!-- =======================================================
+     02 INTRO
+======================================================= -->
 
-<section class="section dark" id="framework"><div class="wrap">
-<div class="head"><div><div class="eyebrow">The P.E.A.K. Framework</div><h2 style="margin-top:12px">Four Playbooks.<br><span class="gold">One complete system.</span></h2></div><p>Each flagship Playbook develops a different part of performance, from identity and mental control to preparation and leadership.</p></div>
-<div class="cards">
-<article class="card" data-letter="P"><div class="k">P — PRIME</div><h3>The G.A.M.E. Plan</h3><p>Build your identity and perform under pressure with a complete system for confidence, composure and control.</p><div class="tag">Ground your identity</div></article>
-<article class="card" data-letter="E"><div class="k">E — EVOLVE</div><h3>Mind Game Mastery</h3><p>Become more composed in difficult moments and execute with greater clarity and precision.</p><div class="tag">Evolve your control</div></article>
-<article class="card" data-letter="A"><div class="k">A — ACTIVATE</div><h3>Peak Performance System</h3><p>Build routines, habits and preparation systems that help you arrive ready to compete.</p><div class="tag">Activate performance</div></article>
-<article class="card" data-letter="K"><div class="k">K — KEYSTONE</div><h3>Legacy Leadership</h3><p>Lead yourself and others through standards, presence and actions that last beyond performance.</p><div class="tag">Keystone leadership</div></article>
+<section class="intro-section">
+
+  <div class="intro-inner">
+
+
+    <div class="eyebrow">
+      Mental Performance, Trained
+    </div>
+
+
+    <h2 class="intro-title">
+
+      <span>
+        TRAIN YOUR MIND
+      </span>
+
+      <span class="gold">
+        LIKE YOU TRAIN YOUR BODY
+      </span>
+
+    </h2>
+
+
+    <div class="intro-copy">
+      Peak State Playbook is a basketball performance system designed
+      to help athletes build confidence, handle pressure and perform
+      at their best when it counts. Through structured Playbooks,
+      you train the mental skills behind consistent performance just
+      like you train your shot, body and game.
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     03 FEATURED PLAYBOOK
+======================================================= -->
+
+<section class="featured-section">
+
+  <div class="featured-wrap">
+
+
+    <div class="featured-content">
+
+
+      <div class="eyebrow">
+        Featured Playbook
+      </div>
+
+
+      <h2 class="featured-title">
+
+        <span>
+          THE
+        </span>
+
+        <span class="gold">
+          G.A.M.E. PLAN
+        </span>
+
+      </h2>
+
+
+      <div class="featured-pillars">
+        Identity &nbsp; | &nbsp;
+        State &nbsp; | &nbsp;
+        Response &nbsp; | &nbsp;
+        Standards
+      </div>
+
+
+      <div class="featured-copy">
+        A complete system built to help basketball players stay
+        confident, composed and in control when the game gets tough.
+        Build an identity that holds under pressure, reset faster
+        after mistakes and compete with confidence no matter what
+        the game throws at you.
+      </div>
+
+
+      <a
+        href="/game-plan"
+        class="button button-white featured-button"
+      >
+        Explore The G.A.M.E. Plan
+      </a>
+
+
+    </div>
+
+
+    <div class="book-stage">
+
+      <div class="book-glow"></div>
+
+      <div class="book-floor-shadow"></div>
+
+
+      <div class="book">
+
+        <div class="book-pages"></div>
+
+        <div class="book-cover"></div>
+
+
+        <div class="spiral">
+
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+          <span class="ring"></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     04 P.E.A.K SERIES
+======================================================= -->
+
+<section class="peak-section">
+
+  <div class="peak-wrap">
+
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        The System
+      </div>
+
+
+      <h2 class="section-title">
+        THE <span class="gold">P.E.A.K.</span> SERIES
+      </h2>
+
+
+      <div class="peak-copy">
+        A growing series of basketball performance Playbooks designed
+        to develop the player behind the performance.
+      </div>
+
+    </div>
+
+
+    <div class="peak-grid">
+
+
+      <div class="peak-card active">
+
+        <div class="peak-letter">
+          P
+        </div>
+
+        <div class="playbook-title">
+          PRIME PLAYBOOK
+        </div>
+
+        <div class="program-name">
+          The G.A.M.E. Plan
+        </div>
+
+        <div class="status available">
+          Available Now
+        </div>
+
+        <br>
+
+        <a
+          href="/game-plan"
+          class="prime-link"
+        >
+          Explore Playbook →
+        </a>
+
+      </div>
+
+
+      <div class="peak-card">
+
+        <div class="peak-letter">
+          E
+        </div>
+
+        <div class="playbook-title">
+          EVOLVE PLAYBOOK
+        </div>
+
+        <div class="program-name">
+          P.E.A.K. Series
+        </div>
+
+        <div class="status">
+          Coming Soon
+        </div>
+
+      </div>
+
+
+      <div class="peak-card">
+
+        <div class="peak-letter">
+          A
+        </div>
+
+        <div class="playbook-title">
+          ASCEND PLAYBOOK
+        </div>
+
+        <div class="program-name">
+          P.E.A.K. Series
+        </div>
+
+        <div class="status">
+          Coming Soon
+        </div>
+
+      </div>
+
+
+      <div class="peak-card">
+
+        <div class="peak-letter">
+          K
+        </div>
+
+        <div class="playbook-title">
+          KEYSTONE PLAYBOOK
+        </div>
+
+        <div class="program-name">
+          P.E.A.K. Series
+        </div>
+
+        <div class="status">
+          Coming Soon
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     05 RESEARCH
+======================================================= -->
+
+<section class="performance-section">
+
+  <div class="performance-wrap">
+
+
+    <div class="section-heading">
+
+
+      <div class="eyebrow">
+        The Research
+      </div>
+
+
+      <h2 class="performance-title">
+
+        <span>
+          THE MENTAL GAME SHOWS UP
+        </span>
+
+        <span class="gold">
+          IN PERFORMANCE
+        </span>
+
+      </h2>
+
+
+      <div class="section-copy">
+        Research shows the mental side of basketball can influence
+        decision-making, performance under pressure and skilled execution.
+      </div>
+
+
+    </div>
+
+
+    <div class="research-grid">
+
+
+      <!-- CONTROL YOUR STATE -->
+
+      <div class="research-card">
+
+
+        <div class="research-title">
+          Control Your State
+        </div>
+
+
+        <div class="research-rule"></div>
+
+
+        <div class="research-copy">
+          Mindfulness training improved performance under stress,
+          while also increasing mental toughness and resilience.
+          The study specifically examined basketball free throws
+          performed in stressful situations.
+        </div>
+
+
+        <div class="source">
+
+          <div class="source-citation">
+            Wang &amp; Zhang (2025) · Frontiers in Psychology
+          </div>
+
+          <a
+            class="source-link"
+            href="https://doi.org/10.3389/fpsyg.2025.1647698"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Study ↗
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- BODY + BRAIN -->
+
+      <div class="research-card">
+
+
+        <div class="research-title">
+          Body + Brain
+        </div>
+
+
+        <div class="research-rule"></div>
+
+
+        <div class="stat-row">
+
+          <div class="stat-number">
+            13%
+          </div>
+
+          <div class="stat-description">
+            Greater sport-specific performance gains
+          </div>
+
+        </div>
+
+
+        <div class="stat-row">
+
+          <div class="stat-number">
+            25.8%
+          </div>
+
+          <div class="stat-description">
+            Higher decision-making accuracy
+          </div>
+
+        </div>
+
+
+        <div class="source">
+
+          <div class="source-citation">
+            Lucia, Bianco &amp; Di Russo (2023)
+            · Psychology of Sport &amp; Exercise
+          </div>
+
+          <a
+            class="source-link"
+            href="https://doi.org/10.1016/j.psychsport.2022.102302"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Study ↗
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- MENTAL FATIGUE -->
+
+      <div class="research-card">
+
+
+        <div class="research-title">
+          Mental Fatigue
+        </div>
+
+
+        <div class="research-rule"></div>
+
+
+        <div class="research-copy">
+          Mental fatigue can reduce accuracy, decision-making and
+          skill execution before physical capacity changes.
+          The systematic review examined how mental fatigue affects
+          skilled performance across athletes.
+        </div>
+
+
+        <div class="source">
+
+          <div class="source-citation">
+            Sun et al. (2021) · PLOS ONE
+          </div>
+
+          <a
+            class="source-link"
+            href="https://doi.org/10.1371/journal.pone.0258307"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Study ↗
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     06 TAKE YOUR GAME FURTHER
+======================================================= -->
+
+<section class="work-section">
+
+  <div class="work-wrap">
+
+
+    <div class="section-heading">
+
+
+      <div class="eyebrow">
+        Other Ways To Work With Peak State
+      </div>
+
+
+      <h2 class="work-main-title">
+        TAKE YOUR GAME <span class="gold">FURTHER</span>
+      </h2>
+
+
+      <div class="section-copy">
+        Go beyond the Playbooks with basketball coaching,
+        game-film analysis and performance programs for athletes and teams.
+      </div>
+
+
+    </div>
+
+
+    <div class="work-grid">
+
+
+      <div class="work-card">
+
+        <div class="work-number">
+          01
+        </div>
+
+        <div class="work-card-title">
+          Basketball Training
+        </div>
+
+        <div class="work-card-copy">
+          Individual and small-group coaching focused on skill
+          development, decision-making and building confidence
+          that translates into games.
+        </div>
+
+        <a
+          href="/basketball-training"
+          class="work-link"
+        >
+          Explore Training →
+        </a>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <div class="work-number">
+          02
+        </div>
+
+        <div class="work-card-title">
+          Film Room
+        </div>
+
+        <div class="work-card-copy">
+          One-on-one game analysis designed to identify patterns,
+          improve decision-making and give you clear next steps
+          for development.
+        </div>
+
+        <a
+          href="/film-room"
+          class="work-link"
+        >
+          Enter The Film Room →
+        </a>
+
+      </div>
+
+
+      <div class="work-card">
+
+        <div class="work-number">
+          03
+        </div>
+
+        <div class="work-card-title">
+          Schools &amp; Teams
+        </div>
+
+        <div class="work-card-copy">
+          Performance workshops built around confidence, leadership,
+          resilience, communication and the standards that shape
+          strong team environments.
+        </div>
+
+        <a
+          href="/school-team-workshops"
+          class="work-link"
+        >
+          Explore Programs →
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     07 TESTIMONIALS
+======================================================= -->
+
+<section class="testimonial-section">
+
+  <div class="testimonial-wrap">
+
+
+    <div class="section-heading">
+
+
+      <div class="eyebrow">
+        Real Players · Real Progress
+      </div>
+
+
+      <h2 class="section-title">
+
+        <span class="title-line">
+          WHAT PLAYERS &amp;
+        </span>
+
+        <span class="title-line gold">
+          PARENTS SAY
+        </span>
+
+      </h2>
+
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+
+      <div class="testimonial-card">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="quote-text">
+          The sessions didn’t just improve my child’s skills,
+          they really changed how they handle pressure and
+          back themselves in games.
+        </div>
+
+        <div class="quote-meta">
+
+          <div class="quote-person">
+            Parent
+          </div>
+
+          <div class="quote-service">
+            Basketball Training
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="testimonial-card">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="quote-text">
+          What stood out most was the confidence and focus.
+          You could actually see it starting to carry over
+          into games.
+        </div>
+
+        <div class="quote-meta">
+
+          <div class="quote-person">
+            Parent
+          </div>
+
+          <div class="quote-service">
+            Basketball Training
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="testimonial-card">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="quote-text">
+          They started second-guessing themselves a lot less
+          and just playing more freely. That was probably
+          the biggest change for us.
+        </div>
+
+        <div class="quote-meta">
+
+          <div class="quote-person">
+            Parent
+          </div>
+
+          <div class="quote-service">
+            Basketball Training
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="section-divider"></div>
+
+</section>
+
+
+<!-- =======================================================
+     08 FINAL CTA
+======================================================= -->
+
+<section class="final-section">
+
+  <div class="final-content">
+
+
+    <div class="eyebrow">
+      Start With Peak State
+    </div>
+
+
+    <h2 class="final-title">
+
+      <span>
+        START TRAINING YOUR MENTAL GAME
+      </span>
+
+      <span class="gold">
+        BUILD CONFIDENCE THAT HOLDS UP
+      </span>
+
+    </h2>
+
+
+    <div class="final-copy">
+      Start with Peak State Starter, a free introduction
+      to training the mental side of basketball.
+    </div>
+
+
+    <a
+      href="/peak-state-starter"
+      class="button button-white final-button"
+    >
+      Start Free
+    </a>
+
+
+    <div class="final-brand">
+      Peak State Playbook
+    </div>
+
+
+  </div>
+
+</section>
+
+
 </div>
-</div></section>
 
-<section class="section" id="game"><div class="wrap feature">
-<div class="feature-main"><div class="eyebrow">Prime Playbook</div><h2>The <span class="gold">G.A.M.E.</span> Plan</h2><p class="lead">A structured mental-performance system designed to build competitive identity, regulate emotion, reset after mistakes and perform with greater clarity under pressure.</p>
-<div class="list"><div><b>01</b> Build your competitive identity</div><div><b>02</b> Activate your peak state</div><div><b>03</b> Reset quickly after mistakes</div><div><b>04</b> Perform with composure under pressure</div></div>
-<div class="actions"><a class="btn" href="#join">Explore The G.A.M.E. Plan</a></div></div>
-<div class="steps">
-<div class="step"><strong>01</strong><div><h4>Know who you are</h4><p>Define the version of you that shows up at your best and build standards around it.</p></div></div>
-<div class="step"><strong>02</strong><div><h4>Control your state</h4><p>Train your body, focus and language so emotion does not control your game.</p></div></div>
-<div class="step"><strong>03</strong><div><h4>Respond instead of react</h4><p>Catch the moments that knock you off and use simple tools to move forward quickly.</p></div></div>
-<div class="step"><strong>04</strong><div><h4>Build repeatability</h4><p>Turn the tools into game-day habits you can rely on throughout your season.</p></div></div>
-</div>
-</div></section>
 
-<section class="section dark" id="minis"><div class="wrap">
-<div class="head"><div><div class="eyebrow">Peak State Mini Playbooks</div><h2 style="margin-top:12px">Focused tools.<br><span class="gold">Fast application.</span></h2></div><p>Short, practical programs built around specific performance problems so athletes can apply the tools quickly in training and games.</p></div>
-<div class="minis">
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Pre-Game Power Up</h3><p>Prepare your body, focus and energy before you step on the court.</p></div><span class="arr">↗</span></article>
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Tryout Ready System</h3><p>Walk into tryouts with clarity, confidence and intent.</p></div><span class="arr">↗</span></article>
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Buckets With Belief</h3><p>Build confidence that shows up in games and play without hesitation.</p></div><span class="arr">↗</span></article>
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>The Mindset Reset</h3><p>Bounce back faster after mistakes and stay in the game.</p></div><span class="arr">↗</span></article>
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Daily Dominance Blueprint</h3><p>Structure your week to train, recover and stay consistent.</p></div><span class="arr">↗</span></article>
-<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Game Film Room</h3><p>Improve movement, spacing and decision-making through film.</p></div><span class="arr">↗</span></article>
-</div>
-</div></section>
-
-<section class="section" id="path"><div class="wrap">
-<div class="head"><div><div class="eyebrow">Your Path Through Peak State</div><h2 style="margin-top:12px">Start simple.<br><span class="gold">Build from there.</span></h2></div><p>The system gives athletes an accessible entry point, quick wins and then deeper performance development.</p></div>
-<div class="path">
-<article><div class="num">01</div><h3>Start Free</h3><p>Enter through the Peak State Starter and experience practical tools you can use immediately.</p></article>
-<article><div class="num">02</div><h3>Build Quick Wins</h3><p>Use Mini Playbooks to target confidence, resets, preparation, tryouts and other specific areas.</p></article>
-<article><div class="num">03</div><h3>Go Deeper</h3><p>Progress into the flagship P.E.A.K. Playbooks for complete performance systems and long-term development.</p></article>
-</div>
-</div></section>
-
-<section class="cta" id="join"><div class="wrap"><div class="cta-box">
-<div class="eyebrow">Build Your Peak State</div><h2>Stop leaving your performance <span class="gold">to chance.</span></h2><p>Train the mental side of your game with a system built for pressure, mistakes, confidence and consistent performance.</p>
-<div class="actions"><a class="btn" href="#framework">Choose Your Playbook</a><a class="btn ghost" href="#top">Back To Top</a></div>
-</div></div></section>
-</main>
-
-<footer><div class="wrap">
-<div class="foot"><a class="brand" href="#top"><span class="mark">PS</span><span><b>Peak State</b><small>Playbook</small></span></a><div class="footlinks"><a href="#framework">Playbooks</a><a href="#game">G.A.M.E. Plan</a><a href="#minis">Mini Playbooks</a><a href="#top">Home</a></div></div>
-<div class="copyr">© 2026 Peak State Playbook. All rights reserved.</div>
-</div></footer>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div>
+        <a class="site-footer-logo" href="/" aria-label="Peak State Playbook home">
+          <img src="https://static.wixstatic.com/media/5db4ae_41bd942450ba4a2f80a2ce243c9f7f6c~mv2.png" alt="Peak State Playbook">
+        </a>
+        <div class="site-footer-copy">
+          Basketball mental-performance training, coaching and development designed to help athletes build confidence, handle pressure and perform when it counts.
+        </div>
+        <div class="site-footer-contact">
+          Contact: <a href="mailto:info@peakstateplaybook.com">info@peakstateplaybook.com</a>
+        </div>
+      </div>
+      <div class="site-footer-links">
+        <a href="/">Home</a>
+        <a href="/about-us">About</a>
+        <a href="/online-programs">Online Programs</a>
+        <a href="/peak-state-starter">Peak State Starter</a>
+        <a href="/basketball-training">Basketball Training</a>
+        <a href="/film-room">Film Room</a>
+        <a href="/school-team-workshops">Schools &amp; Teams</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <div>© 2026 Peak State Playbook™. All rights reserved.</div>
+      <div class="site-footer-social">
+        <a href="https://www.instagram.com/peakstateplaybook/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/peakstateplaybook" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
 <script>
-const h=document.getElementById("header"),m=document.getElementById("menu");m.onclick=()=>h.classList.toggle("open");document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>h.classList.remove("open"));
+(function(){
+  const header = document.getElementById('siteHeader');
+  const button = document.getElementById('siteMenuButton');
+  if(!header || !button) return;
+  button.addEventListener('click', function(){
+    const open = header.classList.toggle('is-open');
+    button.setAttribute('aria-expanded', String(open));
+    button.textContent = open ? '×' : '☰';
+  });
+  header.querySelectorAll('.site-links a').forEach(function(link){
+    link.addEventListener('click', function(){
+      header.classList.remove('is-open');
+      button.setAttribute('aria-expanded','false');
+      button.textContent = '☰';
+    });
+  });
+})();
 </script>
+
 </body>
 </html>
