@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Peak State Playbook helps serious athletes build confidence, handle pressure and perform at their best when it counts.">
+<title>Peak State Playbook</title>
+<style>
+:root{--bg:#050606;--panel:#0c0d0d;--panel2:#111313;--text:#f5f3ec;--muted:#a5a59f;--line:rgba(255,255,255,.1);--gold:#d7ad61;--gold2:#f1cd82}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.section{padding:105px 0}.eyebrow{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:800}h1,h2,h3{font-family:Arial Black,Arial,sans-serif;text-transform:uppercase;line-height:.95;margin:0;letter-spacing:-.04em}h1{font-size:clamp(4rem,8.6vw,8rem)}h2{font-size:clamp(3rem,5.8vw,5.5rem)}h3{font-size:1.65rem}p{margin:0;color:var(--muted)}.gold{color:var(--gold2)}
+header{position:fixed;inset:0 0 auto;z-index:20;background:linear-gradient(#050606ee,#050606aa,transparent);backdrop-filter:blur(8px)}.nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.mark{width:42px;height:42px;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold2);font-family:Arial Black;font-size:1rem;transform:skew(-5deg)}.brand small{display:block;font-size:.62rem;letter-spacing:.32em;color:#a8a8a2;margin-top:2px}.links{display:flex;gap:27px;align-items:center;font-size:.78rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700}.links a{color:#d7d7d1}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--gold);background:linear-gradient(135deg,var(--gold2),#b88239);color:#080909;font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:.78rem;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.ghost{background:transparent;color:white;border-color:#ffffff40}.menu{display:none;background:none;color:white;border:1px solid var(--line);width:46px;height:46px;font-size:1.2rem}
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 75px;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 77% 30%,#d7ad6124,transparent 27%),linear-gradient(90deg,#d7ad610c 1px,transparent 1px),linear-gradient(#d7ad610c 1px,transparent 1px);background-size:auto,70px 70px,70px 70px;mask-image:linear-gradient(#000,transparent 90%)}.hero:after{content:"";position:absolute;width:62vw;height:62vw;border:1px solid #d7ad612b;border-radius:50%;right:-22vw;top:12vh;z-index:-1;box-shadow:0 0 0 80px #d7ad6108,0 0 0 160px #d7ad6105}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}.hero h1{margin:14px 0 25px}.lead{font-size:clamp(1rem,1.5vw,1.2rem);max-width:690px;color:#c9c9c2}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.micro{margin-top:23px;color:#898b86;font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;font-weight:700}.hero-art{aspect-ratio:1;border:1px solid #d7ad6133;background:linear-gradient(145deg,#d7ad610c,#ffffff04);display:grid;place-items:center;position:relative}.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff12}.hero-art:before{inset:22px}.hero-art:after{width:65%;height:65%;border-radius:50%;border-color:#d7ad612d}.hero-monogram{font-family:Arial Black;font-size:clamp(5rem,10vw,9rem);line-height:.75;color:var(--gold2);letter-spacing:-.18em;padding-right:.18em;z-index:1}
+.bar{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#080909}.proof{display:grid;grid-template-columns:repeat(4,1fr)}.proof div{padding:25px 22px;border-right:1px solid var(--line)}.proof div:last-child{border-right:0}.proof strong{display:block;text-transform:uppercase;font-weight:900;font-size:1.2rem}.proof small{color:#7f817c;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem}
+.two{display:grid;grid-template-columns:.9fr 1.1fr;gap:75px}.copy{display:grid;gap:20px;font-size:1.05rem}.quote{border-left:3px solid var(--gold);padding-left:20px;color:#eee9dd;font-weight:700}
+.dark{background:linear-gradient(#090a0a,#050606)}.head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:44px}.head p{max-width:510px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{min-height:340px;border:1px solid var(--line);background:linear-gradient(160deg,#111313,#080909);padding:28px;position:relative;overflow:hidden}.card:after{content:attr(data-letter);position:absolute;right:-5px;bottom:-35px;font-size:11rem;font-family:Arial Black;color:#d7ad610c}.card .k{color:var(--gold2);font-size:.7rem;font-weight:900;letter-spacing:.15em}.card h3{margin:18px 0 13px}.card p{font-size:.9rem}.card .tag{position:absolute;left:28px;bottom:25px;font-size:.67rem;text-transform:uppercase;letter-spacing:.1em;color:#848681}
+.feature{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.feature-main{border:1px solid #d7ad6140;background:linear-gradient(150deg,#121313,#090a0a);padding:48px;position:relative;overflow:hidden}.feature-main:after{content:"GAME";position:absolute;right:-22px;top:-45px;font-size:10rem;font-family:Arial Black;color:#d7ad6108}.feature-main h2{margin:10px 0 18px}.list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:27px}.list div{border-top:1px solid var(--line);padding-top:13px;color:#d7d7d1;font-size:.88rem}.list b{color:var(--gold2);margin-right:7px}.steps{display:grid;gap:13px}.step{border:1px solid var(--line);background:#0b0c0c;padding:22px;display:flex;gap:17px}.step>strong{font-size:2rem;color:var(--gold2);line-height:1}.step h4{margin:0 0 4px;text-transform:uppercase;font-size:.9rem;letter-spacing:.06em}.step p{font-size:.84rem}
+.minis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.mini{border:1px solid var(--line);background:#0f1111;padding:26px;min-height:205px;display:flex;flex-direction:column;justify-content:space-between}.mini h3{margin:8px 0 10px}.arr{color:var(--gold2);font-size:1.3rem;font-weight:900}
+.path{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}.path article{padding:39px;border-right:1px solid var(--line);min-height:245px}.path article:last-child{border-right:0}.num{font-size:3.7rem;font-weight:900;color:var(--gold2);line-height:1}.path h3{margin:15px 0 9px}
+.cta{padding:120px 0}.cta-box{text-align:center;border:1px solid #d7ad6144;background:radial-gradient(circle at 80% 0,#d7ad611b,transparent 30%),#0b0c0c;padding:70px}.cta-box h2{max-width:850px;margin:12px auto 18px}.cta-box p{max-width:600px;margin:auto}.cta-box .actions{justify-content:center}
+footer{border-top:1px solid var(--line);padding:42px 0 30px}.foot{display:flex;justify-content:space-between;align-items:end;gap:35px}.footlinks{display:flex;gap:20px;flex-wrap:wrap;color:#858782;text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}.copyr{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);color:#62645f;font-size:.68rem;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:960px){.links{display:none}.nav>.btn{display:none}.menu{display:block}.open .links{display:flex;position:absolute;top:86px;left:20px;right:20px;background:#0b0c0c;border:1px solid var(--line);padding:22px;flex-direction:column;align-items:flex-start}.hero-grid,.two,.feature{grid-template-columns:1fr}.hero-art{display:none}.cards{grid-template-columns:1fr 1fr}.minis{grid-template-columns:1fr 1fr}.proof{grid-template-columns:1fr 1fr}.proof div:nth-child(2){border-right:0}.proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}.head{flex-direction:column;align-items:start}}
+@media(max-width:650px){.wrap{width:calc(100% - 28px)}.section{padding:76px 0}.nav{height:74px}.open .links{top:74px}.hero{min-height:auto;padding:128px 0 80px}h1{font-size:clamp(3.5rem,19vw,5.5rem)}h2{font-size:clamp(2.9rem,14vw,4.5rem)}.actions{flex-direction:column}.actions .btn{width:100%}.proof,.cards,.minis{grid-template-columns:1fr}.proof div{border-right:0!important;border-bottom:1px solid var(--line)!important;padding:19px 4px}.proof div:last-child{border-bottom:0!important}.feature-main{padding:32px 22px}.list{grid-template-columns:1fr}.path{grid-template-columns:1fr}.path article{border-right:0;border-bottom:1px solid var(--line);padding:29px}.path article:last-child{border-bottom:0}.cta-box{padding:46px 20px}.foot{flex-direction:column;align-items:flex-start}.brand b{font-size:.8rem}}
+</style>
+</head>
+<body>
+<header id="header">
+<div class="wrap nav">
+<a class="brand" href="#top"><span class="mark">PS</span><span><b>Peak State</b><small>Playbook</small></span></a>
+<nav class="links"><a href="#framework">Playbooks</a><a href="#game">The G.A.M.E. Plan</a><a href="#minis">Mini Playbooks</a><a href="#path">How It Works</a><a href="#join">Login</a></nav>
+<a class="btn" href="#framework">Explore Programs</a>
+<button class="menu" id="menu" aria-label="Open menu">☰</button>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap hero-grid">
+<div>
+<div class="eyebrow">High-Performance Mental Training For Athletes</div>
+<h1>Train the part of your game that <span class="gold">controls everything.</span></h1>
+<p class="lead">Build confidence, handle pressure and compete with clarity through practical systems designed for the moments that decide games.</p>
+<div class="actions"><a class="btn" href="#framework">Explore The Playbooks</a><a class="btn ghost" href="#game">Start With The G.A.M.E. Plan</a></div>
+<div class="micro">Identity · Control · Preparation · Leadership</div>
+</div>
+<div class="hero-art" aria-hidden="true"><div class="hero-monogram">PS</div></div>
+</div>
+</section>
+
+<section class="bar"><div class="wrap proof">
+<div><strong>Identity</strong><small>Know who shows up</small></div>
+<div><strong>Composure</strong><small>Stay steady under pressure</small></div>
+<div><strong>Preparation</strong><small>Enter games ready</small></div>
+<div><strong>Leadership</strong><small>Raise your standard</small></div>
+</div></section>
+
+<section class="section"><div class="wrap two">
+<div><div class="eyebrow">The Competitive Edge</div><h2 style="margin-top:12px">Most athletes train their skills.<br><span class="gold">Few train what drives them.</span></h2></div>
+<div class="copy"><p>Peak State Playbook is a high-performance system built to help serious athletes perform with confidence, handle pressure and become more consistent competitors.</p><p>The work goes beyond motivation. Each Playbook gives you practical tools to train how you think, prepare, respond and compete when the game gets difficult.</p><div class="quote">Your skill matters. Your ability to access it when the pressure rises matters just as much.</div></div>
+</div></section>
+
+<section class="section dark" id="framework"><div class="wrap">
+<div class="head"><div><div class="eyebrow">The P.E.A.K. Framework</div><h2 style="margin-top:12px">Four Playbooks.<br><span class="gold">One complete system.</span></h2></div><p>Each flagship Playbook develops a different part of performance, from identity and mental control to preparation and leadership.</p></div>
+<div class="cards">
+<article class="card" data-letter="P"><div class="k">P — PRIME</div><h3>The G.A.M.E. Plan</h3><p>Build your identity and perform under pressure with a complete system for confidence, composure and control.</p><div class="tag">Ground your identity</div></article>
+<article class="card" data-letter="E"><div class="k">E — EVOLVE</div><h3>Mind Game Mastery</h3><p>Become more composed in difficult moments and execute with greater clarity and precision.</p><div class="tag">Evolve your control</div></article>
+<article class="card" data-letter="A"><div class="k">A — ACTIVATE</div><h3>Peak Performance System</h3><p>Build routines, habits and preparation systems that help you arrive ready to compete.</p><div class="tag">Activate performance</div></article>
+<article class="card" data-letter="K"><div class="k">K — KEYSTONE</div><h3>Legacy Leadership</h3><p>Lead yourself and others through standards, presence and actions that last beyond performance.</p><div class="tag">Keystone leadership</div></article>
+</div>
+</div></section>
+
+<section class="section" id="game"><div class="wrap feature">
+<div class="feature-main"><div class="eyebrow">Prime Playbook</div><h2>The <span class="gold">G.A.M.E.</span> Plan</h2><p class="lead">A structured mental-performance system designed to build competitive identity, regulate emotion, reset after mistakes and perform with greater clarity under pressure.</p>
+<div class="list"><div><b>01</b> Build your competitive identity</div><div><b>02</b> Activate your peak state</div><div><b>03</b> Reset quickly after mistakes</div><div><b>04</b> Perform with composure under pressure</div></div>
+<div class="actions"><a class="btn" href="#join">Explore The G.A.M.E. Plan</a></div></div>
+<div class="steps">
+<div class="step"><strong>01</strong><div><h4>Know who you are</h4><p>Define the version of you that shows up at your best and build standards around it.</p></div></div>
+<div class="step"><strong>02</strong><div><h4>Control your state</h4><p>Train your body, focus and language so emotion does not control your game.</p></div></div>
+<div class="step"><strong>03</strong><div><h4>Respond instead of react</h4><p>Catch the moments that knock you off and use simple tools to move forward quickly.</p></div></div>
+<div class="step"><strong>04</strong><div><h4>Build repeatability</h4><p>Turn the tools into game-day habits you can rely on throughout your season.</p></div></div>
+</div>
+</div></section>
+
+<section class="section dark" id="minis"><div class="wrap">
+<div class="head"><div><div class="eyebrow">Peak State Mini Playbooks</div><h2 style="margin-top:12px">Focused tools.<br><span class="gold">Fast application.</span></h2></div><p>Short, practical programs built around specific performance problems so athletes can apply the tools quickly in training and games.</p></div>
+<div class="minis">
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Pre-Game Power Up</h3><p>Prepare your body, focus and energy before you step on the court.</p></div><span class="arr">↗</span></article>
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Tryout Ready System</h3><p>Walk into tryouts with clarity, confidence and intent.</p></div><span class="arr">↗</span></article>
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Buckets With Belief</h3><p>Build confidence that shows up in games and play without hesitation.</p></div><span class="arr">↗</span></article>
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>The Mindset Reset</h3><p>Bounce back faster after mistakes and stay in the game.</p></div><span class="arr">↗</span></article>
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Daily Dominance Blueprint</h3><p>Structure your week to train, recover and stay consistent.</p></div><span class="arr">↗</span></article>
+<article class="mini"><div><div class="eyebrow">Mini Playbook</div><h3>Game Film Room</h3><p>Improve movement, spacing and decision-making through film.</p></div><span class="arr">↗</span></article>
+</div>
+</div></section>
+
+<section class="section" id="path"><div class="wrap">
+<div class="head"><div><div class="eyebrow">Your Path Through Peak State</div><h2 style="margin-top:12px">Start simple.<br><span class="gold">Build from there.</span></h2></div><p>The system gives athletes an accessible entry point, quick wins and then deeper performance development.</p></div>
+<div class="path">
+<article><div class="num">01</div><h3>Start Free</h3><p>Enter through the Peak State Starter and experience practical tools you can use immediately.</p></article>
+<article><div class="num">02</div><h3>Build Quick Wins</h3><p>Use Mini Playbooks to target confidence, resets, preparation, tryouts and other specific areas.</p></article>
+<article><div class="num">03</div><h3>Go Deeper</h3><p>Progress into the flagship P.E.A.K. Playbooks for complete performance systems and long-term development.</p></article>
+</div>
+</div></section>
+
+<section class="cta" id="join"><div class="wrap"><div class="cta-box">
+<div class="eyebrow">Build Your Peak State</div><h2>Stop leaving your performance <span class="gold">to chance.</span></h2><p>Train the mental side of your game with a system built for pressure, mistakes, confidence and consistent performance.</p>
+<div class="actions"><a class="btn" href="#framework">Choose Your Playbook</a><a class="btn ghost" href="#top">Back To Top</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="foot"><a class="brand" href="#top"><span class="mark">PS</span><span><b>Peak State</b><small>Playbook</small></span></a><div class="footlinks"><a href="#framework">Playbooks</a><a href="#game">G.A.M.E. Plan</a><a href="#minis">Mini Playbooks</a><a href="#top">Home</a></div></div>
+<div class="copyr">© 2026 Peak State Playbook. All rights reserved.</div>
+</div></footer>
+<script>
+const h=document.getElementById("header"),m=document.getElementById("menu");m.onclick=()=>h.classList.toggle("open");document.querySelectorAll(".links a").forEach(a=>a.onclick=()=>h.classList.remove("open"));
+</script>
+</body>
+</html>
