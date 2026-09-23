@@ -297,7 +297,7 @@ a {
       rgba(0,0,0,0.35) 100%
     ),
 
-    url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+    url("/assets/home-hero.webp");
 
   background-size: cover;
 
@@ -1917,7 +1917,7 @@ a {
         rgba(0,0,0,1) 100%
       ),
 
-      url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+      url("/assets/home-hero.webp");
   }
 
 
@@ -2703,11 +2703,11 @@ a {
 /* ONLINE PROGRAMS DROPDOWN */
 .site-nav-dropdown{position:relative;display:flex;align-items:center}
 .site-nav-dropdown-trigger{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#e3e3e3;font-family:inherit;font-size:10px;font-weight:800;letter-spacing:1.45px;text-transform:uppercase;white-space:nowrap;cursor:pointer;padding:0}
-.site-nav-dropdown-trigger:hover,.site-nav-dropdown:focus-within .site-nav-dropdown-trigger,.site-nav-dropdown.open .site-nav-dropdown-trigger{color:var(--gold)}
+.site-nav-dropdown-trigger:hover,.site-nav-dropdown.open .site-nav-dropdown-trigger{color:var(--gold)}
 .site-nav-chevron{font-size:10px;transition:transform .2s ease}
-.site-nav-dropdown:hover .site-nav-chevron,.site-nav-dropdown:focus-within .site-nav-chevron,.site-nav-dropdown.open .site-nav-chevron{transform:rotate(180deg)}
+.site-nav-dropdown:hover .site-nav-chevron,.site-nav-dropdown.open .site-nav-chevron{transform:rotate(180deg)}
 .site-nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-6px);min-width:270px;padding:10px;border:1px solid rgba(215,170,87,.22);border-radius:14px;background:rgba(8,8,8,.99);box-shadow:0 22px 60px rgba(0,0,0,.55);opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease}
-.site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown:focus-within .site-nav-dropdown-menu,.site-nav-dropdown.open .site-nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown.open .site-nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .site-nav-dropdown-menu a{display:block;padding:13px 14px!important;border:0!important;border-radius:9px;text-align:left!important;line-height:1.35}
 .site-nav-dropdown-menu a:hover{background:rgba(215,170,87,.07);color:var(--gold)}
 .site-nav-free{display:inline-block;margin-right:7px;color:var(--gold);font-size:8px;letter-spacing:1.5px}
@@ -2719,6 +2719,40 @@ a {
  .site-nav-dropdown-menu a{text-align:center!important;color:#bdbdbd}
 }
 
+
+/* =========================================================
+   HOME PREMIUM REFINEMENTS
+========================================================= */
+.no-break{white-space:nowrap}
+.hero{background-position:center 43%}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse at 55% 112%,transparent 0 28%,rgba(215,170,87,.06) 28.2% 28.45%,transparent 28.7%)}
+.hero-content{position:relative;z-index:3}
+.intro-section{background:
+  radial-gradient(ellipse at 50% 116%,rgba(215,170,87,.055),transparent 37%),
+  linear-gradient(180deg,#171717 0%,#111 52%,#0c0c0c 100%)}
+.intro-section::before{content:"";position:absolute;inset:0;opacity:.6;pointer-events:none;background:
+  linear-gradient(90deg,transparent 49.95%,rgba(255,255,255,.035) 50%,transparent 50.05%)}
+.home-body-line{font-size:clamp(44px,4.7vw,76px)!important;white-space:nowrap}
+.featured-section{background:
+  radial-gradient(circle at 15% 10%,rgba(255,255,255,.09),transparent 14%),
+  radial-gradient(circle at 82% 12%,rgba(215,170,87,.08),transparent 16%),
+  linear-gradient(145deg,#222 0%,#151515 45%,#090909 100%)}
+.peak-section{background:
+  radial-gradient(circle at 50% 32%,rgba(215,170,87,.055),transparent 28%),
+  linear-gradient(180deg,#090909,#0d0d0d 54%,#080808)}
+.peak-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.peak-card:hover{transform:translateY(-6px);border-color:rgba(215,170,87,.34);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.05)}
+.playbook-title{font-size:clamp(14px,1.18vw,19px)!important;white-space:nowrap;letter-spacing:-.25px}
+.performance-section{background:
+  radial-gradient(ellipse at 50% 108%,rgba(215,170,87,.045),transparent 36%),
+  linear-gradient(180deg,#1a1a1a 0%,#121212 52%,#0a0a0a 100%)}
+.research-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.research-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.42);box-shadow:0 22px 48px rgba(0,0,0,.30)}
+@media(max-width:900px){
+ .home-body-line{white-space:normal}
+ .playbook-title{white-space:normal}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -2846,7 +2880,7 @@ a {
         TRAIN YOUR MIND
       </span>
 
-      <span class="gold">
+      <span class="gold home-body-line">
         LIKE YOU TRAIN YOUR BODY
       </span>
 
@@ -3087,7 +3121,7 @@ a {
         </div>
 
         <div class="playbook-title">
-          KEYSTONE PLAYBOOK
+          <span class="no-break">KEYSTONE PLAYBOOK</span>
         </div>
 
         <div class="program-name">
