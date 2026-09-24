@@ -297,7 +297,7 @@ a {
       rgba(0,0,0,0.35) 100%
     ),
 
-    url("/assets/home-hero.webp");
+    url("/assets/home-hero-v3.webp");
 
   background-size: cover;
 
@@ -1917,7 +1917,7 @@ a {
         rgba(0,0,0,1) 100%
       ),
 
-      url("/assets/home-hero.webp");
+      url("/assets/home-hero-v3.webp");
   }
 
 
@@ -2779,6 +2779,30 @@ a {
 .testimonial-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.045)}
 .testimonial-card:hover .testimonial-photo img{transform:scale(1.045);filter:saturate(.95) contrast(1.07)}
 @media(max-width:650px){.testimonial-photo{height:108px}}
+
+/* HOME MOBILE DEAD SPACE FIX */
+@media(max-width:650px){
+  .hero{
+    min-height:610px!important;
+    align-items:center!important;
+    padding:34px 7% 42px!important;
+    background-position:62% 32%!important;
+  }
+  .hero-wrap{min-height:0!important;padding:0!important}
+  .hero-content{padding:0!important}
+  .hero-buttons{
+    width:min(100%,360px)!important;
+    margin:28px auto 0!important;
+    gap:12px!important;
+  }
+  .hero-buttons .button{
+    min-height:54px!important;
+    border-radius:14px!important;
+    width:100%!important;
+  }
+  .featured-section,.featured-wrap{min-height:0!important}
+  .featured-wrap{padding:64px 0!important}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -2987,46 +3011,7 @@ a {
     </div>
 
 
-    <div class="book-stage">
-
-      <div class="book-glow"></div>
-
-      <div class="book-floor-shadow"></div>
-
-
-      <div class="book">
-
-        <div class="book-pages"></div>
-
-        <div class="book-cover"></div>
-
-
-        <div class="spiral">
-
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-
-        </div>
-
-      </div>
-
-    </div>
+    <div class="featured-real-book"><img src="/assets/game-plan-spiral-final.webp" alt="G.A.M.E. Plan spiral workbook"></div>
 
 
   </div>
@@ -3527,7 +3512,7 @@ a {
 
 
       <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/home-hero.webp" alt="Jarrod Molnar entering the court"></div>
+        <div class="testimonial-photo"><img src="/assets/about-hero-final.webp" alt="Jarrod Molnar in game action"></div>
 
         <div class="quote-mark">
           “
@@ -3555,7 +3540,7 @@ a {
 
 
       <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/about-hero.webp" alt="Jarrod Molnar in live game action"></div>
+        <div class="testimonial-photo"><img src="/assets/training-hero.webp" alt="Jarrod Molnar competing on court"></div>
 
         <div class="quote-mark">
           “
@@ -3583,7 +3568,7 @@ a {
 
 
       <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/about-hero.webp" alt="Jarrod Molnar preparing with a basketball"></div>
+        <div class="testimonial-photo"><img src="/assets/film-hero.webp" alt="Jarrod Molnar during basketball competition"></div>
 
         <div class="quote-mark">
           “
