@@ -587,3 +587,131 @@ img{max-width:100%}
     min-height:255px;
   }
 }
+
+/* =========================================================
+   2026 FINAL RESPONSIVE PHOTO PASS
+========================================================= */
+.hero-split-visual img,
+.story-image img,
+.about-photo-duo img,
+.photo-frame img{background:#0b0b0b}
+
+.hero-split.about .hero-split-visual img{object-position:center 48%}
+.hero-split.training .hero-split-visual img{object-position:center 34%}
+.hero-split.film .hero-split-visual img{object-position:center 35%;filter:saturate(.72) contrast(1.06)}
+.hero-split.schools .hero-split-visual img{object-position:center 34%}
+
+.visual-info-panel{
+  min-height:360px;
+  padding:38px;
+  border:1px solid rgba(215,170,87,.22);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 76% 18%,rgba(215,170,87,.11),transparent 28%),
+    linear-gradient(145deg,#171717,#080808);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.visual-info-panel .big-mark{
+  color:rgba(215,170,87,.18);
+  font-size:clamp(72px,9vw,132px);
+  line-height:.8;
+  font-weight:900;
+  letter-spacing:-6px;
+}
+.visual-info-panel h3{margin:26px 0 8px;font-size:26px;text-transform:uppercase}
+.visual-info-panel p{margin:0;color:#bdbdbd;line-height:1.65}
+
+.featured-real-book{
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.featured-real-book:before{
+  content:"";
+  position:absolute;
+  width:430px;height:430px;border-radius:50%;
+  background:radial-gradient(circle,rgba(215,170,87,.14),transparent 68%);
+  filter:blur(10px);
+}
+.featured-real-book img{
+  position:relative;
+  z-index:2;
+  width:min(100%,620px);
+  max-height:570px;
+  object-fit:contain;
+  filter:drop-shadow(0 28px 38px rgba(0,0,0,.5));
+}
+
+@media(max-width:800px){
+  .hero-split{display:block}
+  .hero-split-copy{padding:54px 7% 40px}
+  .hero-split-visual{min-height:0!important;height:auto!important}
+  .hero-split-visual img{
+    width:100%;
+    min-height:0!important;
+    height:auto!important;
+    max-height:360px;
+    object-fit:cover;
+  }
+  .hero-split.about .hero-split-visual img{
+    aspect-ratio:3/2;
+    max-height:none;
+    object-fit:cover;
+    object-position:center 45%;
+  }
+  .hero-split.training .hero-split-visual img,
+  .hero-split.film .hero-split-visual img,
+  .hero-split.schools .hero-split-visual img{
+    aspect-ratio:16/10;
+  }
+  .hero-split-badge{right:14px;bottom:12px}
+  .visual-info-panel{min-height:260px}
+  .featured-real-book{min-height:420px}
+  .featured-real-book img{max-height:390px}
+}
+
+@media(max-width:600px){
+  .button-row{
+    align-items:stretch;
+    max-width:380px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .button-row .button{
+    width:100%;
+    min-height:54px;
+    border-radius:14px;
+    padding:0 18px;
+    letter-spacing:1.65px;
+  }
+  .hero-split-copy .button-row{margin-left:0;margin-right:0}
+  .hero-split-copy{padding:44px 7% 32px}
+  .hero-split-visual img{max-height:300px}
+  .hero-split.about .hero-split-visual img{max-height:none}
+  .about-photo-duo{
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:24px;
+  }
+  .about-photo-duo figure,
+  .about-photo-duo img{
+    min-height:0!important;
+    height:190px!important;
+    margin:0!important;
+  }
+  .story-image,.story-image img{
+    min-height:0!important;
+    height:260px!important;
+  }
+  .photo-frame,.photo-frame img{
+    min-height:0!important;
+    height:auto!important;
+  }
+  .visual-info-panel{min-height:220px;padding:28px}
+  .featured-real-book{min-height:310px;padding:12px 0}
+  .featured-real-book img{max-height:300px}
+}
