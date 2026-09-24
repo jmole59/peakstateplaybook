@@ -2753,6 +2753,32 @@ a {
  .home-body-line{white-space:normal}
  .playbook-title{white-space:normal}
 }
+
+/* =========================================================
+   HOME TESTIMONIAL PHOTO TREATMENT
+========================================================= */
+.testimonial-photo{
+  height:120px;
+  margin:-32px -30px 24px;
+  overflow:hidden;
+  border-radius:15px 15px 0 0;
+  border-bottom:1px solid rgba(215,170,87,.18);
+  position:relative;
+}
+.testimonial-photo::after{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.38));
+}
+.testimonial-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.72) contrast(1.06);
+  transition:transform .5s ease,filter .35s ease;
+}
+.testimonial-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.045)}
+.testimonial-card:hover .testimonial-photo img{transform:scale(1.045);filter:saturate(.95) contrast(1.07)}
+@media(max-width:650px){.testimonial-photo{height:108px}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -3501,6 +3527,7 @@ a {
 
 
       <div class="testimonial-card">
+        <div class="testimonial-photo"><img src="/assets/home-hero.webp" alt="Jarrod Molnar entering the court"></div>
 
         <div class="quote-mark">
           “
@@ -3528,6 +3555,7 @@ a {
 
 
       <div class="testimonial-card">
+        <div class="testimonial-photo"><img src="/assets/training-hero.webp" alt="Jarrod Molnar in live game action"></div>
 
         <div class="quote-mark">
           “
@@ -3555,6 +3583,7 @@ a {
 
 
       <div class="testimonial-card">
+        <div class="testimonial-photo"><img src="/assets/about-hero.webp" alt="Jarrod Molnar preparing with a basketball"></div>
 
         <div class="quote-mark">
           “
