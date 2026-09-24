@@ -503,3 +503,87 @@ img{max-width:100%}
   .about-photo-duo figure:nth-child(2){margin-top:0}
   .testimonial-photo{height:108px}
 }
+
+/* =========================================================
+   MOBILE PHOTO COMPACTION 2026
+   Keeps photographic sections intentional rather than tall blank blocks.
+========================================================= */
+.hero-split.about .hero-split-visual img{object-position:center 30%}
+.hero-split.training .hero-split-visual img{object-position:center 43%}
+.hero-split.film .hero-split-visual img{
+  object-position:center 44%;
+  filter:saturate(.66) contrast(1.08) brightness(.88)
+}
+.hero-split.schools .hero-split-visual img{object-position:center 28%}
+
+@media(max-width:700px){
+  .hero-split-copy{padding:50px 7% 38px}
+  .hero-split-visual,
+  .hero-split-visual img{
+    height:275px;
+    min-height:275px;
+  }
+  .hero-split-badge{
+    right:14px;
+    bottom:12px;
+    padding:9px 12px;
+    font-size:8px;
+  }
+
+  .story-image,
+  .story-image img{
+    height:250px;
+    min-height:250px;
+  }
+
+  .about-photo-duo{
+    gap:10px;
+    margin-top:22px;
+  }
+  .about-photo-duo figure,
+  .about-photo-duo img{
+    height:220px;
+    min-height:220px;
+  }
+
+  .photo-frame{
+    min-height:0 !important;
+    aspect-ratio:4/3;
+  }
+  .photo-frame img{
+    min-height:0 !important;
+    height:100% !important;
+  }
+
+  .photo-band{
+    min-height:290px;
+  }
+
+  .split-story{
+    gap:28px;
+  }
+  .story-panel{
+    padding:27px 21px;
+  }
+}
+
+@media(max-width:430px){
+  .hero-split-visual,
+  .hero-split-visual img{
+    height:245px;
+    min-height:245px;
+  }
+  .story-image,
+  .story-image img{
+    height:225px;
+    min-height:225px;
+  }
+  .about-photo-duo figure,
+  .about-photo-duo img{
+    height:195px;
+    min-height:195px;
+  }
+  .photo-band{
+    min-height:255px;
+  }
+}
