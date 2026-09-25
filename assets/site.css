@@ -715,3 +715,39 @@ img{max-width:100%}
   .featured-real-book{min-height:310px;padding:12px 0}
   .featured-real-book img{max-height:300px}
 }
+
+/* Photo-led openings for Training and Film Room. */
+.training-development .grid-2,
+.film-awareness .grid-2{align-items:center;gap:clamp(28px,4vw,70px)}
+.training-development-photo,
+.film-review-photo{
+  overflow:hidden;
+  border:1px solid rgba(215,170,87,.25);
+  border-radius:20px;
+  background:#101010;
+  box-shadow:0 24px 64px rgba(0,0,0,.36);
+}
+.training-development-photo img,
+.film-review-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.training-development-photo{aspect-ratio:4/3}
+.training-development-photo img{object-position:center 41%}
+.film-review-photo{aspect-ratio:4/3}
+.film-review-photo img{object-position:center}
+.film-awareness .film-notes{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin-top:28px;
+}
+.film-awareness .film-note{padding:18px}
+@media(max-width:800px){
+  .training-development-photo,
+  .film-review-photo{aspect-ratio:16/10}
+  .film-awareness .film-notes{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  .film-awareness .film-notes{grid-template-columns:1fr}
+}

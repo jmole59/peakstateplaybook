@@ -2803,6 +2803,74 @@ a {
   .featured-section,.featured-wrap{min-height:0!important}
   .featured-wrap{padding:64px 0!important}
 }
+
+/* Exact print cover presented as a spiral workbook. Home has its own CSS. */
+.featured-real-book{
+  position:relative;
+  min-height:620px;
+  display:grid;
+  place-items:center;
+  padding:42px 28px 58px;
+  isolation:isolate;
+  perspective:1500px;
+}
+.featured-real-book::before{
+  content:"";
+  position:absolute;
+  width:min(84%,530px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(215,170,87,.16),transparent 68%);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.featured-book{
+  position:relative;
+  display:block;
+  width:min(72%,390px);
+  aspect-ratio:499/709;
+  transform:rotate(-6deg) rotateY(-13deg) rotateX(3deg);
+  transform-style:preserve-3d;
+  filter:drop-shadow(25px 34px 28px rgba(0,0,0,.65));
+}
+.featured-book::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:10px -13px -14px 12px;
+  border-radius:2px 9px 10px 3px;
+  background:repeating-linear-gradient(180deg,#e6e2d9 0 2px,#aba9a4 3px,#f3f1ec 4px 5px);
+  box-shadow:12px 12px 26px rgba(0,0,0,.6);
+  transform:translateZ(-10px);
+}
+.featured-book-cover{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border:1px solid rgba(215,170,87,.4);
+  border-radius:3px 8px 8px 3px;
+  box-shadow:inset 5px 0 8px rgba(0,0,0,.5);
+}
+.featured-book-binding{
+  position:absolute;
+  z-index:2;
+  top:12px;
+  bottom:12px;
+  left:-16px;
+  width:26px;
+  background:radial-gradient(ellipse at 64% 50%,transparent 0 7px,#bfb8aa 7.5px 9px,#4c4b48 9.5px 11px,transparent 11.5px) 0 0/26px 24px repeat-y;
+  filter:drop-shadow(-2px 1px 2px rgba(0,0,0,.9));
+  transform:translateZ(7px);
+}
+@media(max-width:1000px){
+  .featured-real-book{min-height:530px;padding:32px 22px 48px}
+  .featured-book{width:min(68%,350px)}
+}
+@media(max-width:650px){
+  .featured-real-book{min-height:0;padding:38px 16px 36px}
+  .featured-book{width:min(69%,290px)}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -3011,7 +3079,12 @@ a {
     </div>
 
 
-    <div class="featured-real-book"><img src="/assets/game-plan-spiral-final.webp" alt="G.A.M.E. Plan spiral workbook"></div>
+    <div class="featured-real-book">
+      <div class="featured-book">
+        <img class="featured-book-cover" src="/assets/game-plan-cover.webp" alt="The G.A.M.E. Plan spiral workbook cover" width="1941" height="2756">
+        <span class="featured-book-binding" aria-hidden="true"></span>
+      </div>
+    </div>
 
 
   </div>
