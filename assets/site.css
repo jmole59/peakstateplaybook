@@ -643,6 +643,28 @@ img{max-width:100%}
   box-shadow:0 22px 65px rgba(0,0,0,.26);
 }
 .about-approach-image img{width:100%;height:100%;object-fit:cover;object-position:center 43%;display:block;filter:brightness(.78) contrast(1.12) saturate(.8)}
+/* Soft light and edge falloff blend the About photos into the charcoal panels. */
+.hero-split.about .hero-split-visual:before{
+  background:
+    radial-gradient(ellipse at 76% 24%,rgba(215,170,87,.14),transparent 46%),
+    linear-gradient(90deg,rgba(8,8,8,.62),transparent 34%),
+    linear-gradient(180deg,rgba(8,8,8,.20),transparent 40%,rgba(8,8,8,.48));
+}
+.section.soft-grey .story-image img{filter:brightness(.78) contrast(1.1) saturate(.78)}
+.section.soft-grey .story-image:after{
+  background:
+    radial-gradient(ellipse at 28% 21%,rgba(215,170,87,.13),transparent 54%),
+    linear-gradient(180deg,rgba(10,10,10,.24),transparent 34%,rgba(10,10,10,.54)),
+    linear-gradient(90deg,rgba(10,10,10,.25),transparent 25%,transparent 75%,rgba(10,10,10,.24));
+}
+.about-approach-image{position:relative}
+.about-approach-image:after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 70% 25%,rgba(215,170,87,.14),transparent 48%),
+    linear-gradient(180deg,rgba(10,10,10,.24),transparent 34%,rgba(10,10,10,.58)),
+    linear-gradient(90deg,rgba(10,10,10,.17),transparent 32%,transparent 75%,rgba(10,10,10,.18));
+}
 @media(max-width:1050px){
   .hero-split.about .hero-split-visual{min-height:0;height:460px}
   .hero-split.about .hero-split-copy{padding-top:64px;padding-bottom:54px}
