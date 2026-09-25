@@ -623,6 +623,41 @@ img{max-width:100%}
 .visual-info-panel h3{margin:26px 0 8px;font-size:26px;text-transform:uppercase}
 .visual-info-panel p{margin:0;color:#bdbdbd;line-height:1.65}
 
+/* About: keep the introduction close to its actions and crop the portrait intentionally. */
+.hero-split.about{min-height:0;align-items:stretch}
+.hero-split.about .hero-split-copy{padding-top:68px;padding-bottom:68px}
+.hero-split.about .hero-split-visual{min-height:590px;height:610px}
+.hero-split.about .hero-split-visual img{
+  min-height:0;height:100%;object-position:center 31%;
+  filter:brightness(.79) contrast(1.13) saturate(.76);
+}
+.hero-split.about .hero-split-visual:before{
+  background:linear-gradient(90deg,rgba(8,8,8,.48),transparent 35%),
+             linear-gradient(180deg,rgba(8,8,8,.15),transparent 44%,rgba(8,8,8,.38));
+}
+.about-experience-intro{max-width:1050px;margin:20px auto 38px}
+.about-approach{align-items:center;gap:clamp(28px,5vw,74px)}
+.about-approach-image{
+  height:430px;margin:0;overflow:hidden;border-radius:20px;
+  border:1px solid rgba(215,170,87,.24);background:#101010;
+  box-shadow:0 22px 65px rgba(0,0,0,.26);
+}
+.about-approach-image img{width:100%;height:100%;object-fit:cover;object-position:center 43%;display:block;filter:brightness(.78) contrast(1.12) saturate(.8)}
+@media(max-width:1050px){
+  .hero-split.about .hero-split-visual{min-height:0;height:460px}
+  .hero-split.about .hero-split-copy{padding-top:64px;padding-bottom:54px}
+}
+@media(max-width:800px){
+  .hero-split.about .hero-split-visual{height:380px!important}
+  .hero-split.about .hero-split-visual img{height:100%!important;aspect-ratio:auto;object-position:center 30%}
+  .about-approach-image{height:350px}
+}
+@media(max-width:600px){
+  .hero-split.about .hero-split-copy{padding-top:44px;padding-bottom:34px}
+  .hero-split.about .hero-split-visual{height:330px!important}
+  .about-approach-image{height:290px}
+}
+
 .featured-real-book{
   min-height:620px;
   display:flex;
