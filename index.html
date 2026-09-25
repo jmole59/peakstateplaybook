@@ -2606,7 +2606,7 @@ a {
 }
 .site-footer-logo img {
   display: block;
-  width: 205px;
+  width: 68px;
   max-width: 100%;
   height: auto;
 }
@@ -2692,7 +2692,7 @@ a {
   .site-links { top: 66px; }
   .site-footer { padding: 42px 7% 26px; }
   .site-footer-top { grid-template-columns: 1fr; gap: 34px; }
-  .site-footer-logo img { width: 175px; margin: 0 auto; }
+  .site-footer-logo img { width: 64px; margin: 0 auto; }
   .site-footer-copy, .site-footer-contact { text-align: center; margin-left: auto; margin-right: auto; }
   .site-footer-links { grid-template-columns: 1fr; text-align: center; }
   .site-footer-bottom { flex-direction: column; align-items: center; text-align: center; }
@@ -2754,31 +2754,24 @@ a {
  .playbook-title{white-space:normal}
 }
 
-/* =========================================================
-   HOME TESTIMONIAL PHOTO TREATMENT
-========================================================= */
-.testimonial-photo{
-  height:120px;
-  margin:-32px -30px 24px;
-  overflow:hidden;
-  border-radius:15px 15px 0 0;
-  border-bottom:1px solid rgba(215,170,87,.18);
-  position:relative;
-}
-.testimonial-photo::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(0,0,0,.03),rgba(0,0,0,.38));
-}
-.testimonial-photo img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:saturate(.72) contrast(1.06);
-  transition:transform .5s ease,filter .35s ease;
-}
+/* Home testimonial cards use labels instead of unrelated athlete photos. */
 .testimonial-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
 .testimonial-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.045)}
-.testimonial-card:hover .testimonial-photo img{transform:scale(1.045);filter:saturate(.95) contrast(1.07)}
-@media(max-width:650px){.testimonial-photo{height:108px}}
+
+.testimonial-label{
+  color:var(--gold);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:26px;
+}
+.testimonial-card--example{
+  border-color:rgba(215,170,87,.45);
+  background:linear-gradient(145deg,#202018,#0b0b0b);
+}
+.testimonial-card--example .quote-text{margin-top:0}
+.testimonial-card--example .quote-person{color:var(--gold)}
 
 /* HOME MOBILE DEAD SPACE FIX */
 @media(max-width:650px){
@@ -2812,7 +2805,6 @@ a {
   place-items:center;
   padding:42px 28px 58px;
   isolation:isolate;
-  perspective:1500px;
 }
 .featured-real-book::before{
   content:"";
@@ -2829,19 +2821,16 @@ a {
   display:block;
   width:min(72%,390px);
   aspect-ratio:499/709;
-  transform:rotate(-6deg) rotateY(-13deg) rotateX(3deg);
-  transform-style:preserve-3d;
-  filter:drop-shadow(25px 34px 28px rgba(0,0,0,.65));
+  filter:drop-shadow(14px 22px 22px rgba(0,0,0,.68));
 }
 .featured-book::before{
   content:"";
   position:absolute;
   z-index:-1;
-  inset:10px -13px -14px 12px;
-  border-radius:2px 9px 10px 3px;
-  background:repeating-linear-gradient(180deg,#e6e2d9 0 2px,#aba9a4 3px,#f3f1ec 4px 5px);
-  box-shadow:12px 12px 26px rgba(0,0,0,.6);
-  transform:translateZ(-10px);
+  inset:7px -9px -11px 7px;
+  border-radius:2px 7px 8px 3px;
+  background:repeating-linear-gradient(180deg,#e9e6de 0 1px,#bab6ac 2px,#f2f0e8 3px 4px);
+  box-shadow:8px 10px 22px rgba(0,0,0,.55);
 }
 .featured-book-cover{
   display:block;
@@ -2849,7 +2838,7 @@ a {
   height:100%;
   object-fit:cover;
   border:1px solid rgba(215,170,87,.4);
-  border-radius:3px 8px 8px 3px;
+  border-radius:3px 5px 5px 3px;
   box-shadow:inset 5px 0 8px rgba(0,0,0,.5);
 }
 .featured-book-binding{
@@ -2861,7 +2850,6 @@ a {
   width:26px;
   background:radial-gradient(ellipse at 64% 50%,transparent 0 7px,#bfb8aa 7.5px 9px,#4c4b48 9.5px 11px,transparent 11.5px) 0 0/26px 24px repeat-y;
   filter:drop-shadow(-2px 1px 2px rgba(0,0,0,.9));
-  transform:translateZ(7px);
 }
 @media(max-width:1000px){
   .featured-real-book{min-height:530px;padding:32px 22px 48px}
@@ -3561,18 +3549,18 @@ a {
 
 
       <div class="eyebrow">
-        Real Players · Real Progress
+        Training Feedback · Film Review Example
       </div>
 
 
       <h2 class="section-title">
 
         <span class="title-line">
-          WHAT PLAYERS &amp;
+          PROGRESS ON
         </span>
 
         <span class="title-line gold">
-          PARENTS SAY
+          AND OFF THE COURT
         </span>
 
       </h2>
@@ -3585,7 +3573,7 @@ a {
 
 
       <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/about-hero-final.webp" alt="Jarrod Molnar in game action"></div>
+        <div class="testimonial-label">A Parent’s Perspective</div>
 
         <div class="quote-mark">
           “
@@ -3612,27 +3600,24 @@ a {
       </div>
 
 
-      <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/training-hero.webp" alt="Jarrod Molnar competing on court"></div>
-
-        <div class="quote-mark">
-          “
-        </div>
+      <div class="testimonial-card testimonial-card--example">
+        <div class="testimonial-label">Film Review · Illustrative Example</div>
 
         <div class="quote-text">
-          What stood out most was the confidence and focus.
-          You could actually see it starting to carry over
-          into games.
+          James has been reviewing his game footage for four weeks.
+          He starts spotting the decisions he used to miss, knows what
+          to work on between games and notices a big change in how
+          confidently he plays.
         </div>
 
         <div class="quote-meta">
 
           <div class="quote-person">
-            Parent
+            James · Example Scenario
           </div>
 
           <div class="quote-service">
-            Basketball Training
+            Film Review
           </div>
 
         </div>
@@ -3641,7 +3626,7 @@ a {
 
 
       <div class="testimonial-card">
-        <div class="testimonial-photo"><img src="/assets/film-hero.webp" alt="Jarrod Molnar during basketball competition"></div>
+        <div class="testimonial-label">Game Day Confidence</div>
 
         <div class="quote-mark">
           “

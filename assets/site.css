@@ -89,7 +89,7 @@ img{max-width:100%}
 .site-footer{padding:54px 0 28px;border-top:1px solid rgba(215,170,87,.13);background:#050505}
 .footer-top{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .footer-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.footer-brand img{width:70px;height:70px}
+.footer-brand img{width:48px;height:56px;object-fit:contain}
 .footer-brand strong{font-size:14px;letter-spacing:2px;text-transform:uppercase}
 .footer-copy{max-width:500px;margin-top:15px;color:#777;font-size:13px;line-height:1.7}
 .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}

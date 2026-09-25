@@ -22,7 +22,7 @@
 .site-footer .container{width:min(1320px,92%);margin:0 auto}
 .footer-top{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 .footer-brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff}
-.footer-brand img{width:70px;height:70px}
+.footer-brand img{width:48px;height:56px;object-fit:contain}
 .footer-brand strong{font-size:14px;letter-spacing:2px;text-transform:uppercase}
 .footer-copy{max-width:500px;margin-top:15px;color:#777;font-size:13px;line-height:1.7}
 .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
