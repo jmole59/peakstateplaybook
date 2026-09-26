@@ -438,7 +438,7 @@ img{max-width:100%}
   background:radial-gradient(circle at 18% 20%,rgba(215,170,87,.075),transparent 26%),linear-gradient(135deg,#151515,#080808 70%);
 }
 .hero-split.about .hero-split-copy{
-  background:radial-gradient(circle at 18% 20%,rgba(255,255,255,.045),transparent 24%),linear-gradient(135deg,#151515,#080808 70%);
+  background:none;
 }
 
 /* Raw imagery inside homepage testimonials */
@@ -614,18 +614,6 @@ img{max-width:100%}
 .visual-info-panel h3{margin:26px 0 8px;font-size:26px;text-transform:uppercase}
 .visual-info-panel p{margin:0;color:#bdbdbd;line-height:1.65}
 
-/* About: keep the introduction close to its actions and crop the portrait intentionally. */
-.hero-split.about{min-height:0;align-items:stretch}
-.hero-split.about .hero-split-copy{padding-top:68px;padding-bottom:68px}
-.hero-split.about .hero-split-visual{min-height:590px;height:610px}
-.hero-split.about .hero-split-visual img{
-  min-height:0;height:100%;object-position:center 31%;
-  filter:brightness(.79) contrast(1.13) saturate(.76);
-}
-.hero-split.about .hero-split-visual:before{
-  background:linear-gradient(90deg,rgba(8,8,8,.48),transparent 35%),
-             linear-gradient(180deg,rgba(8,8,8,.15),transparent 44%,rgba(8,8,8,.38));
-}
 .about-experience-intro{max-width:1050px;margin:20px auto 38px}
 .about-approach{align-items:center;gap:clamp(28px,5vw,74px)}
 .about-approach-image{
@@ -635,12 +623,6 @@ img{max-width:100%}
 }
 .about-approach-image img{width:100%;height:100%;object-fit:cover;object-position:center 43%;display:block;filter:brightness(.78) contrast(1.12) saturate(.8)}
 /* Soft light and edge falloff blend the About photos into the charcoal panels. */
-.hero-split.about .hero-split-visual:before{
-  background:
-    radial-gradient(ellipse at 76% 24%,rgba(215,170,87,.14),transparent 46%),
-    linear-gradient(90deg,rgba(8,8,8,.62),transparent 34%),
-    linear-gradient(180deg,rgba(8,8,8,.20),transparent 40%,rgba(8,8,8,.48));
-}
 .section.soft-grey .story-image img{filter:brightness(.78) contrast(1.1) saturate(.78)}
 .section.soft-grey .story-image:after{
   background:
@@ -657,17 +639,11 @@ img{max-width:100%}
     linear-gradient(90deg,rgba(10,10,10,.17),transparent 32%,transparent 75%,rgba(10,10,10,.18));
 }
 @media(max-width:1050px){
-  .hero-split.about .hero-split-visual{min-height:0;height:460px}
-  .hero-split.about .hero-split-copy{padding-top:64px;padding-bottom:54px}
 }
 @media(max-width:800px){
-  .hero-split.about .hero-split-visual{height:380px!important}
-  .hero-split.about .hero-split-visual img{height:100%!important;aspect-ratio:auto;object-position:center 30%}
   .about-approach-image{height:350px}
 }
 @media(max-width:600px){
-  .hero-split.about .hero-split-copy{padding-top:44px;padding-bottom:34px}
-  .hero-split.about .hero-split-visual{height:330px!important}
   .about-approach-image{height:290px}
 }
 
@@ -798,4 +774,29 @@ img{max-width:100%}
 }
 @media(max-width:600px){
   .film-awareness .film-notes{grid-template-columns:1fr}
+}
+
+/* About hero: one continuous image, with the portrait and copy sharing the court. */
+.hero-split.about{
+  display:flex;align-items:center;min-height:680px;
+  background:
+    linear-gradient(90deg,rgba(5,5,5,.97) 0%,rgba(5,5,5,.89) 27%,rgba(5,5,5,.55) 49%,rgba(5,5,5,.12) 75%),
+    linear-gradient(180deg,rgba(5,5,5,.08) 52%,rgba(5,5,5,.45) 100%),
+    url('/assets/about-court-hero.webp') center center / cover no-repeat;
+}
+.hero-split.about .hero-split-copy{
+  width:min(760px,61%);padding:70px max(6vw,42px);background:none;
+}
+@media(max-width:800px){
+  .hero-split.about{
+    min-height:780px;align-items:flex-end;
+    background:
+      linear-gradient(180deg,rgba(5,5,5,.05) 0%,rgba(5,5,5,.16) 24%,rgba(5,5,5,.82) 48%,rgba(5,5,5,.98) 72%,#080808 100%),
+      url('/assets/about-court-hero.webp') 69% top / auto 540px no-repeat;
+  }
+  .hero-split.about .hero-split-copy{width:100%;padding:300px 7% 54px}
+}
+@media(max-width:600px){
+  .hero-split.about{min-height:810px;background-position:center,70% top;background-size:auto,auto 520px}
+  .hero-split.about .hero-split-copy{padding:320px 7% 46px}
 }
