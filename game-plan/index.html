@@ -282,24 +282,8 @@ a {
   text-align: center;
 
   background:
-    radial-gradient(
-      ellipse at 50% 118%,
-      rgba(215,170,87,0.08),
-      transparent 38%
-    ),
-
-    radial-gradient(
-      circle at 50% 20%,
-      rgba(255,255,255,0.035),
-      transparent 30%
-    ),
-
-    linear-gradient(
-      180deg,
-      #101010 0%,
-      #080808 55%,
-      #050505 100%
-    );
+    linear-gradient(180deg,rgba(5,5,5,.64) 0%,rgba(5,5,5,.72) 56%,rgba(5,5,5,.88) 100%),
+    url('/assets/game-plan-court-hero.webp') center 43% / cover no-repeat;
 }
 
 
@@ -465,7 +449,7 @@ a {
   grid-template-columns:
     1.05fr 0.95fr;
 
-  gap: 70px;
+  gap: clamp(32px, 4vw, 70px);
 
   align-items: center;
 }
@@ -523,7 +507,13 @@ a {
   background: var(--gold);
 }
 
-
+.video-embed iframe {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
 .video-placeholder-inner {
   position: absolute;
 
@@ -592,7 +582,7 @@ a {
     20px 0 0;
 
   font-size:
-    clamp(48px, 4.6vw, 70px);
+    clamp(38px, 3.6vw, 56px);
 
   line-height: 0.98;
 
@@ -722,6 +712,9 @@ a {
 
 
 .area-card {
+  --area-accent:var(--gold);
+  --area-glow:rgba(215,170,87,.09);
+  --area-border:rgba(215,170,87,.35);
   position: relative;
 
   min-height: 345px;
@@ -733,15 +726,15 @@ a {
 
   border:
     1px solid
-    rgba(215,170,87,0.30);
+    var(--area-border);
 
   border-radius: 17px;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(215,170,87,0.06),
-      transparent 32%
+      var(--area-glow),
+      transparent 68%
     ),
 
     linear-gradient(
@@ -776,13 +769,12 @@ a {
   width: 52px;
   height: 2px;
 
-  background: var(--gold);
+  background: var(--area-accent);
 }
 
 
 .area-number {
-  color:
-    rgba(215,170,87,0.44);
+  color:var(--area-accent);
 
   font-size: 11px;
 
@@ -795,7 +787,7 @@ a {
 .area-title {
   margin-top: 55px;
 
-  color: var(--gold);
+  color:var(--area-accent);
 
   font-size: 25px;
 
@@ -1258,6 +1250,45 @@ a {
   margin-top: 34px;
 }
 
+.guarantee {
+  width: min(100%, 600px);
+  margin: 30px auto 0;
+  padding: 24px 28px;
+  border: 1px solid rgba(215,170,87,.32);
+  border-radius: 18px;
+  background: linear-gradient(125deg,rgba(215,170,87,.095),rgba(255,255,255,.018) 70%);
+  text-align: left;
+}
+
+.guarantee-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 17px;
+  color: var(--white);
+  font-size: clamp(19px,2vw,25px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.guarantee-days {
+  color: var(--gold);
+  font-size: 37px;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+.guarantee p {
+  margin: 13px 0 0;
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.guarantee details { margin-top: 16px; color: var(--grey); font-size: 13px; line-height: 1.6; }
+.guarantee summary { color: var(--gold); cursor: pointer; font-weight: 800; letter-spacing: .3px; }
+.guarantee details a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+
 
 .final-brand {
   margin-top: 24px;
@@ -1337,6 +1368,8 @@ a {
 
     padding:
       75px 7%;
+
+    background-position:center,46% center;
   }
 
 
@@ -1591,6 +1624,55 @@ a {
 
 }
 
+
+/* =========================================================
+   GAME PLAN PREMIUM REFINEMENTS
+========================================================= */
+.hero-title,.story-heading,.section-title,.goal-line-one,.goal-line-two,.final-title{ text-wrap:balance; }
+.story-section{background:
+  radial-gradient(circle at 14% 18%,rgba(255,255,255,.035),transparent 22%),
+  linear-gradient(180deg,#171717 0%,#101010 52%,#080808 100%)}
+.areas-section{background:
+  radial-gradient(ellipse at 50% 110%,rgba(215,170,87,.07),transparent 40%),
+  linear-gradient(180deg,#090909,#0d0d0d 55%,#070707)}
+.system-section{background:
+  radial-gradient(circle at 82% 15%,rgba(215,170,87,.055),transparent 24%),
+  linear-gradient(145deg,#1b1b1b 0%,#111 50%,#080808 100%)}
+.faq-section{background:linear-gradient(180deg,#090909,#131313 48%,#080808)}
+.area-card,.system-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.area-card:hover,.system-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.30),0 0 26px rgba(215,170,87,.045)}
+.areas-section .section-copy{max-width:1200px}
+@media(min-width:1250px){.areas-section .section-copy{white-space:nowrap}}
+.area-card.area-identity{--area-accent:#d4a35c;--area-glow:rgba(190,126,51,.19);--area-border:rgba(212,163,92,.43)}
+.area-card.area-state{--area-accent:#55a6db;--area-glow:rgba(29,114,175,.21);--area-border:rgba(65,153,209,.47)}
+.area-card.area-response{--area-accent:#c3cacc;--area-glow:rgba(152,169,178,.18);--area-border:rgba(190,202,207,.42)}
+.area-card.area-standards{--area-accent:#efcd56;--area-glow:rgba(224,175,29,.21);--area-border:rgba(239,205,86,.48)}
+.areas-grid .area-card:hover{border-color:var(--area-accent);box-shadow:0 22px 48px rgba(0,0,0,.3),0 0 28px var(--area-glow)}
+.included-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(30px,5vw,78px);margin-top:62px;align-items:stretch}
+.included-workbook{min-height:650px;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border:1px solid rgba(215,170,87,.34);border-radius:22px;background:radial-gradient(circle at 50% 85%,rgba(215,170,87,.11),transparent 48%),linear-gradient(145deg,#1b1813,#080808 65%)}
+.included-workbook img{display:block;width:min(78%,300px);max-height:355px;object-fit:contain;margin:20px auto -20px;filter:drop-shadow(0 20px 28px rgba(0,0,0,.48))}
+.included-label{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase}
+.included-layout h3{margin:16px 0 12px;font-size:clamp(25px,2.5vw,35px);line-height:1.08;font-weight:900;text-transform:uppercase}
+.included-layout p{margin:0;color:var(--grey);font-size:var(--body-size);line-height:var(--body-line)}
+.included-formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.included-formats span{padding:9px 12px;border:1px solid rgba(215,170,87,.35);border-radius:99px;color:#e8d1a2;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.included-details{display:flex;flex-direction:column;justify-content:space-between}
+.included-row{padding:22px 0 30px;border-top:1px solid rgba(255,255,255,.22)}
+.included-row:last-child{padding-bottom:0}
+.included-levels{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
+.included-levels span{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:8px 0;border-bottom:2px solid currentColor}
+.included-levels span:nth-child(1){color:#d4a35c}.included-levels span:nth-child(2){color:#55a6db}.included-levels span:nth-child(3){color:#c3cacc}.included-levels span:nth-child(4){color:#efcd56}
+.goal-statement{margin-top:68px;max-width:1000px;padding-top:46px}
+.goal-line-one,.goal-line-two,.goal-line-three{font-size:clamp(29px,3.6vw,54px);line-height:1.08;letter-spacing:-1.8px;text-transform:uppercase}
+.goal-line-two{color:var(--white);margin-top:4px}
+.goal-line-three{display:block;color:var(--gold);font-weight:900;margin-top:14px}
+@media(max-width:850px){.included-layout{grid-template-columns:1fr;gap:30px}.included-workbook{min-height:0}.included-workbook img{max-height:310px}.included-row{padding:24px 0 28px}}
+@media(max-width:650px){.included-layout{margin-top:42px}.included-workbook{padding:26px}.included-layout h3{font-size:26px}.goal-line-one,.goal-line-two,.goal-line-three{font-size:clamp(27px,7vw,37px)}}
+.final-title{max-width:1350px;margin-left:auto;margin-right:auto}
+.final-gold-line{font-size:clamp(39px,4.35vw,68px)!important}
+@media(max-width:650px){
+ .final-gold-line{font-size:clamp(31px,8vw,40px)!important}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 <link rel="stylesheet" href="/assets/chrome.css">
@@ -1603,11 +1685,11 @@ a {
 <nav class="site-links">
 <a href="/">Home</a>
 <a href="/about-us/">About</a>
-<div class="nav-dropdown open-desktop">
+<div class="nav-dropdown">
 <button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Online Programs <span class="nav-chevron">⌄</span></button>
 <div class="nav-dropdown-menu">
 <a href="/peak-state-starter/"><span class="nav-free">FREE</span>Peak State Starter</a>
-<a href="/game-plan/" class="active">The G.A.M.E. Plan</a>
+<a href="/game-plan/">The G.A.M.E. Plan</a>
 </div>
 </div>
 <a href="/basketball-training/">Basketball Training</a>
@@ -1686,25 +1768,8 @@ a {
   <div class="story-wrap">
 
 
-    <!--
-      REPLACE THIS VIDEO PLACEHOLDER
-      WITH YOUR REAL VIDEO EMBED
-    -->
-
-    <div class="video-placeholder">
-
-      <div class="video-placeholder-inner">
-
-        <div class="video-icon">
-          ▶
-        </div>
-
-        <div class="video-label">
-          Add G.A.M.E. Plan Video Here
-        </div>
-
-      </div>
-
+    <div class="video-placeholder video-embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/l9bwrKpHhGI" title="The G.A.M.E. Plan video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
 
@@ -1789,8 +1854,7 @@ a {
 
 
       <div class="section-copy">
-        The G.A.M.E. Plan focuses on four key areas that shape
-        how you think, respond and perform when the game gets tough.
+        The G.A.M.E. Plan focuses on four areas that shape how you think, respond and perform under pressure.
       </div>
 
 
@@ -1802,7 +1866,7 @@ a {
 
       <!-- IDENTITY -->
 
-      <div class="area-card">
+      <div class="area-card area-identity">
 
         <div class="area-number">
           01
@@ -1823,7 +1887,7 @@ a {
 
       <!-- STATE -->
 
-      <div class="area-card">
+      <div class="area-card area-state">
 
         <div class="area-number">
           02
@@ -1844,7 +1908,7 @@ a {
 
       <!-- RESPONSE -->
 
-      <div class="area-card">
+      <div class="area-card area-response">
 
         <div class="area-number">
           03
@@ -1865,7 +1929,7 @@ a {
 
       <!-- STANDARDS -->
 
-      <div class="area-card">
+      <div class="area-card area-standards">
 
         <div class="area-number">
           04
@@ -1907,131 +1971,73 @@ a {
 
 
       <div class="eyebrow">
-        More Than Information
+        Inside The Program
       </div>
 
 
       <h2 class="section-title">
 
         <span class="title-line">
-          A COMPLETE SYSTEM FOR
+          WHAT YOU GET WITH
         </span>
 
         <span class="title-line gold">
-          REAL GROWTH
+          THE G.A.M.E. PLAN
         </span>
 
       </h2>
 
 
       <div class="section-copy">
-        You won't just learn concepts. You'll work through a structured
-        process designed to help you understand them, apply them and
-        use them in real game situations.
+        Your workbook, all four levels and practical tools you can return to before, during and after games.
       </div>
 
 
     </div>
 
 
-    <div class="system-grid">
-
-
-      <!-- UNDERSTAND -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          01
+    <div class="included-layout">
+      <div class="included-workbook">
+        <div class="included-workbook-copy">
+          <div class="included-label">01 / YOUR PLAYBOOK</div>
+          <h3>The complete workbook</h3>
+          <p>Get the full PDF to use straight away, plus a physical workbook sent to you to work through and revisit.</p>
+          <div class="included-formats"><span>Full PDF</span><span>Physical workbook</span></div>
         </div>
-
-        <div class="system-title">
-          Understand
-        </div>
-
-        <div class="system-copy">
-          Recognise the thoughts, patterns and reactions
-          that currently shape the way you perform.
-        </div>
-
+        <img src="/assets/game-plan-cover.webp" alt="The G.A.M.E. Plan workbook cover" loading="lazy">
       </div>
-
-
-      <!-- BUILD -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          02
+      <div class="included-details">
+        <div class="included-row">
+          <div class="included-label">02 / THE FRAMEWORK</div>
+          <h3>All four levels</h3>
+          <p>Work through Identity, State, Response and Standards to build your approach to the mental side of basketball.</p>
+          <div class="included-levels"><span>Identity</span><span>State</span><span>Response</span><span>Standards</span></div>
         </div>
-
-        <div class="system-title">
-          Build
+        <div class="included-row">
+          <div class="included-label">03 / YOUR RESOURCE HUB</div>
+          <h3>The VAULT</h3>
+          <p>Access key tools, worksheets and audios you can use in your daily work and on game day.</p>
         </div>
-
-        <div class="system-copy">
-          Develop practical mental tools that give you a
-          better way to approach confidence, pressure
-          and adversity.
+        <div class="included-row">
+          <div class="included-label">04 / PUT IT INTO PRACTICE</div>
+          <h3>Tools for real game moments</h3>
+          <p>Use the Post-Game Reset after tough games, the Peak State Programming Tool for daily mental rehearsal and Peak State Prime as your game-day audio, with more resources in the VAULT.</p>
         </div>
-
       </div>
-
-
-      <!-- APPLY -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          03
-        </div>
-
-        <div class="system-title">
-          Apply
-        </div>
-
-        <div class="system-copy">
-          Take those tools into training and game situations
-          so they become something you can actually use
-          under pressure.
-        </div>
-
-      </div>
-
-
-      <!-- REINFORCE -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          04
-        </div>
-
-        <div class="system-title">
-          Reinforce
-        </div>
-
-        <div class="system-copy">
-          Keep reviewing, adjusting and strengthening
-          the behaviours that help you compete with
-          more consistency.
-        </div>
-
-      </div>
-
-
     </div>
 
 
     <div class="goal-statement">
 
       <span class="goal-line-one">
-        The goal isn't to feel confident every second.
+        The system I wish I had
       </span>
 
       <span class="goal-line-two">
-        It's to build a system that helps you keep playing your game when confidence is tested.
+        when I needed it the most.
       </span>
+
+      <span class="goal-line-three">And now, it's yours.</span>
 
     </div>
 
@@ -2152,6 +2158,45 @@ a {
       </div>
 
 
+      <!-- FAQ 4 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>What do I get when I purchase The G.A.M.E. Plan?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          You’ll get the full PDF and a physical workbook sent to you.
+          You’ll work through all four levels: Identity, State, Response and Standards.
+          You’ll also get access to the VAULT, with worksheets, audios and tools
+          to use alongside the program.
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 5 -->
+
+      <div class="faq-item">
+
+        <button class="faq-question" type="button">
+          <span>How does training the mental side of basketball actually help?</span>
+          <span class="faq-icon">+</span>
+        </button>
+
+        <div class="faq-answer">
+          Your skills don’t disappear when you feel pressure, but it can become
+          harder to trust them. Training the mental side helps you recognise
+          what throws you off, respond better after mistakes and keep making
+          decisions instead of getting stuck on the last play. The goal is to
+          use more of the game you’ve already worked hard to build.
+        </div>
+
+      </div>
+
+
     </div>
 
 
@@ -2185,8 +2230,8 @@ a {
         YOUR GAME IS ALREADY IN YOU
       </span>
 
-      <span class="gold">
-        BUILD THE MINDSET TO TRUST IT
+      <span class="gold final-gold-line">
+        BUILD THE MINDSET TO TRUST&nbsp;IT
       </span>
 
     </h2>
@@ -2210,6 +2255,15 @@ a {
     >
       Get The G.A.M.E. Plan
     </a>
+
+    <div class="guarantee" aria-label="60-day money-back guarantee">
+      <div class="guarantee-heading"><span class="guarantee-days">60 DAYS</span><span>Full money-back guarantee</span></div>
+      <p>Put The G.A.M.E. Plan to work. If you’re not satisfied, you can request a refund of the full amount you paid within 60 days of receiving your physical workbook.</p>
+      <details>
+        <summary>How the guarantee works</summary>
+        <p>Email <a href="mailto:info@peakstateplaybook.com?subject=G.A.M.E.%20Plan%20guarantee">info@peakstateplaybook.com</a> with your purchase details within 60 days of receiving your physical workbook. The refund covers the entire G.A.M.E. Plan purchase, including the workbook. This extra promise does not limit your rights under Australian Consumer Law.</p>
+      </details>
+    </div>
 
 
     <div class="final-brand">

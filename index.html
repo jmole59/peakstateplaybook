@@ -297,7 +297,7 @@ a {
       rgba(0,0,0,0.35) 100%
     ),
 
-    url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+    url("/assets/home-hero-shooting.webp");
 
   background-size: cover;
 
@@ -1579,17 +1579,17 @@ a {
 
   gap: 18px;
 
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 
 .testimonial-card {
   position: relative;
 
-  min-height: 310px;
+  min-height: 286px;
 
   padding:
-    32px 30px 28px;
+    28px 30px 24px;
 
   display: flex;
 
@@ -1917,7 +1917,7 @@ a {
         rgba(0,0,0,1) 100%
       ),
 
-      url("https://static.wixstatic.com/media/f6209e_3a3f0b666d1e487d84e0b02f137fbc09~mv2.png");
+      url("/assets/home-hero-shooting.webp");
   }
 
 
@@ -2606,7 +2606,7 @@ a {
 }
 .site-footer-logo img {
   display: block;
-  width: 205px;
+  width: 68px;
   max-width: 100%;
   height: auto;
 }
@@ -2692,7 +2692,7 @@ a {
   .site-links { top: 66px; }
   .site-footer { padding: 42px 7% 26px; }
   .site-footer-top { grid-template-columns: 1fr; gap: 34px; }
-  .site-footer-logo img { width: 175px; margin: 0 auto; }
+  .site-footer-logo img { width: 64px; margin: 0 auto; }
   .site-footer-copy, .site-footer-contact { text-align: center; margin-left: auto; margin-right: auto; }
   .site-footer-links { grid-template-columns: 1fr; text-align: center; }
   .site-footer-bottom { flex-direction: column; align-items: center; text-align: center; }
@@ -2703,11 +2703,11 @@ a {
 /* ONLINE PROGRAMS DROPDOWN */
 .site-nav-dropdown{position:relative;display:flex;align-items:center}
 .site-nav-dropdown-trigger{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#e3e3e3;font-family:inherit;font-size:10px;font-weight:800;letter-spacing:1.45px;text-transform:uppercase;white-space:nowrap;cursor:pointer;padding:0}
-.site-nav-dropdown-trigger:hover,.site-nav-dropdown:focus-within .site-nav-dropdown-trigger,.site-nav-dropdown.open .site-nav-dropdown-trigger{color:var(--gold)}
+.site-nav-dropdown-trigger:hover,.site-nav-dropdown.open .site-nav-dropdown-trigger{color:var(--gold)}
 .site-nav-chevron{font-size:10px;transition:transform .2s ease}
-.site-nav-dropdown:hover .site-nav-chevron,.site-nav-dropdown:focus-within .site-nav-chevron,.site-nav-dropdown.open .site-nav-chevron{transform:rotate(180deg)}
+.site-nav-dropdown:hover .site-nav-chevron,.site-nav-dropdown.open .site-nav-chevron{transform:rotate(180deg)}
 .site-nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(-6px);min-width:270px;padding:10px;border:1px solid rgba(215,170,87,.22);border-radius:14px;background:rgba(8,8,8,.99);box-shadow:0 22px 60px rgba(0,0,0,.55);opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease}
-.site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown:focus-within .site-nav-dropdown-menu,.site-nav-dropdown.open .site-nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.site-nav-dropdown:hover .site-nav-dropdown-menu,.site-nav-dropdown.open .site-nav-dropdown-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0)}
 .site-nav-dropdown-menu a{display:block;padding:13px 14px!important;border:0!important;border-radius:9px;text-align:left!important;line-height:1.35}
 .site-nav-dropdown-menu a:hover{background:rgba(215,170,87,.07);color:var(--gold)}
 .site-nav-free{display:inline-block;margin-right:7px;color:var(--gold);font-size:8px;letter-spacing:1.5px}
@@ -2719,6 +2719,136 @@ a {
  .site-nav-dropdown-menu a{text-align:center!important;color:#bdbdbd}
 }
 
+
+/* =========================================================
+   HOME PREMIUM REFINEMENTS
+========================================================= */
+.no-break{white-space:nowrap}
+.hero{background-position:center 43%}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse at 55% 112%,transparent 0 28%,rgba(215,170,87,.06) 28.2% 28.45%,transparent 28.7%)}
+.hero-content{position:relative;z-index:3}
+.intro-section{background:
+  radial-gradient(ellipse at 50% 116%,rgba(215,170,87,.055),transparent 37%),
+  linear-gradient(180deg,#171717 0%,#111 52%,#0c0c0c 100%)}
+.intro-section::before{content:"";position:absolute;inset:0;opacity:.6;pointer-events:none;background:
+  linear-gradient(90deg,transparent 49.95%,rgba(255,255,255,.035) 50%,transparent 50.05%)}
+.home-body-line{font-size:clamp(44px,4.7vw,76px)!important;white-space:nowrap}
+.featured-section{background:
+  radial-gradient(circle at 15% 10%,rgba(255,255,255,.09),transparent 14%),
+  radial-gradient(circle at 82% 12%,rgba(215,170,87,.08),transparent 16%),
+  linear-gradient(145deg,#222 0%,#151515 45%,#090909 100%)}
+.peak-section{background:
+  radial-gradient(circle at 50% 32%,rgba(215,170,87,.055),transparent 28%),
+  linear-gradient(180deg,#090909,#0d0d0d 54%,#080808)}
+.peak-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.peak-card:hover{transform:translateY(-6px);border-color:rgba(215,170,87,.34);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.05)}
+.playbook-title{font-size:clamp(14px,1.18vw,19px)!important;white-space:nowrap;letter-spacing:-.25px}
+.performance-section{background:
+  radial-gradient(ellipse at 50% 108%,rgba(215,170,87,.045),transparent 36%),
+  linear-gradient(180deg,#1a1a1a 0%,#121212 52%,#0a0a0a 100%)}
+.research-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.research-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.42);box-shadow:0 22px 48px rgba(0,0,0,.30)}
+@media(max-width:900px){
+ .home-body-line{white-space:normal}
+ .playbook-title{white-space:normal}
+}
+
+/* Home testimonial cards use text instead of unrelated athlete photos. */
+.testimonial-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.testimonial-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.32),0 0 28px rgba(215,170,87,.045)}
+
+.testimonial-card--example{
+  border-color:rgba(215,170,87,.45);
+  background:linear-gradient(145deg,#202018,#0b0b0b);
+}
+
+/* HOME MOBILE DEAD SPACE FIX */
+@media(max-width:650px){
+  .hero{
+    min-height:610px!important;
+    align-items:center!important;
+    padding:34px 7% 42px!important;
+    background-position:72% 32%!important;
+  }
+  .hero-wrap{min-height:0!important;padding:0!important}
+  .hero-content{padding:0!important}
+  .hero-buttons{
+    width:min(100%,360px)!important;
+    margin:28px auto 0!important;
+    gap:12px!important;
+  }
+  .hero-buttons .button{
+    min-height:54px!important;
+    border-radius:14px!important;
+    width:100%!important;
+  }
+  .featured-section,.featured-wrap{min-height:0!important}
+  .featured-wrap{padding:64px 0!important}
+}
+
+/* Exact print cover presented as a spiral workbook. Home has its own CSS. */
+.featured-real-book{
+  position:relative;
+  min-height:620px;
+  display:grid;
+  place-items:center;
+  padding:42px 28px 58px;
+  isolation:isolate;
+}
+.featured-real-book::before{
+  content:"";
+  position:absolute;
+  width:min(84%,530px);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(215,170,87,.16),transparent 68%);
+  filter:blur(18px);
+  pointer-events:none;
+}
+.featured-book{
+  position:relative;
+  display:block;
+  width:min(72%,390px);
+  aspect-ratio:499/709;
+  filter:drop-shadow(14px 22px 22px rgba(0,0,0,.68));
+}
+.featured-book::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:7px -9px -11px 7px;
+  border-radius:2px 7px 8px 3px;
+  background:repeating-linear-gradient(180deg,#e9e6de 0 1px,#bab6ac 2px,#f2f0e8 3px 4px);
+  box-shadow:8px 10px 22px rgba(0,0,0,.55);
+}
+.featured-book-cover{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border:1px solid rgba(215,170,87,.4);
+  border-radius:3px 5px 5px 3px;
+  box-shadow:inset 5px 0 8px rgba(0,0,0,.5);
+}
+.featured-book-binding{
+  position:absolute;
+  z-index:2;
+  top:12px;
+  bottom:12px;
+  left:-16px;
+  width:26px;
+  background:radial-gradient(ellipse at 64% 50%,transparent 0 7px,#bfb8aa 7.5px 9px,#4c4b48 9.5px 11px,transparent 11.5px) 0 0/26px 24px repeat-y;
+  filter:drop-shadow(-2px 1px 2px rgba(0,0,0,.9));
+}
+@media(max-width:1000px){
+  .featured-real-book{min-height:530px;padding:32px 22px 48px}
+  .featured-book{width:min(68%,350px)}
+}
+@media(max-width:650px){
+  .featured-real-book{min-height:0;padding:38px 16px 36px}
+  .featured-book{width:min(69%,290px)}
+}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -2846,7 +2976,7 @@ a {
         TRAIN YOUR MIND
       </span>
 
-      <span class="gold">
+      <span class="gold home-body-line">
         LIKE YOU TRAIN YOUR BODY
       </span>
 
@@ -2927,45 +3057,11 @@ a {
     </div>
 
 
-    <div class="book-stage">
-
-      <div class="book-glow"></div>
-
-      <div class="book-floor-shadow"></div>
-
-
-      <div class="book">
-
-        <div class="book-pages"></div>
-
-        <div class="book-cover"></div>
-
-
-        <div class="spiral">
-
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-          <span class="ring"></span>
-
-        </div>
-
+    <div class="featured-real-book">
+      <div class="featured-book">
+        <img class="featured-book-cover" src="/assets/game-plan-cover.webp" alt="The G.A.M.E. Plan spiral workbook cover" width="1941" height="2756">
+        <span class="featured-book-binding" aria-hidden="true"></span>
       </div>
-
     </div>
 
 
@@ -3087,7 +3183,7 @@ a {
         </div>
 
         <div class="playbook-title">
-          KEYSTONE PLAYBOOK
+          <span class="no-break">KEYSTONE PLAYBOOK</span>
         </div>
 
         <div class="program-name">
@@ -3441,20 +3537,19 @@ a {
 
     <div class="section-heading">
 
-
       <div class="eyebrow">
-        Real Players · Real Progress
+        On The Court
       </div>
 
 
       <h2 class="section-title">
 
         <span class="title-line">
-          WHAT PLAYERS &amp;
+          WHAT PARENTS &amp;
         </span>
 
         <span class="title-line gold">
-          PARENTS SAY
+          PLAYERS SAY
         </span>
 
       </h2>
@@ -3467,7 +3562,6 @@ a {
 
 
       <div class="testimonial-card">
-
         <div class="quote-mark">
           “
         </div>
@@ -3493,26 +3587,26 @@ a {
       </div>
 
 
-      <div class="testimonial-card">
-
+      <div class="testimonial-card testimonial-card--example">
         <div class="quote-mark">
           “
         </div>
 
         <div class="quote-text">
-          What stood out most was the confidence and focus.
-          You could actually see it starting to carry over
-          into games.
+          After 4 weeks of reviewing his game footage, James started
+          seeing the game much differently. He was picking up on things
+          he’d never noticed before, knew exactly what he needed to work
+          on between games, and has felt much more confident every game.
         </div>
 
         <div class="quote-meta">
 
           <div class="quote-person">
-            Parent
+            James
           </div>
 
           <div class="quote-service">
-            Basketball Training
+            Film Review
           </div>
 
         </div>
@@ -3521,7 +3615,6 @@ a {
 
 
       <div class="testimonial-card">
-
         <div class="quote-mark">
           “
         </div>
