@@ -712,6 +712,9 @@ a {
 
 
 .area-card {
+  --area-accent:var(--gold);
+  --area-glow:rgba(215,170,87,.09);
+  --area-border:rgba(215,170,87,.35);
   position: relative;
 
   min-height: 345px;
@@ -723,15 +726,15 @@ a {
 
   border:
     1px solid
-    rgba(215,170,87,0.30);
+    var(--area-border);
 
   border-radius: 17px;
 
   background:
     radial-gradient(
       circle at 50% 0%,
-      rgba(215,170,87,0.06),
-      transparent 32%
+      var(--area-glow),
+      transparent 68%
     ),
 
     linear-gradient(
@@ -766,13 +769,12 @@ a {
   width: 52px;
   height: 2px;
 
-  background: var(--gold);
+  background: var(--area-accent);
 }
 
 
 .area-number {
-  color:
-    rgba(215,170,87,0.44);
+  color:var(--area-accent);
 
   font-size: 11px;
 
@@ -785,7 +787,7 @@ a {
 .area-title {
   margin-top: 55px;
 
-  color: var(--gold);
+  color:var(--area-accent);
 
   font-size: 25px;
 
@@ -1600,6 +1602,13 @@ a {
 .faq-section{background:linear-gradient(180deg,#090909,#131313 48%,#080808)}
 .area-card,.system-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
 .area-card:hover,.system-card:hover{transform:translateY(-5px);border-color:rgba(215,170,87,.48);box-shadow:0 22px 48px rgba(0,0,0,.30),0 0 26px rgba(215,170,87,.045)}
+.areas-section .section-copy{max-width:1200px}
+@media(min-width:1250px){.areas-section .section-copy{white-space:nowrap}}
+.area-card.area-identity{--area-accent:#d4a35c;--area-glow:rgba(190,126,51,.19);--area-border:rgba(212,163,92,.43)}
+.area-card.area-state{--area-accent:#55a6db;--area-glow:rgba(29,114,175,.21);--area-border:rgba(65,153,209,.47)}
+.area-card.area-response{--area-accent:#c3cacc;--area-glow:rgba(152,169,178,.18);--area-border:rgba(190,202,207,.42)}
+.area-card.area-standards{--area-accent:#efcd56;--area-glow:rgba(224,175,29,.21);--area-border:rgba(239,205,86,.48)}
+.areas-grid .area-card:hover{border-color:var(--area-accent);box-shadow:0 22px 48px rgba(0,0,0,.3),0 0 28px var(--area-glow)}
 .final-title{max-width:1350px;margin-left:auto;margin-right:auto}
 .final-gold-line{font-size:clamp(39px,4.35vw,68px)!important}
 @media(max-width:650px){
@@ -1786,8 +1795,7 @@ a {
 
 
       <div class="section-copy">
-        The G.A.M.E. Plan focuses on four key areas that shape
-        how you think, respond and perform when the game gets tough.
+        The G.A.M.E. Plan focuses on four areas that shape how you think, respond and perform under pressure.
       </div>
 
 
@@ -1799,7 +1807,7 @@ a {
 
       <!-- IDENTITY -->
 
-      <div class="area-card">
+      <div class="area-card area-identity">
 
         <div class="area-number">
           01
@@ -1820,7 +1828,7 @@ a {
 
       <!-- STATE -->
 
-      <div class="area-card">
+      <div class="area-card area-state">
 
         <div class="area-number">
           02
@@ -1841,7 +1849,7 @@ a {
 
       <!-- RESPONSE -->
 
-      <div class="area-card">
+      <div class="area-card area-response">
 
         <div class="area-number">
           03
@@ -1862,7 +1870,7 @@ a {
 
       <!-- STANDARDS -->
 
-      <div class="area-card">
+      <div class="area-card area-standards">
 
         <div class="area-number">
           04
