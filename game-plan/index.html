@@ -449,7 +449,7 @@ a {
   grid-template-columns:
     1.05fr 0.95fr;
 
-  gap: 70px;
+  gap: clamp(32px, 4vw, 70px);
 
   align-items: center;
 }
@@ -514,17 +514,6 @@ a {
   height:100%;
   border:0;
 }
-.video-watch-link {
-  display:inline-block;
-  margin-top:14px;
-  color:var(--gold);
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-}
-
-
 .video-placeholder-inner {
   position: absolute;
 
@@ -593,7 +582,7 @@ a {
     20px 0 0;
 
   font-size:
-    clamp(48px, 4.6vw, 70px);
+    clamp(38px, 3.6vw, 56px);
 
   line-height: 0.98;
 
@@ -1714,7 +1703,6 @@ a {
     <div class="video-placeholder video-embed">
       <iframe src="https://www.youtube-nocookie.com/embed/l9bwrKpHhGI" title="The G.A.M.E. Plan video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <a class="video-watch-link" href="https://www.youtube.com/watch?v=l9bwrKpHhGI" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
 
 
     <div class="story-content">
