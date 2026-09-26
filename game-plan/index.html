@@ -1250,6 +1250,45 @@ a {
   margin-top: 34px;
 }
 
+.guarantee {
+  width: min(100%, 600px);
+  margin: 30px auto 0;
+  padding: 24px 28px;
+  border: 1px solid rgba(215,170,87,.32);
+  border-radius: 18px;
+  background: linear-gradient(125deg,rgba(215,170,87,.095),rgba(255,255,255,.018) 70%);
+  text-align: left;
+}
+
+.guarantee-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 17px;
+  color: var(--white);
+  font-size: clamp(19px,2vw,25px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.guarantee-days {
+  color: var(--gold);
+  font-size: 37px;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
+
+.guarantee p {
+  margin: 13px 0 0;
+  color: var(--grey);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.guarantee details { margin-top: 16px; color: var(--grey); font-size: 13px; line-height: 1.6; }
+.guarantee summary { color: var(--gold); cursor: pointer; font-weight: 800; letter-spacing: .3px; }
+.guarantee details a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+
 
 .final-brand {
   margin-top: 24px;
@@ -2216,6 +2255,15 @@ a {
     >
       Get The G.A.M.E. Plan
     </a>
+
+    <div class="guarantee" aria-label="60-day money-back guarantee">
+      <div class="guarantee-heading"><span class="guarantee-days">60 DAYS</span><span>Full money-back guarantee</span></div>
+      <p>Put The G.A.M.E. Plan to work. If you’re not satisfied, you can request a refund of the full amount you paid within 60 days of receiving your physical workbook.</p>
+      <details>
+        <summary>How the guarantee works</summary>
+        <p>Email <a href="mailto:info@peakstateplaybook.com?subject=G.A.M.E.%20Plan%20guarantee">info@peakstateplaybook.com</a> with your purchase details within 60 days of receiving your physical workbook. The refund covers the entire G.A.M.E. Plan purchase, including the workbook. This extra promise does not limit your rights under Australian Consumer Law.</p>
+      </details>
+    </div>
 
 
     <div class="final-brand">
