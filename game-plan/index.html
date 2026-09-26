@@ -1609,6 +1609,26 @@ a {
 .area-card.area-response{--area-accent:#c3cacc;--area-glow:rgba(152,169,178,.18);--area-border:rgba(190,202,207,.42)}
 .area-card.area-standards{--area-accent:#efcd56;--area-glow:rgba(224,175,29,.21);--area-border:rgba(239,205,86,.48)}
 .areas-grid .area-card:hover{border-color:var(--area-accent);box-shadow:0 22px 48px rgba(0,0,0,.3),0 0 28px var(--area-glow)}
+.included-layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(30px,5vw,78px);margin-top:62px;align-items:stretch}
+.included-workbook{min-height:650px;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;border:1px solid rgba(215,170,87,.34);border-radius:22px;background:radial-gradient(circle at 50% 85%,rgba(215,170,87,.11),transparent 48%),linear-gradient(145deg,#1b1813,#080808 65%)}
+.included-workbook img{display:block;width:min(78%,300px);max-height:355px;object-fit:contain;margin:20px auto -20px;filter:drop-shadow(0 20px 28px rgba(0,0,0,.48))}
+.included-label{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase}
+.included-layout h3{margin:16px 0 12px;font-size:clamp(25px,2.5vw,35px);line-height:1.08;font-weight:900;text-transform:uppercase}
+.included-layout p{margin:0;color:var(--grey);font-size:var(--body-size);line-height:var(--body-line)}
+.included-formats{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.included-formats span{padding:9px 12px;border:1px solid rgba(215,170,87,.35);border-radius:99px;color:#e8d1a2;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.included-details{display:flex;flex-direction:column;justify-content:space-between}
+.included-row{padding:22px 0 30px;border-top:1px solid rgba(255,255,255,.22)}
+.included-row:last-child{padding-bottom:0}
+.included-levels{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}
+.included-levels span{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:8px 0;border-bottom:2px solid currentColor}
+.included-levels span:nth-child(1){color:#d4a35c}.included-levels span:nth-child(2){color:#55a6db}.included-levels span:nth-child(3){color:#c3cacc}.included-levels span:nth-child(4){color:#efcd56}
+.goal-statement{margin-top:68px;max-width:1000px;padding-top:46px}
+.goal-line-one,.goal-line-two,.goal-line-three{font-size:clamp(29px,3.6vw,54px);line-height:1.08;letter-spacing:-1.8px;text-transform:uppercase}
+.goal-line-two{color:var(--white);margin-top:4px}
+.goal-line-three{display:block;color:var(--gold);font-weight:900;margin-top:14px}
+@media(max-width:850px){.included-layout{grid-template-columns:1fr;gap:30px}.included-workbook{min-height:0}.included-workbook img{max-height:310px}.included-row{padding:24px 0 28px}}
+@media(max-width:650px){.included-layout{margin-top:42px}.included-workbook{padding:26px}.included-layout h3{font-size:26px}.goal-line-one,.goal-line-two,.goal-line-three{font-size:clamp(27px,7vw,37px)}}
 .final-title{max-width:1350px;margin-left:auto;margin-right:auto}
 .final-gold-line{font-size:clamp(39px,4.35vw,68px)!important}
 @media(max-width:650px){
@@ -1912,131 +1932,73 @@ a {
 
 
       <div class="eyebrow">
-        More Than Information
+        Inside The Program
       </div>
 
 
       <h2 class="section-title">
 
         <span class="title-line">
-          A COMPLETE SYSTEM FOR
+          WHAT YOU GET WITH
         </span>
 
         <span class="title-line gold">
-          REAL GROWTH
+          THE G.A.M.E. PLAN
         </span>
 
       </h2>
 
 
       <div class="section-copy">
-        You won't just learn concepts. You'll work through a structured
-        process designed to help you understand them, apply them and
-        use them in real game situations.
+        Your workbook, all four levels and practical tools you can return to before, during and after games.
       </div>
 
 
     </div>
 
 
-    <div class="system-grid">
-
-
-      <!-- UNDERSTAND -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          01
+    <div class="included-layout">
+      <div class="included-workbook">
+        <div class="included-workbook-copy">
+          <div class="included-label">01 / YOUR PLAYBOOK</div>
+          <h3>The complete workbook</h3>
+          <p>Get the full PDF to use straight away, plus a physical workbook sent to you to work through and revisit.</p>
+          <div class="included-formats"><span>Full PDF</span><span>Physical workbook</span></div>
         </div>
-
-        <div class="system-title">
-          Understand
-        </div>
-
-        <div class="system-copy">
-          Recognise the thoughts, patterns and reactions
-          that currently shape the way you perform.
-        </div>
-
+        <img src="/assets/game-plan-cover.webp" alt="The G.A.M.E. Plan workbook cover" loading="lazy">
       </div>
-
-
-      <!-- BUILD -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          02
+      <div class="included-details">
+        <div class="included-row">
+          <div class="included-label">02 / THE FRAMEWORK</div>
+          <h3>All four levels</h3>
+          <p>Work through Identity, State, Response and Standards to build your approach to the mental side of basketball.</p>
+          <div class="included-levels"><span>Identity</span><span>State</span><span>Response</span><span>Standards</span></div>
         </div>
-
-        <div class="system-title">
-          Build
+        <div class="included-row">
+          <div class="included-label">03 / YOUR RESOURCE HUB</div>
+          <h3>The VAULT</h3>
+          <p>Access key tools, worksheets and audios you can use in your daily work and on game day.</p>
         </div>
-
-        <div class="system-copy">
-          Develop practical mental tools that give you a
-          better way to approach confidence, pressure
-          and adversity.
+        <div class="included-row">
+          <div class="included-label">04 / PUT IT INTO PRACTICE</div>
+          <h3>Tools for real game moments</h3>
+          <p>Use the Post-Game Reset after tough games, the Peak State Programming Tool for daily mental rehearsal and Peak State Prime as your game-day audio, with more resources in the VAULT.</p>
         </div>
-
       </div>
-
-
-      <!-- APPLY -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          03
-        </div>
-
-        <div class="system-title">
-          Apply
-        </div>
-
-        <div class="system-copy">
-          Take those tools into training and game situations
-          so they become something you can actually use
-          under pressure.
-        </div>
-
-      </div>
-
-
-      <!-- REINFORCE -->
-
-      <div class="system-card">
-
-        <div class="system-number">
-          04
-        </div>
-
-        <div class="system-title">
-          Reinforce
-        </div>
-
-        <div class="system-copy">
-          Keep reviewing, adjusting and strengthening
-          the behaviours that help you compete with
-          more consistency.
-        </div>
-
-      </div>
-
-
     </div>
 
 
     <div class="goal-statement">
 
       <span class="goal-line-one">
-        The goal isn't to feel confident every second.
+        The system I wish I had
       </span>
 
       <span class="goal-line-two">
-        It's to build a system that helps you keep playing your game when confidence is tested.
+        when I needed it the most.
       </span>
+
+      <span class="goal-line-three">And now, it's yours.</span>
 
     </div>
 
