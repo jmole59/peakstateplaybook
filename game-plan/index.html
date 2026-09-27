@@ -1673,6 +1673,14 @@ a {
 @media(max-width:650px){
  .final-gold-line{font-size:clamp(31px,8vw,40px)!important}
 }
+
+/* Cover-inspired treatment for the premium G.A.M.E. Plan title. */
+.hero-title-lockup{position:relative;display:table;max-width:100%;margin:0 auto;padding:16px clamp(18px,3vw,52px) 18px;border:1px solid rgba(215,170,87,.72);border-radius:13px;background:linear-gradient(135deg,rgba(0,0,0,.34),rgba(0,0,0,.08));box-shadow:inset 0 0 0 1px rgba(232,189,104,.09),0 16px 60px rgba(0,0,0,.28)}
+.hero-title-lockup:before{content:"";position:absolute;left:8%;top:-1px;width:19%;height:1px;background:linear-gradient(90deg,transparent,#fff4cf,transparent);box-shadow:0 0 13px 3px rgba(249,208,122,.42)}
+.hero-series{position:absolute;left:50%;top:-10px;transform:translateX(-50%);padding:0 15px;background:#0a0a0a;color:#f0d4a0;font-size:11px;font-weight:900;letter-spacing:3px;white-space:nowrap;text-transform:uppercase}
+.hero-title-lockup .hero-title{color:#d7aa57;background:linear-gradient(180deg,#fff0c1 2%,#efc879 27%,#ae7336 55%,#f2c477 80%,#c58d4d 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(1px 2px 0 rgba(70,37,13,.7));font-size:clamp(65px,8.2vw,116px);line-height:1.06;letter-spacing:-4px}
+@media(max-width:650px){.hero-title-lockup{padding:15px 12px 12px;border-radius:8px}.hero-title-lockup .hero-title{font-size:clamp(31px,9vw,55px);letter-spacing:-2px}.hero-series{font-size:8px;letter-spacing:2px;top:-8px}}
+@media(max-width:390px){.hero-title-lockup .hero-title{font-size:8.6vw}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 <link rel="stylesheet" href="/assets/chrome.css">
@@ -1718,9 +1726,10 @@ a {
     </div>
 
 
-    <h1 class="hero-title">
-      G.A.M.E. PLAN
-    </h1>
+    <div class="hero-title-lockup">
+      <span class="hero-series">P.E.A.K. SERIES</span>
+      <h1 class="hero-title">G.A.M.E. PLAN</h1>
+    </div>
 
 
     <div class="hero-tagline">
