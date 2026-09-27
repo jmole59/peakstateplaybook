@@ -973,3 +973,35 @@ img{max-width:100%}
   .schools-enquiry{padding-top:61px;padding-bottom:68px}
 }
 @media(prefers-reduced-motion:reduce){.workshop-detail,.workshop-icon:after{transition:none}}
+
+/* Schools: photographic teaching hero, topic orbit and editorial outcomes. */
+.schools-cinematic-hero{position:relative;isolation:isolate;min-height:640px;display:flex;align-items:center;overflow:hidden;background:#080808}
+.schools-cinematic-visual{position:absolute;inset:0;z-index:-2}
+.schools-cinematic-visual img{width:100%;height:100%;object-fit:cover;object-position:center 39%;filter:brightness(.72) saturate(.76) contrast(1.07)}
+.schools-cinematic-hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.97) 17%,rgba(8,8,8,.77) 42%,rgba(8,8,8,.16) 72%),linear-gradient(0deg,rgba(7,7,7,.62),transparent 33%)}
+.schools-cinematic-copy{width:min(730px,54%);margin-left:max(6vw,calc((100vw - 1400px)/2));padding:88px 0;color:#fff}
+.schools-cinematic-copy .display{font-size:clamp(48px,5.6vw,94px);line-height:.98}
+.schools-cinematic-copy .lead{max-width:670px}
+.schools-learning-intro{max-width:850px;margin:0 auto;text-align:center}
+.schools-learning-orbit{--ring:rgba(215,170,87,.22);position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 54px;align-items:center;max-width:1080px;min-height:530px;margin:30px auto 0;padding:30px 0}
+.schools-learning-orbit:before{content:"";position:absolute;inset:4% 21%;border:1px solid var(--ring);border-radius:50%;pointer-events:none}
+.schools-learning-hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;align-content:center;width:265px;height:265px;border-radius:50%;background:radial-gradient(circle at 45% 25%,#33271b,#0a0a0a 70%);border:1px solid rgba(215,170,87,.55);box-shadow:0 0 65px rgba(215,170,87,.1),0 20px 80px #000;text-align:center}
+.schools-learning-hub span{color:var(--gold);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:2px}
+.schools-learning-hub strong{margin-top:15px;color:#fff;font-size:25px;line-height:1.12;text-transform:uppercase}
+.schools-learning-topic{position:relative;z-index:1;display:grid;align-content:center;gap:7px;min-height:122px;padding:22px 26px;background:linear-gradient(135deg,#191817,#0b0b0b);border-left:2px solid var(--gold);box-shadow:0 16px 32px rgba(0,0,0,.2)}
+.schools-learning-topic:nth-child(2),.schools-learning-topic:nth-child(5){grid-column:1}
+.schools-learning-topic:nth-child(3),.schools-learning-topic:nth-child(6){grid-column:3}
+.schools-learning-topic:nth-child(4){grid-column:1}.schools-learning-topic:nth-child(7){grid-column:3}
+.schools-learning-topic:nth-child(2),.schools-learning-topic:nth-child(3){grid-row:1}
+.schools-learning-topic:nth-child(4),.schools-learning-topic:nth-child(5){grid-row:2}
+.schools-learning-topic:nth-child(6),.schools-learning-topic:nth-child(7){grid-row:3}
+.schools-learning-topic b{color:var(--gold);font-size:14px;text-transform:uppercase;letter-spacing:1.2px}
+.schools-learning-topic span{font-size:13px;color:#d2d2d2;line-height:1.45}
+.schools-outcomes .section-title{max-width:1000px}
+.schools-outcome-ledger{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:45px;border-top:1px solid rgba(215,170,87,.35);border-left:1px solid rgba(215,170,87,.2)}
+.schools-outcome-ledger>div{display:grid;grid-template-columns:65px 1fr;column-gap:15px;align-content:center;min-height:164px;padding:28px 34px;border-right:1px solid rgba(215,170,87,.2);border-bottom:1px solid rgba(215,170,87,.2);background:linear-gradient(120deg,rgba(215,170,87,.045),transparent 65%)}
+.schools-outcome-num{grid-row:span 2;font-size:31px;font-weight:900;color:var(--gold);line-height:1}
+.schools-outcome-ledger strong{color:#fff;font-size:19px;text-transform:uppercase}
+.schools-outcome-ledger p{margin:9px 0 0;color:#c6c6c6;font-size:14px;line-height:1.5}
+@media(max-width:850px){.schools-cinematic-hero{min-height:620px;align-items:flex-end}.schools-cinematic-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.93) 20%,rgba(8,8,8,.25) 80%)}.schools-cinematic-visual img{object-position:66% center}.schools-cinematic-copy{width:auto;margin:0;padding:240px 7% 58px}.schools-cinematic-copy .display{font-size:clamp(44px,9vw,72px)}.schools-learning-orbit{gap:15px 22px;min-height:490px}.schools-learning-hub{width:205px;height:205px}.schools-learning-hub strong{font-size:20px}.schools-learning-topic{padding:16px;min-height:110px}}
+@media(max-width:600px){.schools-cinematic-hero{min-height:0}.schools-cinematic-copy{padding-top:300px}.schools-cinematic-visual img{object-position:67% top}.schools-learning-orbit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:0;gap:10px;padding:0}.schools-learning-orbit:before{display:none}.schools-learning-hub{position:static;transform:none;grid-column:1/-1;grid-row:1;width:178px;height:178px;margin:0 auto 15px}.schools-learning-topic:nth-child(n){grid-column:auto;grid-row:auto;min-height:100px;padding:14px}.schools-learning-topic b{font-size:12px}.schools-learning-topic span{font-size:12px}.schools-outcome-ledger{grid-template-columns:1fr}.schools-outcome-ledger>div{min-height:130px;padding:22px;grid-template-columns:48px 1fr}.schools-outcome-num{font-size:25px}.schools-outcome-ledger strong{font-size:16px}}
