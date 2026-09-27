@@ -2849,6 +2849,22 @@ a {
   .featured-real-book{min-height:0;padding:38px 16px 36px}
   .featured-book{width:min(69%,290px)}
 }
+
+/* Match the shared footer used throughout the site. */
+.site-footer{padding:54px 0 28px;background:#050505}
+.site-footer .container{width:min(1320px,90%);margin:0 auto}
+.site-footer .footer-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.site-footer .footer-brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+.site-footer .footer-brand img{display:block;width:48px;height:56px;object-fit:contain}
+.site-footer .footer-brand strong{font-size:14px;letter-spacing:2px;text-transform:uppercase}
+.site-footer .footer-copy{max-width:500px;margin-top:15px;color:#777;font-size:13px;line-height:1.7}
+.site-footer .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.site-footer .footer-links a,.site-footer .footer-social a{color:#aaa;font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;text-decoration:none}
+.site-footer .footer-links a:hover,.site-footer .footer-social a:hover{color:var(--gold)}
+.site-footer .footer-bottom{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;gap:20px;color:#5f5f5f;font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+.site-footer .footer-social{display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:800px){.site-footer .footer-top{grid-template-columns:1fr;gap:35px}}
+@media(max-width:600px){.site-footer .footer-links{grid-template-columns:1fr;text-align:center}.site-footer .footer-brand{justify-content:center}.site-footer .footer-copy{text-align:center;margin-left:auto;margin-right:auto}.site-footer .footer-bottom{flex-direction:column;align-items:center;text-align:center}.site-footer .footer-social{justify-content:center}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -3704,41 +3720,7 @@ a {
 </div>
 
 
-<footer class="site-footer">
-  <div class="site-footer-inner">
-    <div class="site-footer-top">
-      <div>
-        <a class="site-footer-logo" href="/" aria-label="Peak State Playbook home">
-          <img src="/assets/gold-p-icon.svg" alt="Peak State Playbook">
-        </a>
-        <div class="site-footer-copy">
-          Basketball mental-performance training, coaching and development designed to help athletes build confidence, handle pressure and perform when it counts.
-        </div>
-        <div class="site-footer-contact">
-          Contact: <a href="mailto:info@peakstateplaybook.com">info@peakstateplaybook.com</a>
-        </div>
-      </div>
-      <div class="site-footer-links">
-        <a href="/">Home</a>
-        <a href="/about-us">About</a>
-        <a href="/peak-state-starter/">Peak State Starter</a>
-        <a href="/game-plan/">The G.A.M.E. Plan</a>
-        <a href="/basketball-training">Basketball Training</a>
-        <a href="/film-room">Film Room</a>
-        <a href="/school-team-workshops">Schools &amp; Teams</a>
-        <a href="/contact">Contact</a>
-      </div>
-    </div>
-    <div class="site-footer-bottom">
-      <div>© 2026 Peak State Playbook™. All rights reserved.</div>
-      <div class="site-footer-social">
-        <a href="https://www.instagram.com/peakstateplaybook/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/peakstateplaybook" target="_blank" rel="noopener noreferrer">Facebook</a>
-        <a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener noreferrer">TikTok</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="footer-brand" href="/"><img src="/assets/gold-p-icon.svg" alt="Peak State Playbook"><strong>Peak State Playbook</strong></a><div class="footer-copy">Basketball mental-performance training, coaching and development designed to help athletes build confidence, handle pressure and perform when it counts.</div></div><div class="footer-links"><a href="/about-us/">About</a><a href="/peak-state-starter/">Peak State Starter</a><a href="/game-plan/">The G.A.M.E. Plan</a><a href="/basketball-training/">Basketball Training</a><a href="/film-room/">Film Room</a><a href="/school-team-workshops/">Schools & Teams</a><a href="/contact/">Contact</a><a href="/login/">Log In</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="footer-bottom"><span>© 2026 Peak State Playbook™. All rights reserved.</span><div class="footer-social"><a href="https://www.instagram.com/peakstateplaybook/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/peakstateplaybook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener">TikTok</a></div></div></div></footer>
 <script>
 (function(){
   const header = document.getElementById('siteHeader');
