@@ -898,5 +898,28 @@ img{max-width:100%}
   .film-awareness .film-note{min-height:0}
   .film-finale{padding:64px 0 69px}
   .film-finale .section-title{font-size:clamp(36px,9vw,51px)}
-  .film-finale .button{width:min(100%,360px)}
+.film-finale .button{width:min(100%,360px)}
 }
+
+/* Film Room offer details remain out of the card until requested. */
+.film-awareness .section-title span{display:block}
+.film-offer-card{display:flex;flex-direction:column;align-items:flex-start}
+.film-offer-card .card-title{margin-top:16px}
+.film-offer-card .price{margin-top:18px}
+.film-offer-card>p{min-height:82px;margin:15px 0 0}
+.film-offer-toggle{display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;margin:19px 0 0;padding:15px 0;border:0;border-top:1px solid rgba(215,170,87,.24);background:none;color:var(--gold);font:900 11px Arial,Helvetica,sans-serif;letter-spacing:1.5px;text-align:left;text-transform:uppercase;cursor:pointer}
+.film-offer-toggle:hover,.film-offer-toggle:focus-visible{color:#f2cc83}
+.film-offer-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.film-offer-icon{position:relative;flex:0 0 15px;width:15px;height:15px}
+.film-offer-icon:before,.film-offer-icon:after{content:"";position:absolute;top:7px;left:1px;width:13px;height:1.5px;background:currentColor;transition:transform .28s ease}
+.film-offer-icon:after{transform:rotate(90deg)}
+.film-offer-toggle[aria-expanded="true"] .film-offer-icon:after{transform:rotate(0)}
+.film-offer-detail{display:grid;grid-template-rows:0fr;opacity:0;width:100%;transition:grid-template-rows .34s ease,opacity .3s ease}
+.film-offer-detail[aria-hidden="false"]{grid-template-rows:1fr;opacity:1}
+.film-offer-detail-inner{min-height:0;overflow:hidden}
+.film-offer-detail p{margin:0 0 15px;color:#d3d3d3;font-size:14px;line-height:1.6}
+.film-offer-detail p:first-child{padding-top:8px}
+.film-offer-detail .film-offer-fit{margin-bottom:21px;color:#e1bc77;font-size:13px}
+.film-offer-card>.button{margin-top:auto}
+@media(max-width:800px){.film-offer-card>p{min-height:0}.film-offer-card>.button{margin-top:4px}}
+@media(prefers-reduced-motion:reduce){.film-offer-detail,.film-offer-icon:after{transition:none}}
