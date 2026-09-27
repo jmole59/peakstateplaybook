@@ -851,5 +851,52 @@ img{max-width:100%}
   .training-feedback-side p{font-size:16px}
   .training-finale{padding:61px 0 66px}
   .training-finale .section-title{font-size:clamp(37px,9vw,52px)}
-  .training-finale .button{width:min(100%,360px)}
+.training-finale .button{width:min(100%,360px)}
+}
+
+/* Film Room: one image for the opening, compact study points, clear closing action. */
+.film-cinematic-hero{
+  position:relative;min-height:640px;display:grid;place-items:center;overflow:hidden;text-align:center;
+  background:
+    linear-gradient(180deg,rgba(4,5,5,.73),rgba(4,5,5,.59) 48%,rgba(4,5,5,.84)),
+    url('/assets/film-review-hero.webp') center 43% / cover no-repeat;
+}
+.film-cinematic-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 48%,transparent 23%,rgba(0,0,0,.30) 100%)}
+.film-cinematic-content{position:relative;z-index:1;width:min(980px,90%);padding:92px 0}
+.film-cinematic-content .display{margin:20px auto 0;max-width:970px;font-size:clamp(52px,6.4vw,92px);line-height:1;letter-spacing:-3px;text-shadow:0 5px 38px rgba(0,0,0,.68)}
+.film-cinematic-content .display span{display:block}
+.film-cinematic-content .lead{max-width:820px;margin:27px auto 0;font-size:clamp(18px,1.6vw,23px);line-height:1.4;text-shadow:0 3px 15px rgba(0,0,0,.85)}
+.film-cinematic-content .button-row{justify-content:center;margin-top:32px}
+
+.film-awareness .film-notes{gap:9px;margin-top:25px}
+.film-awareness .film-note{min-height:118px;padding:17px 18px;border-radius:8px;border-color:rgba(255,255,255,.10);background:rgba(10,10,10,.68)}
+.film-awareness .film-note b{margin-bottom:9px}
+.film-awareness .film-note span{display:block;font-size:13px;line-height:1.5}
+.film-direction-intro{max-width:1110px;margin:22px auto 0;text-wrap:balance}
+@media(min-width:1250px){.film-direction-intro{white-space:nowrap}}
+
+.film-finale{position:relative;overflow:hidden;padding:85px 0 90px;text-align:center;background:radial-gradient(ellipse at 50% 30%,rgba(103,142,147,.11),transparent 55%),linear-gradient(180deg,#101213,#050606)}
+.film-finale:before{content:"";position:absolute;top:0;left:50%;width:min(720px,80%);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(215,170,87,.48),transparent)}
+.film-finale-inner{position:relative}
+.film-finale .section-title{max-width:1100px;margin:18px auto 0;font-size:clamp(44px,5.7vw,82px);line-height:1.02}
+.film-finale .section-title span{display:block}
+.film-finale .lead{margin:25px auto 0;font-size:clamp(17px,1.65vw,22px)}
+.film-finale .button{margin-top:30px}
+
+@media(max-width:800px){
+  .film-cinematic-hero{min-height:585px;background-position:60% center}
+  .film-cinematic-content{padding:80px 0}
+  .film-cinematic-content .display{font-size:clamp(46px,8vw,68px)}
+  .film-finale{padding:74px 0 78px}
+}
+@media(max-width:600px){
+  .film-cinematic-hero{min-height:600px;background-position:59% center;background-image:linear-gradient(180deg,rgba(4,5,5,.71),rgba(4,5,5,.64) 46%,rgba(4,5,5,.88)),url('/assets/film-review-hero.webp')}
+  .film-cinematic-content{width:88%;padding:74px 0}
+  .film-cinematic-content .display{font-size:clamp(39px,10vw,55px);letter-spacing:-2px}
+  .film-cinematic-content .lead{font-size:18px}
+  .film-cinematic-content .button-row{max-width:340px;margin:29px auto 0}
+  .film-awareness .film-note{min-height:0}
+  .film-finale{padding:64px 0 69px}
+  .film-finale .section-title{font-size:clamp(36px,9vw,51px)}
+  .film-finale .button{width:min(100%,360px)}
 }
