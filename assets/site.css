@@ -1005,3 +1005,23 @@ img{max-width:100%}
 .schools-outcome-ledger p{margin:9px 0 0;color:#c6c6c6;font-size:14px;line-height:1.5}
 @media(max-width:850px){.schools-cinematic-hero{min-height:620px;align-items:flex-end}.schools-cinematic-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.93) 20%,rgba(8,8,8,.25) 80%)}.schools-cinematic-visual img{object-position:66% center}.schools-cinematic-copy{width:auto;margin:0;padding:240px 7% 58px}.schools-cinematic-copy .display{font-size:clamp(44px,9vw,72px)}.schools-learning-orbit{gap:15px 22px;min-height:490px}.schools-learning-hub{width:205px;height:205px}.schools-learning-hub strong{font-size:20px}.schools-learning-topic{padding:16px;min-height:110px}}
 @media(max-width:600px){.schools-cinematic-hero{min-height:0}.schools-cinematic-copy{padding-top:300px}.schools-cinematic-visual img{object-position:67% top}.schools-learning-orbit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:0;gap:10px;padding:0}.schools-learning-orbit:before{display:none}.schools-learning-hub{position:static;transform:none;grid-column:1/-1;grid-row:1;width:178px;height:178px;margin:0 auto 15px}.schools-learning-topic:nth-child(n){grid-column:auto;grid-row:auto;min-height:100px;padding:14px}.schools-learning-topic b{font-size:12px}.schools-learning-topic span{font-size:12px}.schools-outcome-ledger{grid-template-columns:1fr}.schools-outcome-ledger>div{min-height:130px;padding:22px;grid-template-columns:48px 1fr}.schools-outcome-num{font-size:25px}.schools-outcome-ledger strong{font-size:16px}}
+
+/* Six interactive topic circles around a shared explanation. */
+.schools-learning-orbit{display:block;width:min(100%,860px);height:680px;min-height:0;margin:36px auto 0;padding:0}
+.schools-learning-orbit:before{display:block;inset:13% 15%;border-color:rgba(215,170,87,.30)}
+.schools-learning-hub{width:255px;height:255px;padding:30px;transition:box-shadow .3s ease,background .3s ease}
+.schools-learning-hub strong{font-size:24px;transition:opacity .25s ease}
+.schools-learning-hub p{margin:10px 0 0;color:#ddd;font-size:13px;line-height:1.45}
+.schools-learning-orbit.has-topic .schools-learning-hub{background:radial-gradient(circle at 45% 25%,#43301d,#0a0a0a 72%);box-shadow:0 0 80px rgba(215,170,87,.21),0 20px 80px #000}
+.schools-learning-topic:nth-child(n){position:absolute;z-index:2;display:grid;place-items:center;width:156px;height:156px;min-height:0;aspect-ratio:1;padding:15px;transform:translate(-50%,-50%);border:1px solid rgba(215,170,87,.48);border-radius:50%;background:radial-gradient(circle at 36% 25%,#29231c,#0a0a0a 72%);box-shadow:0 14px 32px rgba(0,0,0,.48);color:#e9c17a;text-align:center;font:900 14px Arial,Helvetica,sans-serif;letter-spacing:1.3px;text-transform:uppercase;cursor:pointer;transition:background .3s ease,color .3s ease,border-color .3s ease,box-shadow .3s ease,scale .3s ease}
+.schools-learning-topic:nth-child(n):hover,.schools-learning-topic.is-active,.schools-learning-topic:focus-visible{scale:1.09;border-color:#e2b96e;background:radial-gradient(circle at 36% 22%,#60482b,#17100a 72%);color:#fff;box-shadow:0 0 45px rgba(215,170,87,.3)}
+.schools-learning-topic:focus-visible{outline:2px solid #fff;outline-offset:4px}
+.schools-learning-topic:nth-child(2){left:50%;top:9%}
+.schools-learning-topic:nth-child(3){left:81%;top:28%}
+.schools-learning-topic:nth-child(4){left:81%;top:72%}
+.schools-learning-topic:nth-child(5){left:50%;top:91%}
+.schools-learning-topic:nth-child(6){left:19%;top:72%}
+.schools-learning-topic:nth-child(7){left:19%;top:28%}
+@media(max-width:700px){.schools-learning-orbit{height:600px}.schools-learning-orbit:before{inset:16% 12%}.schools-learning-topic:nth-child(n){width:116px;height:116px;font-size:11px}.schools-learning-hub{width:205px;height:205px;padding:22px}.schools-learning-hub strong{font-size:19px}.schools-learning-hub p{font-size:11px}}
+@media(max-width:480px){.schools-learning-orbit{height:560px}.schools-learning-orbit:before{inset:19% 7%}.schools-learning-topic:nth-child(n){width:92px;height:92px;font-size:10px;letter-spacing:.5px;padding:8px}.schools-learning-hub{width:170px;height:170px;padding:15px}.schools-learning-hub span{font-size:8px}.schools-learning-hub strong{font-size:16px;margin-top:9px}.schools-learning-hub p{font-size:10px;line-height:1.25;margin-top:6px}.schools-learning-topic:nth-child(3),.schools-learning-topic:nth-child(4){left:86%}.schools-learning-topic:nth-child(6),.schools-learning-topic:nth-child(7){left:14%}}
+@media(prefers-reduced-motion:reduce){.schools-learning-topic:nth-child(n),.schools-learning-hub{transition:none}}
