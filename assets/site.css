@@ -1025,3 +1025,16 @@ img{max-width:100%}
 @media(max-width:700px){.schools-learning-orbit{height:600px}.schools-learning-orbit:before{inset:16% 12%}.schools-learning-topic:nth-child(n){width:116px;height:116px;font-size:11px}.schools-learning-hub{width:205px;height:205px;padding:22px}.schools-learning-hub strong{font-size:19px}.schools-learning-hub p{font-size:11px}}
 @media(max-width:480px){.schools-learning-orbit{height:560px}.schools-learning-orbit:before{inset:19% 7%}.schools-learning-topic:nth-child(n){width:92px;height:92px;font-size:10px;letter-spacing:.5px;padding:8px}.schools-learning-hub{width:170px;height:170px;padding:15px}.schools-learning-hub span{font-size:8px}.schools-learning-hub strong{font-size:16px;margin-top:9px}.schools-learning-hub p{font-size:10px;line-height:1.25;margin-top:6px}.schools-learning-topic:nth-child(3),.schools-learning-topic:nth-child(4){left:86%}.schools-learning-topic:nth-child(6),.schools-learning-topic:nth-child(7){left:14%}}
 @media(prefers-reduced-motion:reduce){.schools-learning-topic:nth-child(n),.schools-learning-hub{transition:none}}
+
+/* Outcomes read as what can be carried into the next game, not another topic index. */
+.schools-outcome-story{display:grid;grid-template-columns:minmax(250px,34%) 1fr;gap:clamp(30px,6vw,90px);margin-top:48px;padding:32px 0;border-top:1px solid rgba(215,170,87,.35)}
+.schools-outcome-rail{display:flex;flex-direction:column;justify-content:space-between;min-height:430px;padding:42px 30px;background:linear-gradient(160deg,#322618,#101010 68%);border-left:2px solid #d7aa57}
+.schools-outcome-rail span{color:#e4bf78;font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.schools-outcome-rail strong{max-width:320px;color:#fff;font-size:clamp(32px,3.6vw,56px);line-height:.98;text-transform:uppercase}
+.schools-outcome-list{display:grid;align-content:center}
+.schools-outcome-list>div{padding:24px 0;border-bottom:1px solid rgba(215,170,87,.25)}
+.schools-outcome-list>div:first-child{border-top:1px solid rgba(215,170,87,.25)}
+.schools-outcome-list small{display:block;margin-bottom:10px;color:#d7aa57;font-size:10px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase}
+.schools-outcome-list h3{margin:0;color:#fff;font-size:clamp(22px,2vw,30px);text-transform:uppercase}
+.schools-outcome-list p{max-width:590px;margin:9px 0 0;color:#c8c8c8;font-size:15px;line-height:1.5}
+@media(max-width:700px){.schools-outcome-story{grid-template-columns:1fr;gap:20px}.schools-outcome-rail{min-height:225px;padding:27px}.schools-outcome-list>div{padding:22px 0}}
