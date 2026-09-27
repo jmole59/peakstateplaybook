@@ -2898,6 +2898,19 @@ a {
 @keyframes work-reveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:700px){.work-grid{margin-top:32px}.work-row summary{grid-template-columns:1fr 40px;gap:10px;min-height:95px;padding:19px 12px}.work-row .work-number{grid-column:1;grid-row:1;font-size:10px}.work-row .work-card-title{grid-column:1;grid-row:2;font-size:clamp(22px,6vw,31px)}.work-row-toggle{grid-column:2;grid-row:1 / 3}.work-row-detail{padding:0 52px 26px 12px}.work-row .work-card-copy{font-size:16px}}
 @media(prefers-reduced-motion:reduce){.work-row,.work-row .work-card-title,.work-row-toggle,.work-row-toggle::after{transition:none}.work-row-detail{animation:none}}
+/* The free entry point leads into the P.E.A.K. Playbook series. */
+.starter-feature{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:35px;margin:46px 0 0;padding:34px clamp(26px,4vw,52px);border:1px solid rgba(215,170,87,.52);border-radius:16px;background:radial-gradient(ellipse at 88% 18%,rgba(215,170,87,.16),transparent 46%),linear-gradient(120deg,#201c16,#101010 65%);box-shadow:0 18px 44px rgba(0,0,0,.28)}
+.starter-feature-kicker,.peak-series-label{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase}
+.starter-feature h3{margin:11px 0 8px;color:#fff;font-size:clamp(28px,3.3vw,44px);line-height:1.05;letter-spacing:-1.5px;text-transform:uppercase}
+.starter-feature h3 span{color:var(--gold)}
+.starter-feature p{max-width:750px;margin:0;color:#c8c8c8;font-size:clamp(14px,1.2vw,17px);line-height:1.55}
+.starter-feature-link{display:inline-flex;align-items:center;justify-content:center;gap:17px;min-width:173px;min-height:52px;padding:13px 21px;border-radius:30px;background:#fff;color:#080808;font-size:11px;font-weight:900;letter-spacing:1.7px;text-decoration:none;text-transform:uppercase;white-space:nowrap;transition:background .2s ease,transform .2s ease}
+.starter-feature-link:hover{background:var(--gold);transform:translateY(-2px)}
+.starter-feature-link:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.peak-series-label{margin-top:49px;padding-bottom:15px;border-bottom:1px solid rgba(215,170,87,.28)}
+.peak-series-label span{padding:0 5px;color:#666}
+.peak-grid{margin-top:23px}
+@media(max-width:700px){.starter-feature{grid-template-columns:1fr;gap:20px;padding:28px 23px}.starter-feature-link{width:max-content}.peak-series-label{margin-top:40px}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -3131,22 +3144,32 @@ a {
     <div class="section-heading">
 
       <div class="eyebrow">
-        The System
+        The P.E.A.K. Series
       </div>
 
 
       <h2 class="section-title">
-        THE <span class="gold">P.E.A.K.</span> SERIES
+        ONLINE <span class="gold">PROGRAMS</span>
       </h2>
 
 
       <div class="peak-copy">
-        A growing series of basketball performance Playbooks designed
-        to develop the player behind the performance.
+        Start free with Peak State Starter, or explore The G.A.M.E. Plan and the growing P.E.A.K. Series of basketball performance Playbooks.
       </div>
 
     </div>
 
+
+    <div class="starter-feature">
+      <div class="starter-feature-copy">
+        <div class="starter-feature-kicker">Free · Start here</div>
+        <h3>Peak State <span>Starter</span></h3>
+        <p>A free, under-20-minute introduction to training the mental side of your game. Get your first tools for awareness, confidence and resetting after mistakes.</p>
+      </div>
+      <a href="/peak-state-starter/" class="starter-feature-link">Start free <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="peak-series-label">The P.E.A.K. Series <span>·</span> The Playbooks</div>
 
     <div class="peak-grid">
 
@@ -3514,124 +3537,7 @@ a {
      07 TESTIMONIALS
 ======================================================= -->
 
-<section class="testimonial-section">
 
-  <div class="testimonial-wrap">
-
-
-    <div class="section-heading">
-
-      <div class="eyebrow">
-        On The Court
-      </div>
-
-
-      <h2 class="section-title">
-
-        <span class="title-line">
-          WHAT PARENTS &amp;
-        </span>
-
-        <span class="title-line gold">
-          PLAYERS SAY
-        </span>
-
-      </h2>
-
-
-    </div>
-
-
-    <div class="testimonial-grid">
-
-
-      <div class="testimonial-card">
-        <div class="quote-mark">
-          “
-        </div>
-
-        <div class="quote-text">
-          The sessions didn’t just improve my child’s skills,
-          they really changed how they handle pressure and
-          back themselves in games.
-        </div>
-
-        <div class="quote-meta">
-
-          <div class="quote-person">
-            Parent
-          </div>
-
-          <div class="quote-service">
-            Basketball Training
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="testimonial-card testimonial-card--example">
-        <div class="quote-mark">
-          “
-        </div>
-
-        <div class="quote-text">
-          After 4 weeks of reviewing his game footage, James started
-          seeing the game much differently. He was picking up on things
-          he’d never noticed before, knew exactly what he needed to work
-          on between games, and has felt much more confident every game.
-        </div>
-
-        <div class="quote-meta">
-
-          <div class="quote-person">
-            James
-          </div>
-
-          <div class="quote-service">
-            Film Review
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="testimonial-card">
-        <div class="quote-mark">
-          “
-        </div>
-
-        <div class="quote-text">
-          They started second-guessing themselves a lot less
-          and just playing more freely. That was probably
-          the biggest change for us.
-        </div>
-
-        <div class="quote-meta">
-
-          <div class="quote-person">
-            Parent
-          </div>
-
-          <div class="quote-service">
-            Basketball Training
-          </div>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
-  <div class="section-divider"></div>
-
-</section>
 
 
 <!-- =======================================================
