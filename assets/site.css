@@ -38,7 +38,8 @@ img{max-width:100%}
 .site-links{margin-left:auto;display:flex;align-items:center;gap:21px}
 .site-links a{color:#dedede;font-size:9.5px;font-weight:900;letter-spacing:1.3px;text-transform:uppercase;text-decoration:none;white-space:nowrap}
 .site-links a:hover,.site-links a.active{color:var(--gold)}
-.site-links .login{color:var(--gold)}
+.site-links a[aria-current="page"],.site-links .nav-dropdown-trigger.is-current{color:var(--gold)}
+.site-links .login{color:#dedede}
 .menu-btn{display:none;margin-left:auto;width:44px;height:44px;border:1px solid rgba(215,170,87,.3);border-radius:50%;background:none;color:#fff;font-size:20px}
 .hero{position:relative;min-height:680px;display:flex;align-items:center;overflow:hidden;background:
  radial-gradient(circle at 78% 20%,rgba(215,170,87,.10),transparent 30%),
@@ -872,6 +873,15 @@ img{max-width:100%}
 .film-awareness .film-note{min-height:118px;padding:17px 18px;border-radius:8px;border-color:rgba(255,255,255,.10);background:rgba(10,10,10,.68)}
 .film-awareness .film-note b{margin-bottom:9px}
 .film-awareness .film-note span{display:block;font-size:13px;line-height:1.5}
+.film-focus{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:26px 0 23px}
+.film-focus>div{padding:16px 17px;border:1px solid rgba(215,170,87,.3);border-radius:9px;background:linear-gradient(130deg,rgba(215,170,87,.095),rgba(12,12,12,.8))}
+.film-focus b{display:block;color:var(--gold);font-size:12px;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:8px}
+.film-focus span{display:block;color:#ddd;font-size:13px;line-height:1.45}
+.film-process{margin:0;padding:0;list-style:none;border-top:1px solid rgba(215,170,87,.3)}
+.film-process li{display:grid;grid-template-columns:115px 1fr;gap:15px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+.film-process strong{color:var(--gold);font-size:11px;letter-spacing:.8px;text-transform:uppercase}
+.film-process span{color:#ddd;font-size:14px;line-height:1.5}
+@media(max-width:600px){.film-focus{gap:8px}.film-focus>div{padding:13px}.film-process li{grid-template-columns:1fr;gap:5px}}
 .film-direction-intro{max-width:1110px;margin:22px auto 0;text-wrap:balance}
 @media(min-width:1250px){.film-direction-intro{white-space:nowrap}}
 
