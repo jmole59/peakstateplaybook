@@ -1052,3 +1052,17 @@ img{max-width:100%}
 .schools-learning-intro{max-width:1100px}
 .schools-learning-intro .section-title{font-size:clamp(35px,4.3vw,59px);letter-spacing:-.035em;white-space:nowrap}
 @media(max-width:800px){.schools-learning-intro .section-title{white-space:normal}}
+
+/* On touch screens the six topics become a compact 3 x 2 circle selector. */
+.schools-touch-hint{display:none}
+@media(max-width:700px){
+  .schools-touch-hint{display:block;margin:15px 0 0;color:#c7ad7a;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+  .schools-learning-orbit{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;justify-items:center;gap:12px 8px;width:min(100%,480px);height:auto;min-height:0;margin:28px auto 0;padding:0}
+  .schools-learning-orbit:before{display:none}
+  .schools-learning-hub{position:relative;left:auto;top:auto;grid-column:1/-1;grid-row:auto;transform:none;width:100%;height:auto;min-height:145px;margin:0 0 12px;padding:22px;border-radius:18px}
+  .schools-learning-hub strong{font-size:22px;margin-top:9px}
+  .schools-learning-hub p{font-size:14px;line-height:1.45;margin-top:9px}
+  .schools-learning-hub span{font-size:10px}
+  .schools-learning-topic:nth-child(n){position:relative;left:auto;top:auto;grid-column:auto;grid-row:auto;width:min(100%,104px);height:auto;min-height:0;aspect-ratio:1;transform:none;padding:9px;font-size:clamp(9px,2.5vw,11px);letter-spacing:.3px;touch-action:manipulation}
+  .schools-learning-topic:nth-child(n).is-active{scale:1.04}
+}
