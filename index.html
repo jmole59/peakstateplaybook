@@ -2875,6 +2875,28 @@ a {
 .site-footer .footer-social{display:flex;gap:18px;flex-wrap:wrap}
 @media(max-width:800px){.site-footer .footer-top{grid-template-columns:1fr;gap:35px}}
 @media(max-width:600px){.site-footer .footer-links{grid-template-columns:1fr;text-align:center}.site-footer .footer-brand{justify-content:center}.site-footer .footer-copy{text-align:center;margin-left:auto;margin-right:auto}.site-footer .footer-bottom{flex-direction:column;align-items:center;text-align:center}.site-footer .footer-social{justify-content:center}}
+
+/* A compact editorial service index replaces the repeated three-card grid. */
+.work-grid{display:block;max-width:1100px;margin:48px auto 0;border-top:1px solid rgba(215,170,87,.38)}
+.work-row{border-bottom:1px solid rgba(215,170,87,.28);background:transparent;transition:background .25s ease}
+.work-row:hover,.work-row[open]{background:linear-gradient(90deg,rgba(215,170,87,.065),transparent 75%)}
+.work-row summary{display:grid;grid-template-columns:152px 1fr 44px;align-items:center;gap:20px;min-height:112px;padding:20px 24px;cursor:pointer;list-style:none}
+.work-row summary::-webkit-details-marker{display:none}
+.work-row summary:focus-visible,.work-row .work-link:focus-visible{outline:2px solid var(--gold);outline-offset:-3px}
+.work-row .work-number{color:var(--gold);font-size:11px;letter-spacing:2px}
+.work-row .work-card-title{margin:0;font-size:clamp(25px,3.3vw,43px);line-height:1.1;letter-spacing:-.7px;transition:color .25s ease}
+.work-row:hover .work-card-title,.work-row[open] .work-card-title{color:var(--gold)}
+.work-row-toggle{position:relative;display:block;width:38px;height:38px;border:1px solid rgba(215,170,87,.45);border-radius:50%;transition:transform .25s ease,background .25s ease}
+.work-row-toggle::before,.work-row-toggle::after{content:"";position:absolute;top:50%;left:50%;width:12px;height:2px;background:var(--gold);transform:translate(-50%,-50%)}
+.work-row-toggle::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s ease}
+.work-row[open] .work-row-toggle{background:rgba(215,170,87,.12);transform:rotate(180deg)}
+.work-row[open] .work-row-toggle::after{transform:translate(-50%,-50%) rotate(0deg)}
+.work-row-detail{padding:0 70px 29px 196px;animation:work-reveal .24s ease-out}
+.work-row .work-card-copy{max-width:720px;margin:0;color:var(--grey);font-size:clamp(16px,1.4vw,19px);line-height:1.6}
+.work-row .work-link{margin-top:18px;font-size:11px}
+@keyframes work-reveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.work-grid{margin-top:32px}.work-row summary{grid-template-columns:1fr 40px;gap:10px;min-height:95px;padding:19px 12px}.work-row .work-number{grid-column:1;grid-row:1;font-size:10px}.work-row .work-card-title{grid-column:1;grid-row:2;font-size:clamp(22px,6vw,31px)}.work-row-toggle{grid-column:2;grid-row:1 / 3}.work-row-detail{padding:0 52px 26px 12px}.work-row .work-card-copy{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.work-row,.work-row .work-card-title,.work-row-toggle,.work-row-toggle::after{transition:none}.work-row-detail{animation:none}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 </head>
@@ -3461,83 +3483,20 @@ a {
 
     <div class="work-grid">
 
+      <details class="work-row">
+        <summary><span class="work-number">01 / TRAIN</span><span class="work-card-title">Basketball Training</span><span class="work-row-toggle" aria-hidden="true"></span></summary>
+        <div class="work-row-detail"><p class="work-card-copy">Individual and small-group coaching focused on skill development, decision-making and building confidence that translates into games.</p><a href="/basketball-training" class="work-link">Explore Training →</a></div>
+      </details>
 
-      <div class="work-card">
+      <details class="work-row">
+        <summary><span class="work-number">02 / STUDY</span><span class="work-card-title">Film Room</span><span class="work-row-toggle" aria-hidden="true"></span></summary>
+        <div class="work-row-detail"><p class="work-card-copy">One-on-one game analysis designed to identify patterns, improve decision-making and give you clear next steps for development.</p><a href="/film-room" class="work-link">Enter The Film Room →</a></div>
+      </details>
 
-        <div class="work-number">
-          01
-        </div>
-
-        <div class="work-card-title">
-          Basketball Training
-        </div>
-
-        <div class="work-card-copy">
-          Individual and small-group coaching focused on skill
-          development, decision-making and building confidence
-          that translates into games.
-        </div>
-
-        <a
-          href="/basketball-training"
-          class="work-link"
-        >
-          Explore Training →
-        </a>
-
-      </div>
-
-
-      <div class="work-card">
-
-        <div class="work-number">
-          02
-        </div>
-
-        <div class="work-card-title">
-          Film Room
-        </div>
-
-        <div class="work-card-copy">
-          One-on-one game analysis designed to identify patterns,
-          improve decision-making and give you clear next steps
-          for development.
-        </div>
-
-        <a
-          href="/film-room"
-          class="work-link"
-        >
-          Enter The Film Room →
-        </a>
-
-      </div>
-
-
-      <div class="work-card">
-
-        <div class="work-number">
-          03
-        </div>
-
-        <div class="work-card-title">
-          Schools &amp; Teams
-        </div>
-
-        <div class="work-card-copy">
-          Performance workshops built around confidence, leadership,
-          resilience, communication and the standards that shape
-          strong team environments.
-        </div>
-
-        <a
-          href="/school-team-workshops"
-          class="work-link"
-        >
-          Explore Programs →
-        </a>
-
-      </div>
+      <details class="work-row">
+        <summary><span class="work-number">03 / GROW</span><span class="work-card-title">Schools &amp; Teams</span><span class="work-row-toggle" aria-hidden="true"></span></summary>
+        <div class="work-row-detail"><p class="work-card-copy">Performance workshops built around confidence, leadership, resilience, communication and the standards that shape strong team environments.</p><a href="/school-team-workshops" class="work-link">Explore Programs →</a></div>
+      </details>
 
 
     </div>
