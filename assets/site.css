@@ -882,23 +882,6 @@ img{max-width:100%}
 .film-process strong{color:var(--gold);font-size:11px;letter-spacing:.8px;text-transform:uppercase}
 .film-process span{color:#ddd;font-size:14px;line-height:1.5}
 @media(max-width:600px){.film-focus{gap:8px}.film-focus>div{padding:13px}.film-process li{grid-template-columns:1fr;gap:5px}}
-/* Parent and player feedback now lives on the About page. */
-.testimonial-section{padding:80px 6% 88px;background:radial-gradient(circle at 50% 20%,rgba(215,170,87,.05),transparent 42%),#0b0b0b}
-.testimonial-wrap{width:min(1320px,100%);margin:auto}
-.testimonial-section .section-heading{text-align:center}
-.testimonial-section .eyebrow{color:var(--gold);font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
-.testimonial-section .section-title{margin:19px 0 0;font-size:clamp(40px,5.4vw,80px);line-height:.97}
-.testimonial-section .title-line{display:block}
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:43px}
-.testimonial-card{position:relative;display:flex;flex-direction:column;min-height:290px;padding:29px 28px 25px;border:1px solid rgba(215,170,87,.28);border-radius:16px;background:linear-gradient(145deg,#181818,#080808)}
-.testimonial-card::before{content:"";position:absolute;top:0;left:30px;width:54px;height:2px;background:var(--gold)}
-.testimonial-card--example{border-color:rgba(215,170,87,.45);background:linear-gradient(145deg,#201f17,#0b0b0b)}
-.testimonial-card .quote-mark{color:var(--gold);font-family:Georgia,serif;font-size:52px;line-height:.85}
-.testimonial-card .quote-text{margin-top:22px;color:#fff;font-size:16px;line-height:1.7}
-.testimonial-card .quote-meta{margin-top:auto;padding-top:26px}
-.testimonial-card .quote-person{color:#fff;font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
-.testimonial-card .quote-service{margin-top:6px;color:#888;font-size:9px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}
-@media(max-width:900px){.testimonial-grid{grid-template-columns:1fr;max-width:600px;margin:35px auto 0}.testimonial-card{min-height:0}.testimonial-section{padding:68px 7%}}
 .film-direction-intro{max-width:1110px;margin:22px auto 0;text-wrap:balance}
 @media(min-width:1250px){.film-direction-intro{white-space:nowrap}}
 
