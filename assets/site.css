@@ -923,3 +923,53 @@ img{max-width:100%}
 .film-offer-card>.button{margin-top:auto}
 @media(max-width:800px){.film-offer-card>p{min-height:0}.film-offer-card>.button{margin-top:4px}}
 @media(prefers-reduced-motion:reduce){.film-offer-detail,.film-offer-icon:after{transition:none}}
+
+/* Schools & Teams: teaching-led imagery and clear workshop formats. */
+.hero-split.schools .hero-split-visual img{object-position:62% center;filter:brightness(.86) contrast(1.06)}
+.schools-activity-photo{position:relative;align-self:stretch;min-height:420px;margin:0;overflow:hidden;border:1px solid rgba(215,170,87,.23);border-radius:20px;background:#0b0b0b}
+.schools-activity-photo img{display:block;width:100%;height:100%;min-height:420px;object-fit:cover;object-position:center 39%;filter:brightness(.75) contrast(1.08) saturate(.78)}
+.schools-activity-photo:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.87))}
+.schools-activity-photo figcaption{position:absolute;z-index:1;bottom:0;left:0;right:0;display:grid;gap:8px;padding:30px;color:#e7e7e7;line-height:1.5}
+.schools-activity-photo figcaption strong{color:#fff;font-size:21px;font-weight:900;text-transform:uppercase}
+.schools-activity-photo figcaption span{max-width:390px;font-size:14px}
+.schools-focus-points{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:28px}
+.schools-focus-points>div{display:grid;align-content:start;gap:9px;padding:16px 0;border-top:1px solid rgba(215,170,87,.37)}
+.schools-focus-points b{color:var(--gold);font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+.schools-focus-points span{color:#d0d0d0;font-size:13px;line-height:1.45}
+
+.schools-formats .section-title{max-width:1050px;margin:14px auto 0}
+.schools-format-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:42px;align-items:stretch}
+.workshop-format-card{display:flex;flex-direction:column;align-items:flex-start;padding:32px}
+.workshop-format-card .card-title{margin-top:19px;font-size:clamp(21px,2vw,27px)}
+.workshop-duration{margin-top:21px;color:#fff;font-size:20px;font-weight:900}
+.workshop-format-card>p{min-height:86px;margin:15px 0 0;font-size:14px;line-height:1.55}
+.workshop-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin:auto 0 0;padding:17px 0 0;border:0;border-top:1px solid rgba(215,170,87,.28);background:none;color:var(--gold);font:900 11px Arial,Helvetica,sans-serif;letter-spacing:1.5px;text-align:left;text-transform:uppercase;cursor:pointer}
+.workshop-toggle:hover,.workshop-toggle:focus-visible{color:#f1cb83}
+.workshop-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.workshop-icon{position:relative;width:15px;height:15px;flex:0 0 15px}
+.workshop-icon:before,.workshop-icon:after{content:"";position:absolute;left:1px;top:7px;width:13px;height:1.5px;background:currentColor;transition:transform .28s ease}
+.workshop-icon:after{transform:rotate(90deg)}
+.workshop-toggle[aria-expanded="true"] .workshop-icon:after{transform:rotate(0)}
+.workshop-detail{display:grid;grid-template-rows:0fr;opacity:0;width:100%;transition:grid-template-rows .34s ease,opacity .3s ease}
+.workshop-detail[aria-hidden="false"]{grid-template-rows:1fr;opacity:1}
+.workshop-detail-inner{min-height:0;overflow:hidden}
+.workshop-detail p{margin:0 0 14px;color:#d1d1d1;font-size:14px;line-height:1.6}
+.workshop-detail p:first-child{padding-top:14px}
+.workshop-detail .workshop-best{margin-bottom:5px;color:#e1bc77;font-size:13px}
+.schools-formats-action{text-align:center;margin-top:31px}
+.schools-enquiry{padding-top:85px;padding-bottom:95px;background:radial-gradient(ellipse at 50% 15%,rgba(215,170,87,.09),transparent 50%),#090909}
+.schools-enquiry .section-title{max-width:900px;margin:14px auto 0}
+.schools-enquiry .form{max-width:830px;margin-left:auto;margin-right:auto}
+@media(max-width:1000px){.schools-format-grid{grid-template-columns:1fr;max-width:720px;margin-left:auto;margin-right:auto}.workshop-format-card>p{min-height:0}.workshop-toggle{margin-top:20px}}
+@media(max-width:800px){.schools-activity-photo,.schools-activity-photo img{min-height:360px;height:360px}.schools-enquiry{padding-top:72px;padding-bottom:78px}}
+@media(max-width:600px){
+  .hero-split.schools .hero-split-visual img{object-position:61% center}
+  .schools-activity-photo,.schools-activity-photo img{min-height:320px;height:320px}
+  .schools-activity-photo figcaption{padding:22px}
+  .schools-focus-points{grid-template-columns:1fr;gap:0}
+  .schools-focus-points>div{padding:12px 0;gap:5px}
+  .schools-format-grid{margin-top:30px}
+  .workshop-format-card{padding:26px}
+  .schools-enquiry{padding-top:61px;padding-bottom:68px}
+}
+@media(prefers-reduced-motion:reduce){.workshop-detail,.workshop-icon:after{transition:none}}
