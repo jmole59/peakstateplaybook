@@ -297,7 +297,7 @@ a {
       rgba(0,0,0,0.35) 100%
     ),
 
-    url("/assets/home-hero-shooting.webp");
+    url("/assets/home-hero-shooting-color.webp");
 
   background-size: cover;
 
@@ -1917,7 +1917,7 @@ a {
         rgba(0,0,0,1) 100%
       ),
 
-      url("/assets/home-hero-shooting.webp");
+      url("/assets/home-hero-shooting-color.webp");
   }
 
 
@@ -2735,9 +2735,18 @@ a {
   linear-gradient(90deg,transparent 49.95%,rgba(255,255,255,.035) 50%,transparent 50.05%)}
 .home-body-line{font-size:clamp(44px,4.7vw,76px)!important;white-space:nowrap}
 .featured-section{background:
-  radial-gradient(circle at 15% 10%,rgba(255,255,255,.09),transparent 14%),
-  radial-gradient(circle at 82% 12%,rgba(215,170,87,.08),transparent 16%),
-  linear-gradient(145deg,#222 0%,#151515 45%,#090909 100%)}
+  radial-gradient(ellipse at 77% 42%,rgba(215,170,87,.16),transparent 34%),
+  linear-gradient(105deg,#171717 0%,#101010 46%,#080808 100%)}
+.featured-section::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.55;background:linear-gradient(90deg,transparent 0%,rgba(215,170,87,.13) 50%,transparent 50.08%)}
+.featured-content,.featured-real-book{position:relative;z-index:1}
+.featured-content .eyebrow{display:inline-block;border-bottom:1px solid rgba(215,170,87,.65);padding-bottom:13px;margin-bottom:22px}
+.featured-title{font-size:clamp(54px,5.1vw,88px);line-height:.96;letter-spacing:-2.6px}
+.featured-title .gold{color:#e9bc68;text-shadow:0 2px 0 #75511e,0 10px 32px rgba(215,170,87,.16)}
+.featured-pillars{border-top:1px solid rgba(215,170,87,.38);padding-top:20px;margin-top:27px;letter-spacing:2px}
+.featured-copy{max-width:505px;margin-top:22px}
+.featured-includes{margin:25px 0 0;color:#e9e5dd;font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;line-height:1.8}
+.featured-includes span{color:var(--gold);padding:0 9px}
+.featured-button{margin-top:29px}
 .peak-section{background:
   radial-gradient(circle at 50% 32%,rgba(215,170,87,.055),transparent 28%),
   linear-gradient(180deg,#090909,#0d0d0d 54%,#080808)}
@@ -2802,7 +2811,7 @@ a {
   width:min(84%,530px);
   aspect-ratio:1;
   border-radius:50%;
-  background:radial-gradient(circle,rgba(215,170,87,.16),transparent 68%);
+  background:radial-gradient(circle,rgba(215,170,87,.28),transparent 68%);
   filter:blur(18px);
   pointer-events:none;
 }
@@ -2811,8 +2820,9 @@ a {
   display:block;
   width:min(72%,390px);
   aspect-ratio:499/709;
-  filter:drop-shadow(14px 22px 22px rgba(0,0,0,.68));
+  filter:drop-shadow(16px 26px 28px rgba(0,0,0,.8));
 }
+.featured-real-book::after{content:"";position:absolute;bottom:27px;width:min(74%,450px);height:27px;border-radius:50%;background:#000;filter:blur(17px);opacity:.8;z-index:-1}
 .featured-book::before{
   content:"";
   position:absolute;
@@ -3054,12 +3064,10 @@ a {
 
 
       <div class="featured-copy">
-        A complete system built to help basketball players stay
-        confident, composed and in control when the game gets tough.
-        Build an identity that holds under pressure, reset faster
-        after mistakes and compete with confidence no matter what
-        the game throws at you.
+        Build an identity that holds under pressure, reset faster after mistakes and compete with confidence when the game gets tough. The G.A.M.E. Plan gives you a system to train the mental side of basketball, on and off the court.
       </div>
+
+      <div class="featured-includes">Physical workbook <span aria-hidden="true">·</span> Full PDF <span aria-hidden="true">·</span> The VAULT</div>
 
 
       <a

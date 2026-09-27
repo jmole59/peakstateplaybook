@@ -1251,41 +1251,44 @@ a {
 }
 
 .guarantee {
-  width: min(100%, 600px);
+  width: min(100%, 640px);
   margin: 30px auto 0;
-  padding: 24px 28px;
+  padding: 32px clamp(22px,4vw,42px);
   border: 1px solid rgba(215,170,87,.32);
   border-radius: 18px;
   background: linear-gradient(125deg,rgba(215,170,87,.095),rgba(255,255,255,.018) 70%);
-  text-align: left;
+  text-align: center;
 }
 
 .guarantee-heading {
   display: flex;
-  align-items: baseline;
-  gap: 17px;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
   color: var(--white);
-  font-size: clamp(19px,2vw,25px);
+  font-size: clamp(21px,3vw,32px);
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.12;
   text-transform: uppercase;
 }
 
 .guarantee-days {
   color: var(--gold);
-  font-size: 37px;
+  font-size: clamp(48px,6vw,72px);
   letter-spacing: -2px;
   white-space: nowrap;
 }
 
 .guarantee p {
-  margin: 13px 0 0;
+  margin: 20px auto 0;
+  max-width: 520px;
   color: var(--grey);
   font-size: 15px;
   line-height: 1.6;
 }
 
-.guarantee details { margin-top: 16px; color: var(--grey); font-size: 13px; line-height: 1.6; }
+.guarantee details { margin-top: 20px; padding-top: 17px; border-top:1px solid rgba(215,170,87,.22); color: var(--grey); font-size: 13px; line-height: 1.6; }
+.guarantee details p {font-size:13px;margin-top:13px}
 .guarantee summary { color: var(--gold); cursor: pointer; font-weight: 800; letter-spacing: .3px; }
 .guarantee details a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 
