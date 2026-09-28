@@ -1016,6 +1016,33 @@ img{max-width:100%}
 @media(max-width:850px){.schools-cinematic-hero{min-height:620px;align-items:flex-end}.schools-cinematic-hero:before{background:linear-gradient(0deg,#080808 0%,rgba(8,8,8,.93) 20%,rgba(8,8,8,.25) 80%)}.schools-cinematic-visual img{object-position:66% center}.schools-cinematic-copy{width:auto;margin:0;padding:240px 7% 58px}.schools-cinematic-copy .display{font-size:clamp(44px,9vw,72px)}.schools-learning-orbit{gap:15px 22px;min-height:490px}.schools-learning-hub{width:205px;height:205px}.schools-learning-hub strong{font-size:20px}.schools-learning-topic{padding:16px;min-height:110px}}
 @media(max-width:600px){.schools-cinematic-hero{min-height:0}.schools-cinematic-copy{padding-top:300px}.schools-cinematic-visual img{object-position:67% top}.schools-learning-orbit{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-height:0;gap:10px;padding:0}.schools-learning-orbit:before{display:none}.schools-learning-hub{position:static;transform:none;grid-column:1/-1;grid-row:1;width:178px;height:178px;margin:0 auto 15px}.schools-learning-topic:nth-child(n){grid-column:auto;grid-row:auto;min-height:100px;padding:14px}.schools-learning-topic b{font-size:12px}.schools-learning-topic span{font-size:12px}.schools-outcome-ledger{grid-template-columns:1fr}.schools-outcome-ledger>div{min-height:130px;padding:22px;grid-template-columns:48px 1fr}.schools-outcome-num{font-size:25px}.schools-outcome-ledger strong{font-size:16px}}
 
+/* Basketball Training: the photograph and copy share one continuous opening strip. */
+.training-cinematic-hero{position:relative;isolation:isolate;min-height:640px;display:flex;align-items:center;overflow:hidden;background:#080808}
+.training-cinematic-visual{position:absolute;inset:0;z-index:-2}
+.training-cinematic-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 46%;filter:brightness(.85) saturate(.84)}
+.training-cinematic-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(6,6,6,.92) 0%,rgba(6,6,6,.86) 31%,rgba(6,6,6,.46) 56%,rgba(6,6,6,.05) 84%),linear-gradient(0deg,rgba(6,6,6,.38),transparent 35%)}
+.training-cinematic-copy{width:min(900px,65%);padding:70px max(5.2vw,38px);background:none}
+.training-cinematic-copy .display{font-size:clamp(52px,5.25vw,88px);max-width:850px}
+.training-cinematic-copy .lead{max-width:660px;margin-top:20px}
+.training-cinematic-copy .body-copy{max-width:760px;font-size:clamp(14px,1.05vw,16px);line-height:1.5;margin-top:8px}
+@media(min-width:1300px){.training-cinematic-copy .body-copy{white-space:nowrap}}
+@media(max-width:800px){
+  .training-cinematic-hero{min-height:790px;align-items:flex-end}
+  .training-cinematic-visual img{object-position:82% center}
+  .training-cinematic-hero:before{background:linear-gradient(180deg,rgba(6,6,6,.08) 0%,rgba(6,6,6,.24) 30%,rgba(6,6,6,.78) 56%,#080808 100%)}
+  .training-cinematic-copy{width:100%;padding:320px 7% 64px}
+  .training-cinematic-copy .display{font-size:clamp(46px,8.8vw,72px)}
+  .training-cinematic-hero .hero-split-badge{display:none}
+}
+@media(max-width:600px){
+  .training-cinematic-hero{min-height:780px}
+  .training-cinematic-visual img{object-position:85% top}
+  .training-cinematic-copy{padding:315px 7% 48px}
+  .training-cinematic-copy .display{font-size:clamp(43px,10vw,60px);letter-spacing:-2.5px}
+  .training-cinematic-copy .lead{font-size:18px;line-height:1.35}
+  .training-cinematic-copy .body-copy{font-size:14px}
+}
+
 /* Six interactive topic circles around a shared explanation. */
 .schools-learning-orbit{display:block;width:min(100%,860px);height:680px;min-height:0;margin:36px auto 0;padding:0}
 .schools-learning-orbit:before{display:block;inset:13% 15%;border-color:rgba(215,170,87,.30)}
