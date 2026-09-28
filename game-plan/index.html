@@ -385,6 +385,8 @@ a {
   text-transform: uppercase;
 }
 
+.hero-tagline .trust-your-game::before { content: " · "; }
+
 
 .hero-pillars {
   margin-top: 26px;
@@ -1405,6 +1407,13 @@ a {
     font-size: 14px;
   }
 
+  .hero-tagline .trust-your-game {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .hero-tagline .trust-your-game::before { content: none; }
+
 
   .hero-pillars {
     font-size: 9px;
@@ -1744,7 +1753,7 @@ a {
 
 
     <div class="hero-tagline">
-      Build Confidence · Handle Pressure · Trust Your Game
+      Build Confidence · Handle Pressure <span class="trust-your-game">Trust Your Game</span>
     </div>
 
 
