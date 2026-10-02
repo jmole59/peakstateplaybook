@@ -258,6 +258,14 @@ a {
 }
 
 
+.button:disabled {
+  font-family: inherit;
+  cursor: default;
+  opacity: .72;
+  transform: none;
+  box-shadow: none;
+}
+
 /* =========================================================
    01 HERO
 ========================================================= */
@@ -1775,12 +1783,7 @@ a {
     </div>
 
 
-    <a
-      href="#get-game-plan"
-      class="button button-white hero-button"
-    >
-      Get The G.A.M.E. Plan
-    </a>
+    <button type="button" class="button button-white hero-button" disabled aria-disabled="true">COMING SOON</button>
 
 
   </div>
@@ -2273,17 +2276,7 @@ a {
     </div>
 
 
-    <!--
-      REPLACE YOUR-CHECKOUT-URL-HERE
-      WITH THE REAL PURCHASE / PROGRAM URL
-    -->
-
-    <a
-      href="/contact/?service=game-plan" data-placeholder="circle-checkout"
-      class="button button-white final-button"
-    >
-      Get The G.A.M.E. Plan
-    </a>
+    <button type="button" class="button button-white final-button" disabled aria-disabled="true">COMING SOON</button>
 
     <div class="guarantee" aria-label="30-day money-back guarantee">
       <div class="guarantee-heading"><span class="guarantee-days">30 DAYS</span><span>Full money-back guarantee</span></div>
