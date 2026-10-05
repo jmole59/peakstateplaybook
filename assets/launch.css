@@ -90,3 +90,5 @@ body.launch-dialog-open{overflow:hidden}
 .launch-release-deadline{font-size:11px;color:#888;line-height:1.6;margin:12px 0 0}
 .launch-release-inner [hidden]{display:none!important}
 @media(max-width:700px){.launch-release-strip{padding:34px 24px}.launch-release-inner{grid-template-columns:1fr;gap:24px;text-align:center}.launch-release-date{padding:0}.launch-release-date .launch-access-date{font-size:clamp(36px,9vw,58px)}.launch-release-purchase{padding:24px 0 0;border-left:0;border-top:1px solid rgba(215,170,87,.3)}.launch-release-purchase .launch-price{justify-content:center}.launch-dialog-access{gap:10px}.launch-dialog-access strong{font-size:16px}}
+
+.launch-access-date sup,.launch-dialog-access sup{font-size:.35em;vertical-align:super;line-height:0;letter-spacing:0;text-transform:lowercase;margin-left:2px}
