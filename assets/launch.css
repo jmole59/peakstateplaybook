@@ -97,3 +97,9 @@ body.launch-dialog-open{overflow:hidden}
 .prime-launch-note strong{color:var(--gold,#d7aa57);font-weight:700}
 .prime-launch-note span{font-size:10px;color:#888}
 .prime-launch-note[hidden]{display:none!important}
+
+.starter-feature-actions{display:flex;flex-direction:column;align-items:center;gap:14px;flex-shrink:0}
+.starter-direct-link{color:var(--gold,#d7aa57);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px}
+.starter-direct-link:hover{text-decoration:underline;text-underline-offset:4px}
+.starter-direct-link:focus-visible{outline:2px solid var(--gold,#d7aa57);outline-offset:4px}
+@media(max-width:700px){.starter-feature-actions{width:100%}.starter-feature-actions .starter-feature-link{width:100%;box-sizing:border-box;text-align:center}}
