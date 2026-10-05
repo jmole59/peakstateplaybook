@@ -25,3 +25,25 @@
 body.launch-dialog-open{overflow:hidden}
 @media(prefers-reduced-motion:no-preference){.launch-dialog[open]{animation:launch-appear .22s ease-out}@keyframes launch-appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
 @media(max-width:600px){.launch-offer{padding:20px;border-radius:15px}.launch-offer .eyebrow{font-size:11px;letter-spacing:.12em}.launch-price{gap:6px 12px}.launch-offer p{font-size:12px}.launch-offer .button{width:100%;box-sizing:border-box;font-size:11px;letter-spacing:.09em}.launch-dialog{padding:38px 22px 20px}.launch-dialog .eyebrow{font-size:11px;letter-spacing:.12em}}
+
+/* Compact homepage reminder; detailed offer stays in the modal and sales hero. */
+.launch-summary{margin-top:24px}
+.launch-summary .launch-price{margin-bottom:4px;gap:12px}
+.launch-summary .launch-price strong{font-size:clamp(28px,3vw,38px)}
+.launch-summary .launch-summary-label{color:var(--gold,#d7aa57);font-size:13px;font-weight:700;letter-spacing:.04em}
+.launch-summary p{font-size:14px;color:#b8b8b8;margin:0}
+.launch-summary .featured-button{margin-top:20px}
+.launch-summary [hidden]{display:none!important}
+.lesson-preview{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin:64px 0 0;padding:40px 0;border-top:1px solid rgba(215,170,87,.3);text-align:left}
+.lesson-preview h2{font-family:inherit;font-size:clamp(26px,3vw,42px);font-weight:900;line-height:1.12;letter-spacing:-.02em;margin:18px 0}
+.lesson-preview p{font-size:16px;color:#b8b8b8;line-height:1.7;margin:0;max-width:520px}
+.lesson-preview-signup{padding:28px;background:linear-gradient(135deg,rgba(215,170,87,.08),rgba(0,0,0,.18));border-left:2px solid var(--gold,#d7aa57);border-radius:0 14px 14px 0}
+.lesson-preview-label{color:var(--gold,#d7aa57);font-size:12px;letter-spacing:.12em;font-weight:800;margin-bottom:10px}
+.lesson-preview-signup p{font-size:14px}
+.lesson-preview-fields{border:0;padding:0;margin:20px 0 0;min-width:0}
+.lesson-preview-fields label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;color:#ddd;margin-bottom:8px}
+.lesson-preview-fields input{display:block;width:100%;box-sizing:border-box;border:1px solid #444;border-radius:8px;background:#101010;padding:15px 16px;color:#fff;font:inherit;font-size:16px;opacity:1}
+.lesson-preview-fields .button{display:flex;width:100%;box-sizing:border-box;justify-content:center;align-items:center;margin-top:12px;font-size:12px;letter-spacing:.1em;padding:17px 12px}
+.lesson-preview .lesson-preview-status{font-size:11px;line-height:1.5;margin-top:12px;color:#aaa}
+.lesson-preview-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:700px){.lesson-preview{grid-template-columns:1fr;gap:24px;margin-top:40px;padding:30px 0}.lesson-preview-signup{padding:22px}.lesson-preview .eyebrow{font-size:11px;letter-spacing:.12em}.lesson-preview p{font-size:15px}.lesson-preview-signup p{font-size:14px}}

@@ -35,12 +35,14 @@
     if (Date.now() < deadline) return;
     closeDialog();
     document.querySelectorAll('[data-launch-offer]').forEach(offer => {
-      offer.querySelector('[data-offer-label]').textContent = 'The G.A.M.E. Plan';
+      offer.querySelector('[data-offer-label]').textContent = offer.classList.contains('launch-summary') ? 'Full price' : 'The G.A.M.E. Plan';
       offer.querySelector('[data-offer-price]').textContent = '$699';
       ['[data-offer-normal]', '[data-offer-saving]', '[data-offer-code]'].forEach(selector => {
-        offer.querySelector(selector).hidden = true;
+        const element = offer.querySelector(selector);
+        if (element) element.hidden = true;
       });
-      offer.querySelector('[data-offer-deadline]').textContent = 'Program access is live. Train the mental side of your game.';
+      const description = offer.querySelector('[data-offer-deadline]');
+      if (description) description.textContent = 'Program access is live. Train the mental side of your game.';
     });
     const badge = document.querySelector('.peak-card.active .status');
     if (badge) badge.textContent = 'Available Now';
