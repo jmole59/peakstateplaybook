@@ -92,3 +92,8 @@ body.launch-dialog-open{overflow:hidden}
 @media(max-width:700px){.launch-release-strip{padding:34px 24px}.launch-release-inner{grid-template-columns:1fr;gap:24px;text-align:center}.launch-release-date{padding:0}.launch-release-date .launch-access-date{font-size:clamp(36px,9vw,58px)}.launch-release-purchase{padding:24px 0 0;border-left:0;border-top:1px solid rgba(215,170,87,.3)}.launch-release-purchase .launch-price{justify-content:center}.launch-dialog-access{gap:10px}.launch-dialog-access strong{font-size:16px}}
 
 .launch-access-date sup,.launch-dialog-access sup{font-size:.35em;vertical-align:super;line-height:0;letter-spacing:0;text-transform:lowercase;margin-left:2px}
+
+.prime-launch-note{font-size:12px;line-height:1.7;color:#b8b8b8;margin:14px auto 0;max-width:320px;text-align:center;letter-spacing:0;text-transform:none}
+.prime-launch-note strong{color:var(--gold,#d7aa57);font-weight:700}
+.prime-launch-note span{font-size:10px;color:#888}
+.prime-launch-note[hidden]{display:none!important}

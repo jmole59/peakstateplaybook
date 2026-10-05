@@ -48,6 +48,7 @@
     });
     const badge = document.querySelector('.peak-card.active .status');
     if (badge) badge.textContent = 'Available Now';
+    document.querySelectorAll('[data-presale-note]').forEach(note => { note.hidden = true; });
   }
   updateOffer();
   setInterval(updateOffer, 1000);
