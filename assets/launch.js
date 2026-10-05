@@ -37,6 +37,8 @@
     document.querySelectorAll('[data-launch-offer]').forEach(offer => {
       offer.querySelector('[data-offer-label]').textContent = offer.classList.contains('launch-summary') ? 'Full price' : 'The G.A.M.E. Plan';
       offer.querySelector('[data-offer-price]').textContent = '$699';
+      const accessDate = offer.querySelector('[data-access-date]');
+      if (accessDate) accessDate.textContent = 'ACCESS IS LIVE';
       ['[data-offer-normal]', '[data-offer-saving]', '[data-offer-code]'].forEach(selector => {
         const element = offer.querySelector(selector);
         if (element) element.hidden = true;

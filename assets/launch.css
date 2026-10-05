@@ -54,3 +54,11 @@ body.launch-dialog-open{overflow:hidden}
 .prime-offer-link:hover{border-color:var(--gold,#d7aa57)}
 .prime-offer-link:focus-visible{outline:2px solid var(--gold,#d7aa57);outline-offset:4px}
 @media(max-width:700px){.lesson-preview{padding-top:44px;padding-bottom:16px}.launch-dialog .launch-dialog-program{font-size:13px}}
+
+/* Access date leads on the sales page; compact pricing supports it. */
+.launch-offer.launch-access{background:none;border:0;border-radius:0;box-shadow:none;padding:12px 0 0}
+.launch-access::before{display:none}
+.launch-access-date{font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1.08;letter-spacing:-.025em;color:var(--gold,#d7aa57);margin:10px 0 16px}
+.launch-access .launch-price strong{font-size:clamp(25px,3vw,32px)}
+.launch-access .launch-price{margin:8px 0;gap:8px 14px}
+.launch-access .launch-saving{font-size:12px}
