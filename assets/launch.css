@@ -1,0 +1,11 @@
+/* Launch additions use the existing site palette and typography. */
+.launch-offer{margin:24px 0 0;line-height:1.5}
+.launch-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 18px;margin:9px 0}
+.launch-price strong{font-size:clamp(30px,4vw,48px);line-height:1.15;color:var(--gold,#d6aa50);font-weight:800}
+.launch-price span{font-size:16px;color:#b8b8b8}
+.launch-saving{color:var(--gold,#d6aa50);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.launch-offer p{font-size:14px;color:#b8b8b8;margin:10px 0 0;line-height:1.6}
+.hero-content .launch-price{justify-content:center}
+.hero-content .launch-offer{margin-top:20px}
+.hero-content .hero-button{margin-top:20px}
+@media(max-width:600px){.launch-offer .eyebrow{font-size:11px;letter-spacing:.12em}.launch-price{gap:6px 12px}.launch-offer p{font-size:13px}}
