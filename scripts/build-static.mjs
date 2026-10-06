@@ -12,7 +12,7 @@ export const publicFiles=[
  'assets/about-hero.webp','assets/about-jarrod-portrait.webp','assets/chrome.css','assets/chrome.js',
  'assets/film-hero-final.webp','assets/film-hero.webp','assets/film-review-details.webp','assets/film-review-hero.webp',
  'assets/game-plan-court-hero.webp','assets/game-plan-cover.webp','assets/game-plan-spiral-final.webp',
- 'assets/gold-logo.svg','assets/gold-p-icon.svg','assets/home-hero-shooting-color.webp',
+ 'assets/gold-logo.svg','assets/gold-p-icon.svg','assets/lesson-email-logo.png','assets/home-hero-shooting-color.webp',
  'assets/home-hero-shooting.webp','assets/home-hero-v3.webp','assets/home-hero.webp',
  'assets/jarrod-sprite-final.webp','assets/launch.css','assets/launch.js','assets/lesson-signup.js','assets/prime-cover-player.webp',
  'assets/schools-classroom-hero-v2.webp','assets/schools-classroom-hero-v3.webp','assets/schools-classroom-hero-v4.webp',
