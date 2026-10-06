@@ -108,3 +108,22 @@ body.launch-dialog-open{overflow:hidden}
 .lesson-preview-fields .lesson-marketing{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:12px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:400}
 .lesson-preview-fields .lesson-marketing input{width:16px;height:16px;padding:0;margin:2px 0 0;flex-shrink:0}
 #lessonTurnstile:not(:empty){margin-top:16px}
+/* Locked lesson preview: no video or lesson URL is exposed here. */
+.lesson-preview{align-items:stretch}
+.lesson-preview-intro{display:flex;flex-direction:column;min-width:0}
+.lesson-preview-intro>.eyebrow{align-self:flex-start}
+.lesson-video-preview{position:relative;display:flex;flex:1;margin-top:26px;min-height:220px}
+.lesson-video-unlock{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;align-items:center;width:100%;min-height:220px;padding:22px;border:1px solid rgba(215,170,87,.28);border-radius:12px;overflow:hidden;background:#0b0b0b;color:#fff;cursor:pointer;font:inherit;text-align:center}
+.lesson-video-unlock:before{content:"";position:absolute;inset:0;z-index:-2;background:url('/assets/game-plan-court-hero.webp') center 42%/cover no-repeat;filter:grayscale(1);opacity:.4}
+.lesson-video-unlock:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.18) 45%,rgba(0,0,0,.88))}
+.lesson-video-kicker{color:var(--gold,#d7aa57);font-size:11px;letter-spacing:.16em;font-weight:800}
+.lesson-video-play{display:grid;place-items:center;width:62px;height:62px;border:1px solid rgba(215,170,87,.6);border-radius:50%;background:rgba(0,0,0,.5);color:var(--gold,#d7aa57);transition:transform .2s,background .2s}
+.lesson-video-play svg{width:27px;height:27px;margin-left:3px}
+.lesson-video-caption{display:flex;align-items:center;justify-content:center;gap:8px;font-size:10px;letter-spacing:.09em;color:#ddd}
+.lesson-video-caption svg{width:14px;height:14px;flex-shrink:0}
+.lesson-video-unlock:hover .lesson-video-play{transform:scale(1.06);background:rgba(215,170,87,.13)}
+.lesson-video-unlock:focus-visible{outline:2px solid var(--gold,#d7aa57);outline-offset:4px}
+.lesson-video-preview .lesson-video-prompt{position:absolute;left:18px;right:18px;bottom:48px;margin:0;padding:10px 14px;border:1px solid rgba(215,170,87,.35);border-radius:6px;background:rgba(8,8,8,.95);color:#fff;font-size:13px;line-height:1.45;text-align:center;pointer-events:none}
+.lesson-video-prompt[hidden]{display:none}
+@media(max-width:700px){.lesson-video-preview{flex:none;min-height:0;aspect-ratio:16/9;margin-top:22px}.lesson-video-unlock{min-height:0;padding:16px}.lesson-video-play{width:52px;height:52px}.lesson-video-preview .lesson-video-prompt{bottom:39px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.lesson-video-play{transition:none}}
