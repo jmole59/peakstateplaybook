@@ -2086,8 +2086,8 @@ a {
       <div class="lesson-preview-signup">
         <div class="lesson-preview-label">EXCLUSIVE LESSON ACCESS</div>
         <p>Enter your email to receive the lesson link directly in your inbox.</p>
-        <!-- Review-only layout. Enable only when email capture and delivery are connected. -->
-        <form id="lessonPreviewForm" data-signup-enabled="false" data-signup-test-enabled="true">
+        <!-- Public signup: server-side validation and delivery remain authoritative. -->
+        <form id="lessonPreviewForm" data-signup-enabled="true">
         <fieldset class="lesson-preview-fields" disabled>
           <legend class="lesson-preview-sr">Request your free G.A.M.E. Plan lesson</legend>
           <label for="lessonPreviewName">FIRST NAME (OPTIONAL)</label>
@@ -2101,7 +2101,7 @@ a {
         </fieldset>
         </form>
         <p class="lesson-preview-status" id="lessonPreviewPrivacy">We use your email to send this lesson and store your request in our private Athlete Hub. Marketing is optional. <a class="gold" href="/privacy/#free-lesson">How we handle your information</a></p>
-        <p class="lesson-preview-status" id="lessonPreviewStatus" role="status" aria-live="polite">Lesson signup is not available yet.</p>
+        <p class="lesson-preview-status" id="lessonPreviewStatus" role="status" aria-live="polite">Enter your details to receive your free lesson.</p>
       </div>
     </section>
 
@@ -2401,3 +2401,4 @@ document
 <script src="/assets/lesson-signup.js" defer></script>
 </body>
 </html>
+

@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {signup} from '../netlify/functions/lesson-signup.mjs';
+const origin='https://peakstateplaybook.com';
+const settings={CONTEXT:'production',LESSON_SIGNUP_ENABLED:'true',LESSON_ALLOWED_ORIGINS:origin,TURNSTILE_SECRET_KEY:'offline',PSP_HUB_SERVICE_TOKEN:'offline',PSP_LEAD_INGESTION_TOKEN:'offline'};
+function request(url=origin,headers={},extra={}){return new Request(url+'/.netlify/functions/lesson-signup',{method:'POST',headers:{Origin:url,'Content-Type':'application/json',...headers},body:JSON.stringify({email:'alex@example.com',requestId:crypto.randomUUID(),marketingConsent:false,turnstileToken:'offline',...extra})});}
+const forbidden=()=>{throw Error('Unexpected network');};
+test('old test flags cannot bypass disabled public signup',async()=>{const r=await signup(request(),{...settings,LESSON_SIGNUP_ENABLED:'false',LESSON_TEST_ENABLED:'true',LESSON_PRODUCTION_TEST_ENABLED:'true'},forbidden);assert.equal(r.status,503);});
+test('old production test header is rejected before saving',async()=>{const r=await signup(request(origin,{'X-PSP-Release-Test':'production'}),settings,forbidden);assert.equal(r.status,400);assert.equal((await r.json()).code,'TEST_ACCESS_REMOVED');});
+test('preview URLs and nonproduction contexts cannot activate',async()=>{assert.equal((await signup(request('https://deploy-preview-7--cool-cajeta-ad120e.netlify.app'),{...settings,LESSON_TEST_ENABLED:'true'},forbidden)).status,503);assert.equal((await signup(request(),{...settings,CONTEXT:'deploy-preview'},forbidden)).status,503);});
+test('public signup forwards only the signup action and confirms durable save',async()=>{let relayed;const r=await signup(request(origin,{}, {action:'dispatch'}),settings,async(url,options)=>{if(String(url).includes('siteverify'))return Response.json({success:true,hostname:'peakstateplaybook.com',action:'lesson_signup'});relayed=JSON.parse(options.body);return Response.json({ok:true,saved:true});});assert.equal(r.status,202);assert.equal((await r.json()).saved,true);assert.equal(relayed.action,'signup');assert.equal(relayed.marketingConsent,false);});
+test('failed challenge never reaches storage',async()=>{let calls=0;const r=await signup(request(),settings,async()=>{calls++;return Response.json({success:false});});assert.equal(r.status,403);assert.equal(calls,1);});
+test('failed Hub save never reports success',async()=>{const r=await signup(request(),settings,async url=>String(url).includes('siteverify')?Response.json({success:true,hostname:'peakstateplaybook.com',action:'lesson_signup'}):Response.json({ok:false},{status:503}));assert.equal(r.status,503);assert.equal((await r.json()).ok,false);});
