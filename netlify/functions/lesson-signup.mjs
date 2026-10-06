@@ -2,7 +2,7 @@ import {hub,json} from './lib/bridge.mjs';
 export async function signup(req,settings=process.env,fetcher=fetch){
  if(req.method!=='POST')return json({ok:false,code:'METHOD_NOT_ALLOWED'},405);
  const previewOrigin='https://deploy-preview-7--cool-cajeta-ad120e.netlify.app';
- const previewTest=settings.LESSON_TEST_ENABLED==='true'&&settings.CONTEXT==='deploy-preview'&&settings.DEPLOY_PRIME_URL===previewOrigin&&new URL(req.url).origin===previewOrigin;
+ const previewTest=settings.LESSON_TEST_ENABLED==='true'&&new URL(req.url).origin===previewOrigin;
  if(settings.LESSON_SIGNUP_ENABLED!=='true'&&!previewTest)return json({ok:false,code:'SIGNUP_DISABLED'},503);
  const allowed=previewTest?[previewOrigin]:(settings.LESSON_ALLOWED_ORIGINS||'').split(',').map(s=>s.trim()).filter(Boolean);
  if(!allowed.includes(req.headers.get('origin')))return json({ok:false,code:'ORIGIN_NOT_ALLOWED'},403);
