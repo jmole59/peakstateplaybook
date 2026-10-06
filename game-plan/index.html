@@ -2087,13 +2087,20 @@ a {
         <div class="lesson-preview-label">EXCLUSIVE LESSON ACCESS</div>
         <p>Enter your email to receive the lesson link directly in your inbox.</p>
         <!-- Review-only layout. Enable only when email capture and delivery are connected. -->
+        <form id="lessonPreviewForm" data-signup-enabled="false">
         <fieldset class="lesson-preview-fields" disabled>
           <legend class="lesson-preview-sr">Request your free G.A.M.E. Plan lesson</legend>
+          <label for="lessonPreviewName">FIRST NAME (OPTIONAL)</label>
+          <input id="lessonPreviewName" name="firstName" autocomplete="given-name" maxlength="80" placeholder="Your first name">
           <label for="lessonPreviewEmail">EMAIL ADDRESS</label>
-          <input id="lessonPreviewEmail" type="email" name="email" autocomplete="email" placeholder="Your email address" aria-describedby="lessonPreviewStatus">
-          <button type="button" class="button button-white">GET THE FREE LESSON</button>
+          <input id="lessonPreviewEmail" type="email" name="email" autocomplete="email" required placeholder="Your email address" aria-describedby="lessonPreviewStatus">
+          <div class="lesson-preview-sr" aria-hidden="true"><label for="lessonWebsite">Website</label><input id="lessonWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="lesson-marketing"><input type="checkbox" name="marketingConsent"> <span>Yes, send me occasional basketball mental-performance tips and program updates from Peak State Playbook. I can unsubscribe anytime.</span></label>
+          <div id="lessonTurnstile"></div>
+          <button type="submit" class="button button-white">GET THE FREE LESSON</button>
         </fieldset>
-        <p class="lesson-preview-status" id="lessonPreviewStatus">Preview only: sign-up and email delivery are not connected yet.</p>
+        </form>
+        <p class="lesson-preview-status" id="lessonPreviewStatus" role="status" aria-live="polite">Lesson signup is not available yet.</p>
       </div>
     </section>
 
@@ -2390,5 +2397,6 @@ document
 </div></div></div></footer>
 <script src="/assets/chrome.js"></script>
 <script src="/assets/launch.js"></script>
+<script src="/assets/lesson-signup.js" defer></script>
 </body>
 </html>
