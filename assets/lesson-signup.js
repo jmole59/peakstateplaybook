@@ -9,6 +9,21 @@
     event.preventDefault();
     if (enabled) submit();
   });
+  const previewButton = document.getElementById('lessonVideoUnlock');
+  if (previewButton && typeof previewButton.addEventListener === 'function') previewButton.addEventListener('click', () => {
+    const prompt = document.getElementById('lessonVideoPrompt');
+    if (prompt) {
+      prompt.textContent = 'Enter your details to receive this exclusive lesson by email.';
+      prompt.hidden = false;
+    }
+    if (enabled && !form.elements.email.disabled) {
+      form.elements.email.focus({ preventScroll: true });
+      form.elements.email.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'center'
+      });
+    }
+  });
   if (!enabled) { fields.disabled = true; return; }
   let widget, token = '', pending = null, busy = false, saved = false;
   const button = form.querySelector('button[type="submit"]');
