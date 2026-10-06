@@ -12,14 +12,18 @@ export async function signup(req,settings=process.env,fetcher=fetch){
  if(!body||typeof body!=='object'||Array.isArray(body)||typeof body.email!=='string'||!body.email.trim()||typeof body.requestId!=='string'||!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(body.requestId)||body.website||typeof body.turnstileToken!=='string'||body.turnstileToken.length>2048)return json({ok:false,code:'INVALID_REQUEST'},400);
  if(previewTest&&body.email.trim().toLowerCase()!=='info@peakstateplaybook.com')return json({ok:false,code:'TEST_RECIPIENT_ONLY'},400);
  if(!settings.TURNSTILE_SECRET_KEY)return json({ok:false,code:'NOT_CONFIGURED'},503);
+ let failureCode='CHALLENGE_UNAVAILABLE';
  try{
   const verification=await fetcher('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',redirect:'manual',signal:AbortSignal.timeout(5000),headers:{'Content-Type':'application/json'},body:JSON.stringify({secret:settings.TURNSTILE_SECRET_KEY,response:body.turnstileToken,idempotency_key:body.requestId})});
-  if(!verification.ok)throw Error('CHALLENGE_UNAVAILABLE');const challenge=await verification.json();
+  const challenge=await verification.json();
+  if(Array.isArray(challenge['error-codes'])&&challenge['error-codes'].some(c=>['missing-input-secret','invalid-input-secret'].includes(c)))return json({ok:false,code:'VERIFICATION_KEY_INVALID'},503);
+  if(!verification.ok)throw Error('CHALLENGE_UNAVAILABLE');
   if(challenge.success!==true||challenge.action!=='lesson_signup'||!allowed.some(o=>new URL(o).hostname===challenge.hostname))return json({ok:false,code:'CHALLENGE_FAILED'},403);
   // Explicit allowlist: the public browser cannot request dispatch or mutate delivery events.
+  failureCode='HUB_SAVE_UNAVAILABLE';
   const saved=await hub({action:'signup',email:body.email,firstName:body.firstName,requestId:body.requestId,marketingConsent:body.marketingConsent,consentVersion:body.consentVersion},fetcher,settings);
   if(saved.saved!==true)throw Error('NOT_SAVED');
   return json({ok:true,saved:true,message:'Your request is saved. Your lesson email will be sent shortly.'},202);
- }catch{return json({ok:false,code:'TEMPORARILY_UNAVAILABLE',message:'We could not confirm your request. Please try again.'},503);}
+ }catch{return json({ok:false,code:failureCode,message:'We could not confirm your request. Please try again.'},503);}
 }
 export default function(req){return signup(req);}
