@@ -35,7 +35,7 @@ body.launch-dialog-open{overflow:hidden}
 .launch-summary .featured-button{margin-top:20px}
 .launch-summary [hidden]{display:none!important}
 .lesson-preview{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;margin:64px 0 0;padding:68px 0 12px;border-top:1px solid rgba(215,170,87,.3);text-align:left}
-.lesson-preview h2{font-family:inherit;font-size:clamp(26px,3vw,42px);font-weight:900;line-height:1.12;letter-spacing:-.02em;margin:18px 0}
+.lesson-preview h2{font-family:inherit;font-size:clamp(36px,4.6vw,64px);font-weight:900;line-height:1.04;letter-spacing:-.025em;margin:20px 0;text-wrap:balance}
 .lesson-preview p{font-size:16px;color:#b8b8b8;line-height:1.7;margin:0;max-width:520px}
 .lesson-preview-signup{padding:28px;background:linear-gradient(135deg,rgba(215,170,87,.08),rgba(0,0,0,.18));border-left:2px solid var(--gold,#d7aa57);border-radius:0 14px 14px 0}
 .lesson-preview-label{color:var(--gold,#d7aa57);font-size:12px;letter-spacing:.12em;font-weight:800;margin-bottom:10px}
@@ -46,7 +46,7 @@ body.launch-dialog-open{overflow:hidden}
 .lesson-preview-fields .button{display:flex;width:100%;box-sizing:border-box;justify-content:center;align-items:center;margin-top:12px;font-size:12px;letter-spacing:.1em;padding:17px 12px}
 .lesson-preview .lesson-preview-status{font-size:11px;line-height:1.5;margin-top:12px;color:#aaa}
 .lesson-preview-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-@media(max-width:700px){.lesson-preview{grid-template-columns:1fr;gap:24px;margin-top:40px;padding:30px 0}.lesson-preview-signup{padding:22px}.lesson-preview .eyebrow{font-size:11px;letter-spacing:.12em}.lesson-preview p{font-size:15px}.lesson-preview-signup p{font-size:14px}}
+@media(max-width:700px){.lesson-preview{grid-template-columns:1fr;gap:24px;margin-top:40px;padding:30px 0}.lesson-preview-signup{padding:22px}.lesson-preview h2{font-size:clamp(32px,8.5vw,44px)}.lesson-preview .eyebrow{font-size:11px;letter-spacing:.12em}.lesson-preview p{font-size:15px}.lesson-preview-signup p{font-size:14px}}
 
 .launch-dialog .launch-dialog-program{font-size:14px;line-height:1.55;color:#ddd;max-width:390px;margin:0 auto 16px}
 .launch-dialog .launch-learn-more{margin:8px 0;background:transparent;color:var(--gold,#d7aa57);border:1px solid rgba(215,170,87,.55)}
