@@ -1714,6 +1714,7 @@ a {
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 <link rel="stylesheet" href="/assets/chrome.css">
+<link rel="stylesheet" href="/assets/launch.css">
 </head>
 
 
@@ -1783,13 +1784,30 @@ a {
     </div>
 
 
-    <button type="button" class="button button-white hero-button" disabled aria-disabled="true">COMING SOON</button>
+    <a href="https://peakstateplaybook.circle.so/checkout/game-plan" class="button button-white hero-button">GET THE G.A.M.E. PLAN</a>
+
 
 
   </div>
 
 </section>
 
+
+<section class="launch-release-strip" aria-label="G.A.M.E. Plan launch offer">
+  <div class="launch-release-inner" data-launch-offer>
+    <div class="launch-release-date">
+      <div class="eyebrow" data-offer-label>Program access begins</div>
+      <div class="launch-access-date" data-access-date>1<sup>st</sup> NOVEMBER</div>
+    </div>
+    <div class="launch-release-purchase">
+      <div class="launch-saving" data-offer-saving>50% off pre-sale launch pricing</div>
+      <div class="launch-price"><strong data-offer-price>$349.50</strong><span data-offer-normal>Full price <span class="launch-normal-price">$699</span></span></div>
+      <p class="launch-code" data-offer-code>Use code <strong>GAMEPLAN50</strong> at checkout</p>
+      <a href="https://peakstateplaybook.circle.so/checkout/game-plan" class="button button-white">GET THE G.A.M.E. PLAN</a>
+      <p class="launch-release-deadline" data-offer-deadline>Offer ends 31 October 2026 · 11:59 PM Melbourne time.<br>Full price from 1 November.</p>
+    </div>
+  </div>
+</section>
 
 <!-- =======================================================
      02 STORY
@@ -2059,19 +2077,33 @@ a {
     </div>
 
 
-    <div class="goal-statement">
-
-      <span class="goal-line-one">
-        The system I wish I had
-      </span>
-
-      <span class="goal-line-two">
-        when I needed it the most.
-      </span>
-
-      <span class="goal-line-three">And now, it's yours.</span>
-
-    </div>
+    <section class="lesson-preview" aria-labelledby="lessonPreviewTitle">
+      <div class="lesson-preview-intro">
+        <div class="eyebrow">An inside look</div>
+        <h2 id="lessonPreviewTitle">EXPERIENCE<br><span class="gold">ONE FULL LESSON</span></h2>
+        <p>Still deciding? Get a free preview of one lesson from inside The G.A.M.E. Plan. See how the program works before you commit.</p>
+      </div>
+      <div class="lesson-preview-signup">
+        <div class="lesson-preview-label">EXCLUSIVE LESSON ACCESS</div>
+        <p>Enter your email to receive the lesson link directly in your inbox.</p>
+        <!-- Review-only layout. Enable only when email capture and delivery are connected. -->
+        <form id="lessonPreviewForm" data-signup-enabled="false" data-signup-test-enabled="true">
+        <fieldset class="lesson-preview-fields" disabled>
+          <legend class="lesson-preview-sr">Request your free G.A.M.E. Plan lesson</legend>
+          <label for="lessonPreviewName">FIRST NAME (OPTIONAL)</label>
+          <input id="lessonPreviewName" name="firstName" autocomplete="given-name" maxlength="80" placeholder="Your first name">
+          <label for="lessonPreviewEmail">EMAIL ADDRESS</label>
+          <input id="lessonPreviewEmail" type="email" name="email" autocomplete="email" required placeholder="Your email address" aria-describedby="lessonPreviewPrivacy lessonPreviewStatus">
+          <div class="lesson-preview-sr" aria-hidden="true"><label for="lessonWebsite">Website</label><input id="lessonWebsite" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="lesson-marketing"><input type="checkbox" name="marketingConsent"> <span>Yes, send me occasional basketball mental-performance tips and program updates from Peak State Playbook. I can unsubscribe anytime.</span></label>
+          <div id="lessonTurnstile"></div>
+          <button type="submit" class="button button-white">GET THE FREE LESSON</button>
+        </fieldset>
+        </form>
+        <p class="lesson-preview-status" id="lessonPreviewPrivacy">We use your email to send this lesson and store your request in our private Athlete Hub. Marketing is optional. <a class="gold" href="/privacy/#free-lesson">How we handle your information</a></p>
+        <p class="lesson-preview-status" id="lessonPreviewStatus" role="status" aria-live="polite">Lesson signup is not available yet.</p>
+      </div>
+    </section>
 
 
   </div>
@@ -2276,7 +2308,7 @@ a {
     </div>
 
 
-    <button type="button" class="button button-white final-button" disabled aria-disabled="true">COMING SOON</button>
+    <a href="https://peakstateplaybook.circle.so/checkout/game-plan" class="button button-white final-button">GET THE G.A.M.E. PLAN</a>
 
     <div class="guarantee" aria-label="30-day money-back guarantee">
       <div class="guarantee-heading"><span class="guarantee-days">30 DAYS</span><span>Full money-back guarantee</span></div>
@@ -2365,5 +2397,7 @@ document
 <a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener">TikTok</a>
 </div></div></div></footer>
 <script src="/assets/chrome.js"></script>
+<script src="/assets/launch.js"></script>
+<script src="/assets/lesson-signup.js" defer></script>
 </body>
 </html>

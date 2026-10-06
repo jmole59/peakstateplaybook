@@ -2928,6 +2928,7 @@ a {
 @media(max-width:650px){.featured-title{font-size:clamp(32px,8.6vw,50px);letter-spacing:-1.5px}.featured-pillars{letter-spacing:1.3px}.featured-includes{font-size:10px;letter-spacing:1.1px}.featured-includes span{padding:0 5px}}
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
+<link rel="stylesheet" href="/assets/launch.css">
 </head>
 
 
@@ -3010,10 +3011,10 @@ a {
       <div class="hero-buttons">
 
         <a
-          href="https://peakstateplaybook.circle.so/c/peak-state-starter"
+          href="/peak-state-starter/"
           class="button button-white"
         >
-          Start Free
+          Explore the Free Starter
         </a>
 
         <a
@@ -3113,15 +3114,15 @@ a {
         Build an identity that holds under pressure, reset faster after mistakes and compete with confidence when the game gets tough. The G.A.M.E. Plan gives you a system to train the mental side of basketball, on and off the court.
       </div>
 
+      <div class="launch-summary">
+
+        
+        <a href="/game-plan/" class="button button-white featured-button">LEARN MORE</a>
+      </div>
       <div class="featured-includes">Physical workbook <span aria-hidden="true">·</span> Full PDF <span aria-hidden="true">·</span> Program videos</div>
 
 
-      <a
-        href="/game-plan"
-        class="button button-white featured-button"
-      >
-        Explore The G.A.M.E. Plan
-      </a>
+      
 
 
     </div>
@@ -3176,7 +3177,9 @@ a {
         <h3>Peak State <span>Starter</span></h3>
         <p>A free, under-20-minute introduction to training the mental side of your game. Get your first tools for awareness, confidence and resetting after mistakes.</p>
       </div>
-      <a href="https://peakstateplaybook.circle.so/c/peak-state-starter" class="starter-feature-link">Start free <span aria-hidden="true">→</span></a>
+      <div class="starter-feature-actions">
+        <a href="/peak-state-starter/" class="starter-feature-link">Learn more <span aria-hidden="true">→</span></a>
+      </div>
     </div>
 
     <div class="peak-series-label">The P.E.A.K. Series <span>·</span> The Playbooks</div>
@@ -3198,17 +3201,15 @@ a {
           The G.A.M.E. Plan
         </div>
 
-        <div class="status available">
-          Coming Soon
-        </div>
+        <span class="status available prime-offer-link">AVAILABLE NOW</span>
 
         <br>
 
         <a
-          href="/game-plan"
+          href="/game-plan/"
           class="prime-link"
         >
-          Explore Playbook →
+          Explore The G.A.M.E. Plan →
         </a>
 
       </div>
@@ -3584,10 +3585,10 @@ a {
 
 
     <a
-      href="https://peakstateplaybook.circle.so/c/peak-state-starter"
+      href="/peak-state-starter/"
       class="button button-white final-button"
     >
-      Start Free
+      Explore the Free Starter
     </a>
 
 
@@ -3636,5 +3637,26 @@ a {
 })();
 </script>
 
+<dialog class="launch-dialog" id="gamePlanLaunch" aria-labelledby="launchDialogTitle" aria-describedby="launchDialogDescription">
+  <button type="button" class="launch-dialog-close" aria-label="Close launch offer">×</button>
+  <div class="eyebrow">Pre-Sale Launch Offer</div>
+  <h2 id="launchDialogTitle">G.A.M.E. PLAN</h2>
+  <div class="launch-dialog-intro">
+    <p class="launch-dialog-program">Online basketball mindset program</p>
+    <p class="launch-dialog-outcomes">Confidence · Composure · Control under pressure</p>
+  </div>
+  <div class="launch-dialog-access" id="launchDialogDescription">
+    <span>PROGRAM ACCESS</span><strong>1<sup>st</sup> NOVEMBER</strong>
+  </div>
+  <div class="launch-dialog-offer">
+    <div class="launch-saving">50% off launch pricing</div>
+    <div class="launch-price"><strong>$349.50</strong><span>Full price <span class="launch-normal-price">$699</span></span></div>
+    <p class="launch-code">Use code <strong>GAMEPLAN50</strong> at checkout</p>
+  </div>
+  <p class="launch-dialog-deadline">Offer ends 31 October · 11:59 PM Melbourne time.</p>
+  <a class="button button-white" href="/game-plan/">Explore the G.A.M.E. Plan</a>
+  <button type="button" class="launch-dialog-dismiss">Continue exploring</button>
+</dialog>
+<script src="/assets/launch.js"></script>
 </body>
 </html>
