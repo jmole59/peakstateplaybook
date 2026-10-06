@@ -3,28 +3,13 @@
   if (!form) return;
   const fields = form.querySelector('fieldset');
   const status = document.getElementById('lessonPreviewStatus');
-  // Deliberate release gate. Requires approved backend deployment and controlled test.
-  const previewTest = form.dataset.signupTestEnabled === 'true' &&
-    location.hostname === 'deploy-preview-7--cool-cajeta-ad120e.netlify.app';
-  const productionTest = form.dataset.signupTestEnabled === 'true' &&
-    ['peakstateplaybook.com', 'www.peakstateplaybook.com'].includes(location.hostname) &&
-    new URLSearchParams(location.search).get('lesson-test') === '1';
-  const enabled = previewTest || productionTest || (form.dataset.signupEnabled === 'true' &&
-    ['peakstateplaybook.com', 'www.peakstateplaybook.com'].includes(location.hostname));
+  const enabled = form.dataset.signupEnabled === 'true' &&
+    ['peakstateplaybook.com', 'www.peakstateplaybook.com'].includes(location.hostname);
   form.addEventListener('submit', event => {
     event.preventDefault();
     if (enabled) submit();
   });
   if (!enabled) { fields.disabled = true; return; }
-  if (previewTest || productionTest) {
-    form.elements.email.value = 'info@peakstateplaybook.com';
-    form.elements.email.readOnly = true;
-    status.textContent = 'Controlled test only. Sends to info@peakstateplaybook.com.';
-  }
-  if (productionTest) {
-    form.elements.marketingConsent.checked = false;
-    form.elements.marketingConsent.disabled = true;
-  }
   let widget, token = '', pending = null, busy = false, saved = false;
   const button = form.querySelector('button[type="submit"]');
   function refreshButton() { button.disabled = busy || saved || !token; }
@@ -51,7 +36,7 @@
     if (!pending) {
       pending = {
         email: form.elements.email.value.trim(), firstName: form.elements.firstName.value.trim(),
-        requestId: crypto.randomUUID(), marketingConsent: productionTest ? false : form.elements.marketingConsent.checked,
+        requestId: crypto.randomUUID(), marketingConsent: form.elements.marketingConsent.checked,
         consentVersion: 'psp-tips-v1', website: form.elements.website.value
       };
     }
@@ -62,7 +47,7 @@
     const timeout = setTimeout(() => controller.abort(), 30000);
     try {
       const response = await fetch('/.netlify/functions/lesson-signup', {
-        method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json', ...(productionTest ? {'X-PSP-Release-Test': 'production'} : {}) },
+        method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...pending, turnstileToken: token }), signal: controller.signal
       });
       const result = await response.json();
@@ -83,7 +68,7 @@
         // Allow retry button/challenge, keep uncertain request values locked.
         fields.disabled = false;
         ['email', 'firstName', 'marketingConsent', 'website'].forEach(name => {
-          form.elements[name].disabled = pending !== null || (productionTest && name === 'marketingConsent');
+          form.elements[name].disabled = pending !== null;
         });
         resetChallenge();
       }
@@ -91,3 +76,4 @@
     }
   }
 })();
+
