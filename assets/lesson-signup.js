@@ -4,13 +4,20 @@
   const fields = form.querySelector('fieldset');
   const status = document.getElementById('lessonPreviewStatus');
   // Deliberate release gate. Requires approved backend deployment and controlled test.
-  const enabled = form.dataset.signupEnabled === 'true' &&
-    ['peakstateplaybook.com', 'www.peakstateplaybook.com'].includes(location.hostname);
+  const previewTest = form.dataset.signupTestEnabled === 'true' &&
+    location.hostname === 'deploy-preview-7--cool-cajeta-ad120e.netlify.app';
+  const enabled = previewTest || (form.dataset.signupEnabled === 'true' &&
+    ['peakstateplaybook.com', 'www.peakstateplaybook.com'].includes(location.hostname));
   form.addEventListener('submit', event => {
     event.preventDefault();
     if (enabled) submit();
   });
   if (!enabled) { fields.disabled = true; return; }
+  if (previewTest) {
+    form.elements.email.value = 'info@peakstateplaybook.com';
+    form.elements.email.readOnly = true;
+    status.textContent = 'Controlled test only. Sends to info@peakstateplaybook.com.';
+  }
   let widget, token = '', pending = null, busy = false, saved = false;
   const button = form.querySelector('button[type="submit"]');
   function refreshButton() { button.disabled = busy || saved || !token; }
