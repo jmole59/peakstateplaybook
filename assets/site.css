@@ -1105,3 +1105,24 @@ img{max-width:100%}
   .film-cinematic-content .display{font-size:clamp(32px,8.3vw,44px)}
   .film-finale .section-title{font-size:clamp(30px,7.6vw,40px)}
 }
+
+/* Basketball Training: compact, consistent testimonial typography. */
+.training-feedback{padding-top:64px;padding-bottom:64px}
+.training-feedback .section-title{font-size:clamp(34px,4.1vw,58px);max-width:1000px;line-height:1.06;letter-spacing:-.035em}
+.training-feedback-layout{grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}
+.training-feedback-feature{justify-content:flex-start;padding:36px;border-radius:14px}
+.training-feedback-feature p{font-size:clamp(20px,1.8vw,25px);font-weight:600;line-height:1.55;margin:20px 0 26px;text-wrap:pretty}
+.training-feedback-feature footer{margin-top:auto}
+.training-feedback-layout footer{font-size:11px;letter-spacing:1px;line-height:1.6}
+.training-feedback-side{justify-content:flex-start}
+.training-feedback-side blockquote{position:relative;padding:24px 0 24px 32px}
+.training-feedback-side .training-quote-mark{position:absolute;top:28px;left:0;font-size:36px}
+.training-feedback-side p{font-size:18px;line-height:1.65;margin:0 0 16px;text-wrap:pretty}
+@media(max-width:700px){
+  .training-feedback{padding-top:46px;padding-bottom:46px}
+  .training-feedback-layout{grid-template-columns:1fr;gap:24px;margin-top:28px}
+  .training-feedback-feature{padding:28px}
+  .training-feedback-feature p{font-size:20px}
+  .training-feedback-side p{font-size:17px}
+  .training-feedback .section-title{font-size:clamp(30px,7.8vw,40px)}
+}
