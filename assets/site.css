@@ -1093,3 +1093,15 @@ img{max-width:100%}
   .schools-learning-topic:nth-child(n){position:relative;left:auto;top:auto;grid-column:auto;grid-row:auto;width:min(100%,104px);height:auto;min-height:0;aspect-ratio:1;transform:none;padding:9px;font-size:clamp(9px,2.5vw,11px);letter-spacing:.3px;touch-action:manipulation}
   .schools-learning-topic:nth-child(n).is-active{scale:1.04}
 }
+
+/* Film Room opening and closing headings: match the site's restrained scale. */
+.film-cinematic-content .display{font-size:clamp(44px,5.2vw,72px);letter-spacing:-.035em;max-width:1000px;line-height:1.04}
+.film-finale .section-title{font-size:clamp(36px,4.4vw,62px);letter-spacing:-.035em;line-height:1.06;max-width:950px}
+@media(max-width:900px){
+  .film-cinematic-content .display{font-size:clamp(40px,6.3vw,58px)}
+  .film-finale .section-title{font-size:clamp(34px,5.3vw,48px)}
+}
+@media(max-width:600px){
+  .film-cinematic-content .display{font-size:clamp(32px,8.3vw,44px)}
+  .film-finale .section-title{font-size:clamp(30px,7.6vw,40px)}
+}
