@@ -1146,3 +1146,16 @@ img{max-width:100%}
   .hero-split.about .hero-split-copy .body-copy{margin-top:16px}
   .hero-split.about .hero-split-copy .button-row{margin-top:24px}
 }
+
+/* Schools opening: consistent spacing between headline, details and actions. */
+.schools-cinematic-copy .lead{margin-top:24px;max-width:590px;font-size:clamp(18px,1.65vw,22px);line-height:1.5}
+.schools-cinematic-copy .body-copy{margin-top:18px;max-width:590px;line-height:1.65}
+.schools-cinematic-copy .button-row{margin-top:28px;gap:12px}
+@media(min-width:901px){
+  .schools-cinematic-copy{padding-top:72px;padding-bottom:72px}
+}
+@media(max-width:600px){
+  .schools-cinematic-copy .lead{margin-top:20px;font-size:18px}
+  .schools-cinematic-copy .body-copy{margin-top:16px}
+  .schools-cinematic-copy .button-row{margin-top:24px}
+}
