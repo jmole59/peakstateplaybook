@@ -1127,8 +1127,9 @@ img{max-width:100%}
   .training-feedback .section-title{font-size:clamp(30px,7.8vw,40px)}
 }
 
-/* Shorter About story crop, balanced with the adjacent copy. */
+/* About story photo follows the text column's height on desktop. */
 @media(min-width:901px){
-  .split-story .story-image{height:500px;min-height:0}
-  .split-story .story-image img{height:100%;min-height:0;object-fit:cover;object-position:center 43%}
+  .split-story{align-items:stretch}
+  .split-story .story-image{height:auto;min-height:0;align-self:stretch}
+  .split-story .story-image img{position:absolute;inset:0;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center 43%}
 }
