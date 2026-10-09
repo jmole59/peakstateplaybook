@@ -1126,3 +1126,9 @@ img{max-width:100%}
   .training-feedback-side p{font-size:17px}
   .training-feedback .section-title{font-size:clamp(30px,7.8vw,40px)}
 }
+
+/* Shorter About story crop, balanced with the adjacent copy. */
+@media(min-width:901px){
+  .split-story .story-image{height:500px;min-height:0}
+  .split-story .story-image img{height:100%;min-height:0;object-fit:cover;object-position:center 43%}
+}
