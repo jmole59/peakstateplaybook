@@ -1,5 +1,7 @@
 import {createHmac,timingSafeEqual} from 'node:crypto';
 const product='prod_VMHqgkptMAFwQg';
+const upfrontPrice='price_1ULZH6Kqm3Mkt6ysGfyYMryu';
+const instalmentPrice='price_1UPrSrKqm3Mkt6ysOVTh6U1w';
 const id=v=>typeof v==='string'?v:v?.id||'';
 export function verifyStripe(raw,signature,secret,now=Date.now()){
  const parts=String(signature||'').split(',').map(p=>p.split('=')),t=parts.find(p=>p[0]==='t')?.[1],signatures=parts.filter(p=>p[0]==='v1').map(p=>p[1]);
@@ -17,12 +19,25 @@ export async function normalise(event,settings,fetcher=fetch){
  if(!/^in_[A-Za-z0-9]+$/.test(o?.id||'')||o.status!=='paid'||o.paid_out_of_band||!(o.amount_paid>0))return null;
  let lines=o.lines;if(!lines?.data)lines=await api('invoices/'+encodeURIComponent(o.id)+'/lines?limit=100');
  let all=[...lines.data],page=lines;for(let n=0;page.has_more;n++){if(n>=10||!page.data.length)throw Error('INCOMPLETE_LINES');page=await api('invoices/'+encodeURIComponent(o.id)+'/lines?limit=100&starting_after='+encodeURIComponent(page.data.at(-1).id));all.push(...page.data);}
- const products=[];for(const line of all){let p=id(line.pricing?.price_details?.product||line.price?.product||line.plan?.product);if(!p){const price=id(line.pricing?.price_details?.price||line.price);if(!price)throw Error('PRODUCT_UNCONFIRMED');p=id((await api('prices/'+encodeURIComponent(price))).product);}products.push(p);}
+ const products=[],matches=[];for(const line of all){const priceId=id(line.pricing?.price_details?.price||line.price||line.plan);let p=id(line.pricing?.price_details?.product||line.price?.product||line.plan?.product);if(!p){if(!priceId)throw Error('PRODUCT_UNCONFIRMED');p=id((await api('prices/'+encodeURIComponent(priceId))).product);}products.push(p);if(p===product)matches.push({line,priceId});}
  if(!products.includes(product))return null;
  let email=o.customer_email,name=o.customer_name;if(!email){const c=await api('customers/'+encodeURIComponent(id(o.customer)));email=c.email;name=c.name;}
  let pi=id(o.payment_intent),charge=id(o.charge);
  if(!pi&&!charge){let payments=o.payments||await api('invoice_payments?invoice='+encodeURIComponent(o.id)+'&status=paid&limit=100');const paid=payments.data.filter(p=>p.status==='paid');if(payments.has_more||paid.length!==1)throw Error('PAYMENT_LINK_REVIEW');pi=id(paid[0].payment?.payment_intent);charge=id(paid[0].payment?.charge);if(!pi&&!charge)throw Error('PAYMENT_LINK_REVIEW');}
- return {...base,type:'purchase',purchase:{productId:product,invoiceId:o.id,email,name,amountPaid:o.amount_paid,currency:o.currency,chargeId:charge,paymentIntentId:pi,purchasedAt:new Date((o.status_transitions?.paid_at||event.created)*1000).toISOString()}};
+ let enrolment={};
+ const eligible=matches.filter(m=>[upfrontPrice,instalmentPrice].includes(m.priceId));
+ if(eligible.length){
+  if(eligible.length!==1||matches.length!==1||(eligible[0].line.quantity??1)!==1)throw Error('ENROLMENT_REQUIRES_REVIEW');
+  const priceId=eligible[0].priceId,stripeCustomerId=id(o.customer);if(!/^cus_[A-Za-z0-9]+$/.test(stripeCustomerId))throw Error('CUSTOMER_REFERENCE_REQUIRED');
+  let enrolmentId=o.id;
+  if(priceId===instalmentPrice){
+   enrolmentId=id(o.parent?.subscription_details?.subscription||o.subscription||eligible[0].line.subscription);
+   if(!enrolmentId){const fresh=await api('invoices/'+encodeURIComponent(o.id));enrolmentId=id(fresh.parent?.subscription_details?.subscription||fresh.subscription);}
+   if(!/^sub_[A-Za-z0-9]+$/.test(enrolmentId))throw Error('ENROLMENT_REFERENCE_REQUIRED');
+  }
+  enrolment={stripeCustomerId,priceId,enrolmentId};
+ }
+ return {...base,type:'purchase',purchase:{productId:product,invoiceId:o.id,email,name,amountPaid:o.amount_paid,currency:o.currency,chargeId:charge,paymentIntentId:pi,purchasedAt:new Date((o.status_transitions?.paid_at||event.created)*1000).toISOString(),...enrolment}};
 }
 export async function purchaseWebhook(req,settings=process.env,fetcher=fetch){
  const reply=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store'}});
