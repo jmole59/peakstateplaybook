@@ -3668,7 +3668,7 @@ a {
 <p class="founding-popup-date">Program access begins 1 November 2026<br>Founding bonuses end 31 October · 11:59 PM AEDT</p>
 </dialog>
 <script>
-(()=>{const dialog=document.getElementById('foundingPopup');const key='psp-founding-launch-2026-seen';const end=Date.parse('2026-10-31T13:00:00Z');if(!dialog||Date.now()>=end||typeof dialog.showModal!=='function')return;try{if(localStorage.getItem(key))return;}catch(e){}
+(()=>{const dialog=document.getElementById('foundingPopup');const key='psp-founding-launch-2026-seen';const end=Date.parse('2026-10-31T13:00:00Z');if(!dialog||Date.now()>=end||typeof dialog.showModal!=='function')return;const preview=location.hostname.startsWith('deploy-preview-')&&new URLSearchParams(location.search).get('offer-preview')==='1';try{if(!preview&&localStorage.getItem(key))return;}catch(e){}
 const priorOverflow=document.body.style.overflow;
 function close(){dialog.close();}
 dialog.querySelector('.founding-popup-close').addEventListener('click',close);
