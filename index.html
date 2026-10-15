@@ -3641,5 +3641,40 @@ a {
 </script>
 
 
-</body>
+<style>
+.founding-popup{width:min(590px,calc(100% - 32px));max-height:90dvh;overflow:auto;border:1px solid #b88c47;border-radius:18px;padding:46px 38px 34px;background:radial-gradient(ellipse at 50% 0%,#3c2d174d,transparent 65%),#0e0e0e;color:white;text-align:center;box-shadow:0 25px 100px #000b;font-family:Arial,Helvetica,sans-serif}
+.founding-popup::backdrop{background:#000c;backdrop-filter:blur(6px)}
+.founding-popup-close{position:absolute;right:14px;top:12px;width:34px;height:34px;border:1px solid #d7aa5740;border-radius:50%;background:transparent;color:#bbb;font-size:25px;cursor:pointer}
+.founding-popup-kicker{font-size:10px;font-weight:800;letter-spacing:2.3px;text-transform:uppercase;color:#d7aa57;margin:0 0 18px}
+.founding-popup h2{font-size:clamp(34px,6vw,49px);line-height:1.05;letter-spacing:-1.5px;margin:0;color:#e4bd71}
+.founding-popup-type{font-size:14px;color:#ddd;margin:15px 0 9px}
+.founding-popup-benefits{font-size:12px;color:#aaa;margin:0 0 24px;line-height:1.6}
+.founding-popup-offer{border-top:1px solid #d7aa5735;border-bottom:1px solid #d7aa5735;padding:23px 0;margin:0 0 24px}
+.founding-popup-offer h3{font-size:14px;letter-spacing:.7px;text-transform:uppercase;margin:0 0 10px}
+.founding-popup-offer strong{display:block;font-size:29px;color:#d7aa57;line-height:1.2}
+.founding-popup-offer p{font-size:14px;line-height:1.6;color:#bbb;margin:12px auto 0;max-width:420px}
+.founding-popup .button{width:100%;min-height:52px}
+.founding-popup-date{font-size:12px;line-height:1.6;color:#999;margin:19px 0 0}
+@media(max-width:500px){.founding-popup{padding:43px 23px 26px}.founding-popup-offer strong{font-size:25px}.founding-popup-benefits{font-size:11px}}
+</style>
+<dialog class="founding-popup" id="foundingPopup" aria-labelledby="foundingPopupTitle" aria-describedby="foundingPopupDescription">
+<button class="founding-popup-close" type="button" aria-label="Close launch offer">×</button>
+<p class="founding-popup-kicker">Founding launch open now</p>
+<h2 id="foundingPopupTitle">G.A.M.E. PLAN</h2>
+<p class="founding-popup-type" id="foundingPopupDescription">Online basketball mindset program</p>
+<p class="founding-popup-benefits">Confidence · Composure · Control under pressure</p>
+<div class="founding-popup-offer"><h3>Founding Athlete Bonus Package</h3><strong>UP TO $549 IN BONUS VALUE</strong><p>The complete system for $699, with three flexible private coaching credits and a personalised 5-Point Performance Plan included free during the Founding Launch.</p></div>
+<a class="button button-white" href="/game-plan/">EXPLORE THE G.A.M.E. PLAN →</a>
+<p class="founding-popup-date">Program access begins 1 November 2026<br>Founding bonuses end 31 October · 11:59 PM AEDT</p>
+</dialog>
+<script>
+(()=>{const dialog=document.getElementById('foundingPopup');const key='psp-founding-launch-2026-seen';const end=Date.parse('2026-10-31T13:00:00Z');if(!dialog||Date.now()>=end||typeof dialog.showModal!=='function')return;try{if(localStorage.getItem(key))return;}catch(e){}
+const priorOverflow=document.body.style.overflow;
+function close(){dialog.close();}
+dialog.querySelector('.founding-popup-close').addEventListener('click',close);
+dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)close();}});
+dialog.addEventListener('close',()=>{document.body.style.overflow=priorOverflow;});
+window.setTimeout(()=>{if(Date.now()>=end)return;dialog.showModal();document.body.style.overflow='hidden';try{localStorage.setItem(key,'1');}catch(e){}},1200);
+})();
+</script></body>
 </html>
