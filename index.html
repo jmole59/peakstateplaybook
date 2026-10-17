@@ -2935,7 +2935,7 @@ a {
 </style>
 <link rel="icon" href="/assets/gold-p-icon.svg">
 <link rel="stylesheet" href="/assets/launch.css">
-</head>
+<style>.peak-card .prime-availability,.peak-card:hover .prime-availability{cursor:default;transform:none!important;box-shadow:none!important;transition:none!important;border-color:rgba(215,170,87,.30)!important;color:var(--gold)!important;background:rgba(215,170,87,.035)!important;pointer-events:none}</style></head>
 
 
 <body>
@@ -3207,7 +3207,7 @@ a {
           The G.A.M.E. Plan
         </div>
 
-        <span class="status available prime-offer-link">AVAILABLE NOW</span>
+        <span class="status available prime-availability">AVAILABLE NOW</span>
 
         <br>
 
@@ -3668,7 +3668,7 @@ a {
 <p class="founding-popup-date">Program access begins 1 November 2026<br>Founding bonuses end 31 October · 11:59 PM AEDT</p>
 </dialog>
 <script>
-(()=>{const dialog=document.getElementById('foundingPopup');const key='psp-founding-launch-2026-seen';const end=Date.parse('2026-10-31T13:00:00Z');if(!dialog||Date.now()>=end||typeof dialog.showModal!=='function')return;const preview=location.hostname.startsWith('deploy-preview-')&&new URLSearchParams(location.search).get('offer-preview')==='1';try{if(!preview&&localStorage.getItem(key))return;}catch(e){}
+(()=>{const dialog=document.getElementById('foundingPopup');const key='psp-founding-launch-2026-v2-seen';const end=Date.parse('2026-10-31T13:00:00Z');if(!dialog||Date.now()>=end||typeof dialog.showModal!=='function')return;const preview=location.hostname.startsWith('deploy-preview-')&&new URLSearchParams(location.search).get('offer-preview')==='1';try{if(!preview&&localStorage.getItem(key))return;}catch(e){}
 const priorOverflow=document.body.style.overflow;
 function close(){dialog.close();}
 dialog.querySelector('.founding-popup-close').addEventListener('click',close);
