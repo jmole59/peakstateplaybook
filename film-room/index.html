@@ -1,64 +1,167 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Film Room | Peak State Playbook</title><meta name="description" content="One-on-one basketball game-film analysis to identify patterns, improve decision-making and build a clear action plan."><link rel="icon" href="/assets/gold-p-icon.svg"><link rel="stylesheet" href="/assets/site.css"></head><body><header class="site-header"><div class="site-nav">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Film Room | Peak State Playbook</title><meta name="description" content="One-on-one basketball game-film analysis to identify patterns, improve decision-making and build a clear action plan."><link rel="icon" href="/assets/gold-p-icon.svg"><link rel="stylesheet" href="/assets/site.css"><style>
+/* Film Room service page: scoped to preserve the shared site. */
+.fr-mobile-break{display:none}
+.fr-page{--fr-line:rgba(215,170,87,.25)}
+.fr-page h1,.fr-page h2,.fr-page h3{text-wrap:balance}
+.fr-page p,.fr-page li{text-wrap:pretty}
+.fr-page .section{padding:82px 0}
+.fr-page .section-title{font-size:clamp(32px,4.2vw,60px);line-height:1.04;letter-spacing:-.035em}
+.fr-page .kicker{line-height:1.6}
+.fr-page .body-copy{max-width:720px}
+.fr-hero{position:relative;min-height:650px;display:flex;align-items:center;background:linear-gradient(90deg,#060606f0 0%,#060606ce 44%,#06060644 100%),url('/assets/film-review-details.webp') center/cover}
+.fr-hero .container{padding:84px 0}
+.fr-hero h1{max-width:900px;font-size:clamp(45px,5.8vw,84px);line-height:.99;letter-spacing:-.045em;margin:22px 0}
+.fr-hero .lead{max-width:700px;font-size:clamp(20px,2vw,28px)}
+.fr-hero .body-copy{max-width:640px}
+.fr-page .button{line-height:1.45;text-align:center;padding:16px 26px;max-width:100%}
+.fr-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,76px);align-items:center}
+.fr-heading{margin:17px 0 24px}
+.fr-tags{list-style:none;display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:25px 0}
+.fr-tags li{border:1px solid var(--fr-line);padding:10px 14px;border-radius:6px;color:#d8d8d8;font-size:14px}
+.fr-photo{margin:0;overflow:hidden;border-radius:14px;border:1px solid var(--fr-line)}
+.fr-photo img{display:block;width:100%;aspect-ratio:5/4;object-fit:cover}
+.fr-statement{font-size:clamp(22px,2.5vw,34px);line-height:1.35;color:#edcf96;font-weight:800;max-width:900px}
+.fr-audit{background:radial-gradient(ellipse at 80% 15%,#d7aa5719,transparent 65%),#11100d;border-top:1px solid var(--fr-line);border-bottom:1px solid var(--fr-line);scroll-margin-top:90px}
+.fr-audit-head{max-width:860px}
+.fr-audit h2{color:#e4bd76}
+.fr-audit-layout{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:34px 0}
+.fr-audit-panel{padding:30px;background:#08080888;border:1px solid var(--fr-line);border-radius:12px}
+.fr-audit-panel h3{margin:0;font-size:19px;text-transform:uppercase}
+.fr-audit .list{margin-top:15px}
+.fr-pending{scroll-margin-top:110px;padding:12px 15px;border:1px solid #d7aa5733;border-radius:8px;background:#d7aa5708}.fr-pending:target{border-color:var(--gold);color:#eed6ad}.fr-page [hidden]{display:none!important}
+.fr-small{font-size:13px;line-height:1.7;color:#a9a9a9}
+.fr-reassurance{color:#eee;font-size:19px;font-weight:700;line-height:1.5}
+.fr-options{scroll-margin-top:90px}
+.fr-option-grid{display:grid;grid-template-columns:1fr 1.18fr;gap:26px;margin-top:38px;align-items:stretch}
+.fr-offer{position:relative;padding:34px;border:1px solid var(--fr-line);border-radius:14px;background:#101010;display:flex;flex-direction:column}
+.fr-offer h3{margin:18px 0 14px;font-size:25px;text-transform:uppercase;line-height:1.15}
+.fr-offer p{color:#c4c4c4;line-height:1.7}
+.fr-offer .button{margin-top:auto}
+.fr-offer .list{margin-bottom:28px}
+.fr-offer-featured{background:linear-gradient(140deg,#2b2114,#111 75%);border-color:#d7aa5777;box-shadow:0 18px 50px #0004}
+.fr-best{align-self:flex-start;background:#d7aa57;color:#080808;padding:8px 12px;border-radius:4px;font-size:10px;font-weight:900;letter-spacing:2px}
+.fr-price{font-size:clamp(43px,4.5vw,62px);font-weight:900;color:#fff;letter-spacing:-.04em}
+.fr-saving{color:#ebca8f!important;margin:8px 0 0}
+.fr-five{color:#c4c4c4;font-size:14px;line-height:1.7;padding:16px 0;border-top:1px solid var(--fr-line);border-bottom:1px solid var(--fr-line)}
+.fr-process{list-style:none;padding:0;margin:36px 0 0;display:grid;gap:0}
+.fr-process li{display:grid;grid-template-columns:58px minmax(180px,.6fr) 1fr;gap:24px;align-items:start;padding:25px 0;border-top:1px solid var(--fr-line)}
+.fr-process .n{color:var(--gold);font-size:28px;font-weight:900}
+.fr-process h3{margin:4px 0;font-size:18px;text-transform:uppercase}
+.fr-process p{margin:0;color:#c4c4c4;line-height:1.7}
+.fr-why-list{display:grid;grid-template-columns:1fr 1fr;gap:0 25px}
+.fr-parent{padding:24px 28px;border-left:2px solid var(--gold);background:#d7aa5708;color:#d4d4d4;line-height:1.7;margin-top:30px}
+.fr-final{text-align:center;padding:80px 0;background:radial-gradient(ellipse at center,#d7aa5715,transparent 75%)}
+.fr-final h2{max-width:950px;margin:18px auto 25px}
+.fr-final .button-row{justify-content:center}
+.fr-page a:focus-visible{outline:2px solid #f0d295;outline-offset:5px}
+@media(max-width:800px){.fr-split,.fr-audit-layout,.fr-option-grid{grid-template-columns:1fr}.fr-hero{background-position:64% center}.fr-hero h1{font-size:clamp(42px,8vw,64px)}.fr-process li{grid-template-columns:45px 1fr;gap:12px 18px}.fr-process li p{grid-column:2}.fr-offer-featured{order:-1}}
+@media(max-width:600px){.fr-mobile-break{display:inline}.fr-page .section{padding:58px 0}.fr-hero{min-height:0;background-image:linear-gradient(90deg,#060606eb,#060606ba),url('/assets/film-review-details.webp')}.fr-hero .container{padding:65px 0}.fr-hero h1{font-size:clamp(38px,10.5vw,56px)}.fr-page .section-title{font-size:clamp(30px,8vw,42px)}.fr-page .kicker{letter-spacing:2px}.fr-page .button-row{flex-direction:column;align-items:stretch}.fr-audit-panel,.fr-offer{padding:25px 22px}.fr-why-list{grid-template-columns:1fr}.fr-tags{gap:8px}.fr-tags li{font-size:13px}.fr-parent{padding:20px}.fr-final{padding:60px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fr-page .button{transition:none}.fr-page .button:hover{transform:none}}
+
+/* Focused layout polish, preserving the offer and page structure. */
+.fr-hero{background-position:center 48%}
+.fr-hero .lead{max-width:none;font-size:clamp(18px,1.75vw,25px)}
+.fr-problem .fr-split{align-items:stretch}
+.fr-problem .fr-split>div{display:flex;flex-direction:column;justify-content:center}
+.fr-problem .section-title{font-size:clamp(30px,3.3vw,47px)}
+.fr-problem .fr-photo{position:relative;min-height:440px}
+.fr-problem .fr-photo img{height:100%;position:absolute;inset:0;aspect-ratio:auto;object-position:center}
+.fr-problem .fr-statement{font-size:clamp(21px,2vw,28px);margin-bottom:0}
+.fr-audit-head{max-width:none;text-align:center}
+.fr-audit-head .body-copy{max-width:none;margin-left:auto;margin-right:auto}
+.fr-audit h2{font-size:clamp(36px,5.2vw,76px)}
+.fr-audit-head .lead{font-size:clamp(18px,1.8vw,25px);margin-left:auto;margin-right:auto}
+.fr-audit-bottom{text-align:center;margin-top:32px}
+.fr-options-intro{text-align:center}
+.fr-options-intro .body-copy{max-width:850px;margin-left:auto;margin-right:auto}
+.fr-options-intro .fr-statement{margin-left:auto;margin-right:auto}
+.fr-offer{padding:30px}
+.fr-offer h3{font-size:24px}
+.fr-offer .list{margin-top:10px;margin-bottom:24px}
+.fr-offer .list li{padding-top:9px;padding-bottom:9px;font-size:15px}
+.fr-offer .button{width:100%}
+.fr-offer .fr-best{margin-bottom:0}
+.fr-offer-featured h3{margin-top:14px}
+.fr-link-target{display:block;scroll-margin-top:110px}
+.fr-process li{padding:22px 16px;transition:background .2s,border-color .2s}
+.fr-process li:hover,.fr-process li:focus-within{background:#d7aa5710;border-color:#d7aa5777}
+.fr-process li:hover h3,.fr-process li:focus-within h3{color:#eac780}
+.fr-process h3{font-size:17px}
+.fr-process p{font-size:14px}
+.fr-why{background:radial-gradient(ellipse at 15% 40%,#d7aa5712,transparent 65%),#0a0a0a;border-top:1px solid #d7aa5722;border-bottom:1px solid #d7aa5722}
+.fr-why .section-title{font-size:clamp(34px,3.5vw,52px)}
+.fr-why .fr-reads{padding:32px;border:1px solid #d7aa5738;border-radius:14px;background:linear-gradient(135deg,#201a12,#101010)}
+.fr-why .fr-why-list{grid-template-columns:1fr}
+.fr-why .fr-why-list li{font-size:18px;font-weight:700;padding-top:16px;padding-bottom:16px}
+.fr-audience-heading{text-align:center}
+@media(min-width:1100px){.fr-hero .lead,.fr-audit-head .lead{white-space:nowrap}.fr-process li{grid-template-columns:50px 275px minmax(0,1fr)}}
+@media(max-width:800px){.fr-problem .fr-photo{min-height:0}.fr-problem .fr-photo img{position:static;height:auto;aspect-ratio:5/4}.fr-offer-featured{order:0}.fr-why .fr-reads{padding:26px}}
+@media(max-width:600px){.fr-hero .lead,.fr-audit-head .lead{white-space:normal}.fr-audit h2{font-size:clamp(34px,9vw,47px)}.fr-offer{padding:25px 22px}.fr-process li{padding-left:0;padding-right:0}.fr-process p{font-size:15px}.fr-why .fr-why-list li{font-size:16px}.fr-problem .section-title{font-size:clamp(27px,7.2vw,38px)}}
+@media(prefers-reduced-motion:reduce){.fr-process li{transition:none}}
+
+/* Final scanability: paired audit lists, compact moments and useful FAQs. */
+.fr-tag-rows{margin:22px 0}.fr-tag-rows .fr-tags{margin:0 0 8px;gap:8px}
+.fr-tag-rows .fr-tags li{padding:9px 10px;font-size:clamp(11px,.95vw,14px);white-space:nowrap}
+.fr-problem .fr-photo{min-height:390px}
+.fr-options-intro .body-copy{max-width:1100px;font-size:15px}
+.fr-options-intro .section-title{max-width:none}
+.fr-pattern{margin:32px auto 0;padding:32px;text-align:center;border:1px solid #d7aa5760;border-radius:12px;background:radial-gradient(ellipse at center,#d7aa5715,transparent 80%),#100e0b}
+.fr-pattern p{margin:16px 0;color:#ddd;font-size:clamp(21px,2.7vw,36px);font-weight:900;line-height:1.35;letter-spacing:-.025em}
+.fr-pattern strong{color:#edc779}
+.fr-pattern>span{color:#b8b0a2;font-size:14px;line-height:1.6}
+.fr-faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.fr-faq-item{padding:23px 0;border-top:1px solid #d7aa5738}
+.fr-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;font-weight:700;font-size:17px;line-height:1.5}
+.fr-faq-item summary::-webkit-details-marker,.fr-more-faq>summary::-webkit-details-marker{display:none}
+.fr-faq-item summary:after{content:"+";color:var(--gold);font-size:24px;flex:none}
+.fr-faq-item[open] summary:after{content:"−"}
+.fr-faq-item p{font-size:15px;line-height:1.75;color:#c4c4c4;margin:16px 0 0}
+.fr-more-faq{margin-top:20px;border:1px solid #d7aa5738;border-radius:10px;padding:22px 26px}
+.fr-more-faq>summary{list-style:none;cursor:pointer;color:var(--gold);font-weight:800;font-size:13px;letter-spacing:1.5px}
+.fr-more-faq>summary:after{content:" +";float:right}
+.fr-more-faq[open]>summary:after{content:" −"}
+.fr-more-faq[open]>.fr-faq-grid{margin-top:22px}
+.fr-faq-item summary:focus-visible,.fr-more-faq>summary:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:1100px){.fr-tag-rows .fr-tags li{white-space:normal}.fr-desktop-break{display:none}}
+@media(max-width:700px){.fr-faq-grid{grid-template-columns:1fr}.fr-faq-item summary{font-size:16px}.fr-pattern{padding:27px 20px}.fr-pattern p{font-size:clamp(21px,5.7vw,29px)}.fr-more-faq{padding:20px}.fr-tag-rows .fr-tags li{font-size:13px}}
+</style></head><body><header class="site-header"><div class="site-nav">
 <a class="site-logo" href="/" aria-label="Peak State Playbook home"><img src="/assets/gold-p-icon.svg" alt="Peak State Playbook"></a>
 <nav class="site-links">
 <a href="/">Home</a><a href="/about-us/">About</a>
 <div class="nav-dropdown"><button class="nav-dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">Online Programs <span class="nav-chevron">⌄</span></button><div class="nav-dropdown-menu"><a href="/peak-state-starter/"><span class="nav-free">FREE</span>Peak State Starter</a><a href="/game-plan/">The G.A.M.E. Plan</a></div></div>
 <a href="/basketball-training/">Basketball Training</a><a href="/film-room/" aria-current="page">Film Room</a><a href="/school-team-workshops/">Schools &amp; Teams</a><a href="/contact/">Contact</a>
-</nav><button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button></div></header><main><section class="film-cinematic-hero">
-  <div class="film-cinematic-content">
-    <div class="kicker">The Film Room</div>
-    <h1 class="display">Understand your game <span class="gold">Improve with clarity</span></h1>
-    <p class="lead">One-on-one film sessions that turn your game footage into clear decisions and next steps</p>
-    <div class="button-row"><a class="button button-white" href="#options">View Options</a><a class="button button-outline" href="/contact/?service=film-room">Enquire</a></div>
-  </div>
-</section><section class="section soft-grey film-awareness"><div class="container"><div class="grid-2"><div><div class="kicker">Inside A Film Session</div><h2 class="section-title" style="margin-top:14px">One focus <span class="gold">A clearer game plan</span></h2><p class="body-copy">We start by choosing one side of your game: offence or defence. Trying to review everything at once makes it hard to remember what matters. Focusing on one gives us room to spot the patterns and make a plan you can actually use.</p><div class="film-focus" aria-label="Film session focus options"><div><b>Offence</b><span>Shot selection · spacing · reads · decisions</span></div><div><b>Defence</b><span>Positioning · awareness · rotations · effort</span></div></div><ol class="film-process"><li><strong>01 / Isolate</strong><span>Choose offence or defence and study those possessions closely.</span></li><li><strong>02 / Notice</strong><span>Find the habits that keep showing up. Awareness comes first.</span></li><li><strong>03 / Change</strong><span>Build a clear plan for what to work on between sessions.</span></li></ol></div><div class="film-review-photo"><img src="/assets/film-review-details.webp" alt="Basketball game film being reviewed alongside handwritten court notes" loading="lazy"></div></div></div></section>
-<section class="section court-section" id="options"><div class="container"><div class="center"><div class="kicker">Film Room Options</div><h2 class="section-title" style="margin-top:14px">Choose your <span class="gold">film review</span></h2></div><div class="grid-3" style="margin-top:46px">
-<div class="card film-offer-card">
-  <div class="card-label">Single Session</div>
-  <h3 class="card-title">30–45 Minute Film Breakdown</h3>
-  
-  <p>One live review of your game footage with a clear tactical focus for your next game.</p>
-  <button class="film-offer-toggle" type="button" aria-expanded="false" aria-controls="film-single-included">What's included <span class="film-offer-icon" aria-hidden="true"></span></button>
-  <div class="film-offer-detail" id="film-single-included" aria-hidden="true"><div class="film-offer-detail-inner">
-    <p>In a live one-on-one session, we break down a recent game together, look at your decisions and identify what to focus on next. You leave with targeted feedback and a clear tactical focus for your next game.</p>
-    <p class="film-offer-fit">Best for a player who wants focused insight from one game.</p>
-  </div></div>
-  <a class="button button-outline" href="/contact/?service=film-single">Book / Enquire</a>
-</div>
-<div class="card film-offer-card">
-  <div class="card-label">5x Package</div>
-  <h3 class="card-title">Film Breakdown Package</h3>
-  
-  <p>Five film reviews to track patterns, adjust your game and measure progress.</p>
-  <button class="film-offer-toggle" type="button" aria-expanded="false" aria-controls="film-package-included">What's included <span class="film-offer-icon" aria-hidden="true"></span></button>
-  <div class="film-offer-detail" id="film-package-included" aria-hidden="true"><div class="film-offer-detail-inner">
-    <p>Across five one-on-one film sessions, we revisit your footage, track recurring habits and trends, and make tactical adjustments as your game develops. Each review gives you a clearer focus for what to work on next, with accountability across the package.</p>
-    <p class="film-offer-fit">Best for a player who wants ongoing feedback rather than a one-off breakdown.</p>
-  </div></div>
-  <a class="button button-outline" href="/contact/?service=film-package">Book / Enquire</a>
-</div>
-<div class="card film-offer-card">
-  <div class="card-label">Performance System</div>
-  <h3 class="card-title">Complete Development Package</h3>
-  
-  <p>Five film reviews plus three tailored weekly training videos built around your game.</p>
-  <button class="film-offer-toggle" type="button" aria-expanded="false" aria-controls="film-development-included">What's included <span class="film-offer-icon" aria-hidden="true"></span></button>
-  <div class="film-offer-detail" id="film-development-included" aria-hidden="true"><div class="film-offer-detail-inner">
-    <p>Five one-on-one film reviews and three tailored weekly training videos built from what shows up in your game. We identify the patterns and decisions to improve, then give you specific drills and training direction to use between sessions. You train it during the week and review your progress in the next session.</p>
-    <p class="film-offer-fit">Best for a player who wants film review connected to what they actually train.</p>
-  </div></div>
-  <a class="button button-outline" href="/contact/?service=performance-system">Book / Enquire</a>
-</div>
-</div></div></section>
-<section class="section alt film-direction"><div class="container"><div class="center"><div class="kicker">Inside The Film Room</div><h2 class="section-title" style="margin-top:14px">Turn footage into <span class="gold">direction</span></h2><p class="body-copy film-direction-intro">Each breakdown moves from observation to action, so you leave knowing what to see, what to change and what to train.</p></div><div class="film-rail">
-<div class="film-row"><div class="film-index">01</div><h3>Break down your performance in real time</h3></div><div class="film-row"><div class="film-index">02</div><h3>Identify patterns you may not see yourself</h3></div><div class="film-row"><div class="film-index">03</div><h3>Clarify decision-making</h3></div><div class="film-row"><div class="film-index">04</div><h3>Understand how you impact the game</h3></div><div class="film-row"><div class="film-index">05</div><h3>Highlight habits, tendencies and patterns</h3></div><div class="film-row"><div class="film-index">06</div><h3>Build a clear direction moving forward</h3></div>
-</div></div></section>
-<section class="film-finale"><div class="container film-finale-inner"><div class="kicker">Film Review</div><h2 class="section-title">Stop guessing what to <span class="gold">work on next</span></h2><p class="lead">See the game clearly. Train what actually matters.</p><a class="button button-white" href="/contact/?service=film-room">Book Film Review</a></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="footer-brand" href="/"><img src="/assets/gold-p-icon.svg" alt="Peak State Playbook"><strong>Peak State Playbook</strong></a><div class="footer-copy">Basketball mental-performance training, coaching and development designed to help athletes build confidence, handle pressure and perform when it counts.</div></div><div class="footer-links"><a href="/about-us/">About</a><a href="/peak-state-starter/">Peak State Starter</a><a href="/game-plan/">The G.A.M.E. Plan</a><a href="/basketball-training/">Basketball Training</a><a href="/film-room/">Film Room</a><a href="/school-team-workshops/">Schools & Teams</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="footer-bottom"><span>© 2026 Peak State Playbook™. All rights reserved.</span><div class="footer-social"><a href="https://www.instagram.com/peakstateplaybook/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/peakstateplaybook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener">TikTok</a></div></div></div></footer><script src="/assets/site.js"></script><script>
-document.querySelectorAll('.film-offer-toggle').forEach(function(button) {
-  button.addEventListener('click', function() {
-    var expanded = button.getAttribute('aria-expanded') === 'true';
-    button.setAttribute('aria-expanded', String(!expanded));
-    document.getElementById(button.getAttribute('aria-controls')).setAttribute('aria-hidden', String(expanded));
-  });
+</nav><button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button></div></header><main class="fr-page">
+<section class="fr-hero"><div class="container"><div class="kicker">Peak State Playbook · Film Room</div><h1 class="display">STOP GUESSING<br><span class="gold">WHAT TO<span class="fr-mobile-break"><br></span> WORK ON.</span></h1><p class="lead">See your game clearly. Know exactly what to improve next.</p><p class="body-copy">One-on-one basketball film analysis designed to identify patterns, improve decision-making and turn game footage into a clear development plan.</p><div class="button-row"><a class="button button-gold" data-film-action="audit" href="https://tally.so/r/xVVOd5?source=free-film-audit">GET MY FREE 3-CLIP GAME AUDIT</a><a class="button button-outline" href="#options">VIEW FILM ROOM OPTIONS</a></div></div></section>
+<section class="section fr-problem"><div class="container fr-split"><div><div class="kicker">The moments you keep repeating</div><h2 class="section-title fr-heading">YOU CAN’T FIX<br><span class="gold">WHAT YOU CAN’T SEE</span></h2><p class="body-copy">You can train every day and still repeat the same mistakes in games. In the moment, it is hard to see why a possession broke down or why you made that decision.</p><div class="fr-tag-rows"><ul class="fr-tags"><li>Rushing possessions</li><li>Passing up shots</li><li>Missing reads</li><li>Poor positioning</li></ul><ul class="fr-tags"><li>Changing after mistakes</li><li>Decisions under pressure</li><li>Same habits, game after game</li></ul></div><p class="fr-statement">Film slows the game down so we can actually see what’s happening.</p></div><figure class="fr-photo"><img src="/assets/film-review-hero.webp" alt="Basketball footage prepared for a detailed film review" loading="lazy"></figure></div></section>
+<section class="section fr-audit" id="free-audit"><div class="container"><div class="fr-audit-head"><div class="kicker">Start with your actual game · Free</div><h2 class="section-title fr-heading">FREE 3-CLIP GAME AUDIT</h2><p class="lead">Send me your game. I’ll find three moments to help you improve your next one.</p><p class="body-copy">A focused look at what is happening on court, with feedback you can take straight into your preparation.</p></div><div class="fr-audit-layout"><article class="fr-audit-panel"><h3>You send</h3><ul class="list"><li>Your full-game video or a viewable link</li><li>Your name, position and team</li><li>Jersey number or how to identify you</li><li>What you are struggling with (offence or defence)</li></ul></article><article class="fr-audit-panel"><h3>You receive</h3><ul class="list"><li>3 selected clips from your game</li><li>A recorded feedback breakdown for each clip</li><li>3 clear areas or adjustments to work on</li><li>A simple next-game action plan</li></ul></article></div><div class="fr-audit-bottom"><p class="fr-reassurance">No call. No commitment. Just useful feedback from your actual game.</p><a class="button button-gold" data-film-action="audit" href="https://tally.so/r/xVVOd5?source=free-film-audit">SEND ME MY GAME</a><span id="audit-link-pending" class="fr-link-target" aria-hidden="true"></span><p class="fr-small">Limited free audits available each week to allow time for each review.</p></div></div></section>
+<section class="section fr-options" id="options"><div class="container"><div class="fr-options-intro"><div class="kicker">One game is the starting point</div><h2 class="section-title fr-heading">WANT TO <span class="gold">GO DEEPER?</span></h2><p class="body-copy">The free audit gives you a snapshot. A live Film Room session gives us time to explore your decisions together.<br class="fr-desktop-break">Across multiple games, we can track recurring habits, test adjustments and see what is changing.</p></div><div class="fr-option-grid"><article class="fr-offer"><div class="card-label">A focused look at one game</div><h3>SINGLE FILM SESSION</h3><div class="fr-price">A$120</div><p>One 30–45 minute one-on-one film session.</p><ul class="list"><li>Game breakdown</li><li>Decision-making feedback</li><li>Strengths and improvement areas</li><li>Clear focuses for your next game</li><li>Athlete-specific action plan</li></ul><span id="single-link-pending" class="fr-link-target" aria-hidden="true"></span><a class="button button-outline" data-film-action="single" href="#single-link-pending">BOOK A SINGLE SESSION</a></article><article class="fr-offer fr-offer-featured"><span class="fr-best">BEST VALUE</span><h3>5-SESSION<br>FILM ROOM PACKAGE</h3><div class="fr-price">A$500</div><p class="fr-saving">Normally A$600 individually · <strong>Save A$100</strong></p><p>Five session credits for ongoing feedback, accountability and game-to-game development.</p><ul class="list"><li>Track recurring tendencies, reads and decisions</li><li>Review shot selection, pace and positioning</li><li>Review confidence and body language where relevant</li><li>Check how previous adjustments are being applied</li><li>Set clear actions and review your progression</li></ul><span id="package-link-pending" class="fr-link-target" aria-hidden="true"></span><a class="button button-gold" data-film-action="package" href="#package-link-pending">START MY 5-SESSION PACKAGE</a></article></div><aside class="fr-pattern"><div class="kicker">Why review more than one game?</div><p>ONE GAME CAN SHOW US A PROBLEM.<br><strong>FIVE GAMES SHOW US THE PATTERN.</strong></p><span>Spot the habit. Apply the adjustment. Review what changes.</span></aside></div></section>
+<section class="section soft-grey"><div class="container"><div class="kicker">A clear process, every game</div><h2 class="section-title fr-heading">HOW IT <span class="gold">WORKS</span></h2><ol class="fr-process"><li><span class="n" aria-hidden="true">01</span><h3>Send your game</h3><p>Send your footage, player details and review focus to Jmole.</p></li><li><span class="n" aria-hidden="true">02</span><h3>Book your session</h3><p>Choose a paid session time. Free audits need no booking.</p></li><li><span class="n" aria-hidden="true">03</span><h3>Break down the game</h3><p>Review key decisions with Jmole, or receive your recorded audit.</p></li><li><span class="n" aria-hidden="true">04</span><h3>Take the plan into your next game</h3><p>Apply clear, specific actions in your next game.</p></li><li><span class="n" aria-hidden="true">05</span><h3>Track progress</h3><p>Review new games, track patterns and check your adjustments.</p></li></ol></div></section>
+<section class="section fr-why"><div class="container fr-split"><div><div class="kicker">Connect training to competition</div><h2 class="section-title fr-heading">MORE TRAINING ISN’T<br><span class="gold">ALWAYS THE ANSWER</span></h2><p class="body-copy">You might have the skill. The question is when and how you use it. Another shooting workout will not show you the open teammate you missed or why you rushed a good advantage.</p><p class="body-copy">Film connects what you train to what actually happens in games. We can pause, replay and look at the options you had, then choose a practical adjustment.</p></div><div class="fr-reads"><div class="kicker">What we can look at</div><ul class="list fr-why-list"><li>Reading the defence</li><li>Controlling pace</li><li>Shot selection</li><li>Spacing and positioning</li><li>Recognising advantages</li><li>Defensive positioning and rotations</li></ul></div></div></section>
+<section class="section soft-grey fr-audience"><div class="container"><div class="fr-audience-heading"><div class="kicker">Your questions, answered</div><h2 class="section-title fr-heading">FILM ROOM <span class="gold">FAQS</span></h2></div><div class="fr-faq-grid">
+<details class="fr-faq-item"><summary>What is the difference between the free audit and a paid session?</summary><p>The free audit is recorded feedback on three selected clips, with three focus areas and a next-game action plan. No call or booking is needed. A paid session is a live, one-on-one 30–45 minute review where you can ask questions and explore your game in more depth.</p></details>
+<details class="fr-faq-item"><summary>What footage and details do I need to send?</summary><p>Send a viewable full-game video link, your name, position, team and jersey number or another way to identify you. Include what you feel you are struggling with and whether you want to focus on offence or defence.</p></details>
+<details class="fr-faq-item"><summary>How does the five-session package work?</summary><p>You receive five Film Room session credits for A$500, compared with A$600 for five individual sessions. Across your games, we review recurring habits, check whether adjustments are being applied and set clear focuses for what to work on next.</p></details>
+<details class="fr-faq-item"><summary>Can we review defence as well as offence?</summary><p>Yes. We can focus on offence or defence, including reads, shot selection, pace and spacing, or defensive positioning, awareness and rotations. Tell Jmole what you want help understanding.</p></details>
+</div><details class="fr-more-faq"><summary>MORE QUESTIONS</summary><div class="fr-faq-grid">
+<details class="fr-faq-item"><summary>I train well but struggle in games. Can film help?</summary><p>Film lets us look at what actually happens when the game speeds up: which options you notice, when you use your skills and where possessions break down. The aim is to leave with specific adjustments you can practice, rather than simply doing more training.</p></details>
+<details class="fr-faq-item"><summary>Can a parent arrange this for their son or daughter?</summary><p>Yes. The feedback is individual to the athlete and their actual game. A parent can help organise the footage and support the process, while the athlete works on the decisions and actions discussed with Jmole.</p></details>
+<details class="fr-faq-item"><summary>What do I leave with after a paid session?</summary><p>Feedback on your decisions, strengths and improvement areas, plus clear focuses and an athlete-specific action plan for your next game. Package athletes return with new footage to review progress and recurring patterns.</p></details>
+<details class="fr-faq-item"><summary>Do I need to book a call for the free audit?</summary><p>No. The free 3-Clip Game Audit is asynchronous: you send your game and receive recorded feedback. It does not require payment, calendar booking or a live call.</p></details>
+</div></details><p class="fr-parent">Buying for your son or daughter? Film Room gives them individual feedback from their own game, so they understand what to work on and why. It adds direction to their development, rather than simply adding another training session.</p><p class="fr-small">Led by Jarrod Molnar, Coach Jmole: professional playing experience across Australia, China, Taiwan and Malaysia, and 15 years of coaching and private training.</p></div></section>
+<section class="fr-final"><div class="container"><div class="kicker">Peak State Playbook · Film Room</div><h2 class="section-title">STOP GUESSING.<br><span class="gold">START SEEING YOUR GAME CLEARLY.</span></h2><div class="button-row"><a class="button button-white" data-film-action="audit" href="https://tally.so/r/xVVOd5?source=free-film-audit">GET MY FREE 3-CLIP GAME AUDIT</a><a class="button button-gold" data-film-action="package" href="#package-link-pending">START MY 5-SESSION PACKAGE</a></div></div></section>
+</main><footer class="site-footer"><div class="container"><div class="footer-top"><div><a class="footer-brand" href="/"><img src="/assets/gold-p-icon.svg" alt="Peak State Playbook"><strong>Peak State Playbook</strong></a><div class="footer-copy">Basketball mental-performance training, coaching and development designed to help athletes build confidence, handle pressure and perform when it counts.</div></div><div class="footer-links"><a href="/about-us/">About</a><a href="/peak-state-starter/">Peak State Starter</a><a href="/game-plan/">The G.A.M.E. Plan</a><a href="/basketball-training/">Basketball Training</a><a href="/film-room/">Film Room</a><a href="/school-team-workshops/">Schools & Teams</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div></div><div class="footer-bottom"><span>© 2026 Peak State Playbook™. All rights reserved.</span><div class="footer-social"><a href="https://www.instagram.com/peakstateplaybook/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/peakstateplaybook" target="_blank" rel="noopener">Facebook</a><a href="https://www.tiktok.com/@peakstateplaybook" target="_blank" rel="noopener">TikTok</a></div></div></div></footer><script src="/assets/site.js"></script><script>
+/* INSERT VERIFIED HTTPS DESTINATIONS BELOW.
+audit: dedicated free-audit/intake form; single: A$120 Stripe link;
+package: A$500 Stripe link. Empty values retain on-page pending notices.
+Future backend: verified payment -> Athlete Hub create/update + 1 or 5 credits
+-> intake -> booking -> Google Calendar. Deduct credits on completion only.
+This page does not implement that automation. */
+const filmRoomLinks = { audit: "https://tally.so/r/xVVOd5?source=free-film-audit", single: "", package: "" };
+document.querySelectorAll("[data-film-action]").forEach(link => {
+  const destination = filmRoomLinks[link.dataset.filmAction];
+  if (destination && /^https:\/\//i.test(destination)) {
+    link.href = destination;
+    document.getElementById(link.dataset.filmAction + "-link-pending")?.setAttribute("hidden", "");
+  }
 });
 </script></body></html>
