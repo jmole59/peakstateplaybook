@@ -46,7 +46,16 @@ export async function purchaseWebhook(req,settings=process.env,fetcher=fetch){
  if(Number(req.headers.get('content-length'))>1000000)return reply({ok:false},413);
  const raw=await req.text();if(raw.length>1000000)return reply({ok:false},413);
  let event;try{event=verifyStripe(raw,req.headers.get('stripe-signature'),settings.STRIPE_PURCHASE_WEBHOOK_SECRET);}catch{return reply({ok:false,code:'INVALID_SIGNATURE'},400);}
- try{const body=await normalise(event,settings,fetcher);if(!body)return reply({ok:true,ignored:true});
+ try{
+ const filmLinks=new Set(['plink_1UW7N7Kqm3Mkt6ysUit7ZaRn','plink_1UW7O7Kqm3Mkt6ysOwYoPjBN']);
+ if(['checkout.session.completed','checkout.session.async_payment_succeeded'].includes(event.type)){
+  const session=event.data?.object;
+  if(event.livemode!==true||!filmLinks.has(session?.payment_link)||session.payment_status!=='paid')return reply({ok:true,ignored:true});
+  const result=await fetcher('https://psp-athlete-records.info329282.chatgpt.site/api/film-payments',{method:'POST',redirect:'manual',signal:AbortSignal.timeout(20000),headers:{'Content-Type':'application/json','OAI-Sites-Authorization':'Bearer '+settings.PSP_HUB_SERVICE_TOKEN,'x-psp-purchase-key':settings.PSP_PURCHASE_INGESTION_TOKEN},body:JSON.stringify(session)});
+  if(!result.ok||!(await result.json()).ok)throw Error('HUB_UNAVAILABLE');
+  return reply({ok:true});
+ }
+ const body=await normalise(event,settings,fetcher);if(!body)return reply({ok:true,ignored:true});
  const r=await fetcher('https://psp-athlete-records.info329282.chatgpt.site/api/purchases',{method:'POST',redirect:'manual',signal:AbortSignal.timeout(20000),headers:{'Content-Type':'application/json','OAI-Sites-Authorization':'Bearer '+settings.PSP_HUB_SERVICE_TOKEN,'x-psp-purchase-key':settings.PSP_PURCHASE_INGESTION_TOKEN},body:JSON.stringify(body)});
  if(!r.ok||!(await r.json()).ok)throw Error('HUB_UNAVAILABLE');return reply({ok:true});
  }catch{return reply({ok:false,code:'RETRY_REQUIRED'},503);}
