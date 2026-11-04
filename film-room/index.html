@@ -161,6 +161,18 @@
 @media(max-width:950px){.fr-package-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fr-package-card,.fr-flex-card{grid-column:span 1}.fr-package-best{grid-column:span 2}.fr-package-card h3{min-height:58px}}
 @media(max-width:600px){.fr-package-grid{grid-template-columns:1fr;gap:12px}.fr-package-card,.fr-flex-card,.fr-package-best{grid-column:auto;padding:22px}.fr-package-card h3{min-height:0;margin:12px 0}.fr-package-fit{min-height:0}.fr-package-price{font-size:42px}.fr-package-heading{margin-bottom:24px}.fr-package-note{text-align:left}}
 .fr-package-details summary:focus-visible{outline:2px solid #ddbb79;outline-offset:5px}
+
+@media(min-width:951px){
+.fr-flex-card{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:20px;row-gap:9px;padding:21px 24px}
+.fr-flex-card .fr-package-top{grid-column:1/-1;min-height:16px}
+.fr-flex-card h3{grid-column:1;grid-row:2;margin:5px 0;font-size:21px;align-self:center}
+.fr-flex-card .fr-package-price{grid-column:2;grid-row:2;font-size:39px;text-align:right;align-self:center}
+.fr-flex-card .fr-package-saving{grid-column:2;grid-row:3;text-align:right;margin:0;font-size:12px;max-width:170px;align-self:center}
+.fr-flex-card .fr-package-meta{grid-column:1;grid-row:3;padding:0;border:0}
+.fr-flex-card .fr-package-fit{display:none}
+.fr-flex-card>.button{grid-column:1/-1;margin-top:8px}
+.fr-flex-card .fr-package-details{grid-column:1/-1;margin-top:1px;padding-top:9px}
+}
 </style></head><body><header class="site-header"><div class="site-nav">
 <a class="site-logo" href="/" aria-label="Peak State Playbook home"><img src="/assets/gold-p-icon.svg" alt="Peak State Playbook"></a>
 <nav class="site-links">
