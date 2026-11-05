@@ -5,7 +5,7 @@ import {fileURLToPath} from 'node:url';
 // New assets must be deliberately added here; never recursively copy the repository.
 export const publicFiles=[
  'index.html','404.html','_redirects','robots.txt','sitemap.xml',
- 'about-us/index.html','basketball-training/index.html','contact/index.html',
+ 'about-us/index.html','basketball-training/index.html','contact/index.html','club-coaching/index.html',
  'film-room/index.html','game-plan/index.html','login/index.html',
  'peak-state-starter/index.html','privacy/index.html','school-team-workshops/index.html','terms/index.html',
  'assets/about-court-hero.webp','assets/about-hero-final.webp','assets/about-hero-v3.webp',
