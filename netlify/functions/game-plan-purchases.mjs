@@ -47,7 +47,7 @@ export async function purchaseWebhook(req,settings=process.env,fetcher=fetch){
  const raw=await req.text();if(raw.length>1000000)return reply({ok:false},413);
  let event;try{event=verifyStripe(raw,req.headers.get('stripe-signature'),settings.STRIPE_PURCHASE_WEBHOOK_SECRET);}catch{return reply({ok:false,code:'INVALID_SIGNATURE'},400);}
  try{
- const filmLinks=new Set(['plink_1UW7N7Kqm3Mkt6ysUit7ZaRn','plink_1UW7O7Kqm3Mkt6ysOwYoPjBN']);
+ const filmLinks=new Set(['plink_1UW7N7Kqm3Mkt6ysUit7ZaRn','plink_1UW7O7Kqm3Mkt6ysOwYoPjBN','plink_1UYCkBKqm3Mkt6ysohuSyLJB','plink_1UYClsKqm3Mkt6yshBYw78Ch','plink_1UYCnaKqm3Mkt6ys5ZCqJSxE']);
  if(['checkout.session.completed','checkout.session.async_payment_succeeded'].includes(event.type)){
   const session=event.data?.object;
   if(event.livemode!==true||!filmLinks.has(session?.payment_link)||session.payment_status!=='paid')return reply({ok:true,ignored:true});
