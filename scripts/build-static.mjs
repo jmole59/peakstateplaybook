@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 export const publicFiles=[
  'index.html','404.html','_redirects','robots.txt','sitemap.xml',
  'about-us/index.html','basketball-training/index.html','contact/index.html',
- 'film-room/index.html','live-game-assessment/index.html','game-plan/index.html','login/index.html',
+ 'camps/index.html','film-room/index.html','live-game-assessment/index.html','game-plan/index.html','login/index.html',
  'peak-state-starter/index.html','privacy/index.html','school-team-workshops/index.html','terms/index.html',
  'assets/about-court-hero.webp','assets/about-hero-final.webp','assets/about-hero-v3.webp',
  'assets/about-hero.webp','assets/about-jarrod-portrait.webp','assets/chrome.css','assets/chrome.js',
@@ -18,7 +18,7 @@ export const publicFiles=[
  'assets/schools-classroom-hero-v2.webp','assets/schools-classroom-hero-v3.webp','assets/schools-classroom-hero-v4.webp',
  'assets/schools-classroom-hero.webp','assets/schools-hero.webp','assets/schools-workshop-hero.webp',
  'assets/partners/southern-tigers.webp','assets/partners/darwin-basketball.webp','assets/partners/cardijn-college.webp','assets/partners/mandurah-magic.webp','assets/partners/parba.webp','assets/partners/kilsyth-heat.webp',
- 'assets/assessment-jmole-game.webp','assets/live-assessment-sample-report.pdf','assets/assessment-report-1.webp','assets/assessment-report-2.webp','assets/assessment-report-3.webp','assets/assessment-report-4.webp','assets/site.css','assets/site.js','assets/assessment-enquiry.js','assets/training-cinematic-hero.webp','assets/training-hero-v3.webp',
+ 'assets/assessment-jmole-game.webp','assets/live-assessment-sample-report.pdf','assets/assessment-report-1.webp','assets/assessment-report-2.webp','assets/assessment-report-3.webp','assets/assessment-report-4.webp','assets/camps.css','assets/camps-summer-hero.webp','assets/site.css','assets/site.js','assets/assessment-enquiry.js','assets/training-cinematic-hero.webp','assets/training-hero-v3.webp',
  'assets/training-hero.webp','assets/training-session.webp'
 ];
 export async function buildStatic(root=resolve(dirname(fileURLToPath(import.meta.url)),'..')){
