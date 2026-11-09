@@ -1,30 +1,29 @@
-# Holiday Camps booking system, test-only draft
+# Holiday Camps live-booking handover
 
-Public source: `holiday-camps-current-site` / PR 38. Backend: Athlete Hub, new camp tables and routes, isolated from existing athlete records. Both copies of camp-model.mjs must match.
+## Current implementation
+Neutral entry for all Book buttons, with no camp or price selected. Choose one age group, then any mix of full blocks and individual days. All days in a block upgrade automatically to its full-block price; all three complete blocks receive the A$600 Summer Pass. Server recalculates every order. One Stripe Checkout uses only the supplied live Price IDs in the central `camp-config.mjs`.
 
-## Completed
-- One athlete and age group per booking, editable camp selections and full/day modes.
-- Server-authoritative prices. Two blocks add normally. Selecting every day in a block automatically uses its full-block price. All three complete blocks, however selected, receive the $600 Summer Pass.
-- One Stripe Checkout Session for the order, with inline price_data. No combination payment links or discount codes.
-- Atomic D1 transaction and capacity trigger enforce nine reservations per date, group and environment. Full blocks reserve every included date. SQL failure rolls the entire order back.
-- Reservations happen before Checkout. Payment webhooks confirm a reservation, never the return page. Processing payments keep their reservation. Expired/failed sessions release it. Full refunds release dates; partial refund amounts are recorded without cancelling all dates.
-- Idempotent order creation, replay-safe payment transitions, signed booking links, short post-payment athlete form and private owner-only attendance view at the Hub's /camps.
-- Durable email status and deterministic Resend idempotency keys. Failed emails retry for at most 23 hours automatically; then flag review rather than risk duplicates. Test emails are restricted to CAMP_TEST_EMAIL. Medical notes never appear in email.
-- Ten-minute maintenance function reconciles linked held/processing sessions and retries eligible test confirmations. Unlinked holds after an uncertain Stripe response remain held and flagged for review rather than being released unsafely.
+Private Hub `/camps` shows attendance by date/group and booking details. `/camp-setup` securely accepts a restricted live API key and webhook signing secret, verifies the Prices, and manages the single venue value. Secrets are encrypted in the database with a platform-held encryption key; they are never returned to the browser. Saving configuration keeps checkout closed. Explicit owner activation opens it after configuration.
 
-## Connection still required before an end-to-end Stripe sandbox test
-No test key or test webhook secret was available through the connected Stripe account (live-only PSP account). Checkout is deliberately disabled without them. No live keys are accepted by this implementation.
+Venue defaults to “To be confirmed”. Changing it once in camp setup updates the camps page, booking page, confirmation page and future emails. No court booking is required to activate checkout.
 
-Hub secrets: CAMP_STRIPE_TEST_KEY (restricted sandbox key with Checkout Sessions write/read, PaymentIntents read, Charges read, Products/Prices permissions needed by inline price_data), CAMP_TEST_WEBHOOK_SECRET, CAMP_LINK_SECRET (random >=32 chars). Hub settings: CAMPS_TEST_ENABLED=true, CAMP_TEST_EMAIL=info@peakstateplaybook.com. Existing RESEND_API_KEY and purchase-ingestion token are reused server-side only.
-Netlify preview configuration: CAMPS_TEST_ENABLED=true plus existing PSP_HUB_SERVICE_TOKEN and PSP_PURCHASE_INGESTION_TOKEN. Do not expose these in client code or commit environment files.
-Register the sandbox webhook at the preview's /.netlify/functions/camp-webhook for checkout.session.completed, checkout.session.async_payment_succeeded, checkout.session.async_payment_failed, checkout.session.expired, charge.refunded. Put its signing secret in Hub runtime settings. All events are signature-verified at the Hub.
-Deploy the new Hub migration and routes before enabling the proxy. Saved backend source does not imply deployed backend. The frontend handles an unconnected backend honestly, with no fabricated counts or successful booking claims.
+## Stripe connection still required
+The live Prices were verified in the connected PSP account. A server-side restricted live key is still required, with Checkout Sessions read/write, Prices read, PaymentIntents read and Charges read. Do not paste keys in chat. Enter them in the private setup screen.
 
-## Acceptance checks still requiring real sandbox connection
-Use test cards in hosted Stripe Checkout. Confirm single checkout for multiple blocks; paid and unpaid return states; webhook replay; last place contention using separate browser sessions; abandoned checkout release; delayed payment success/failure; full and partial refunds; signed form completion; one confirmation to the authorised test address; owner-only roster access. Local automated coverage verifies the pricing matrix, transactional capacity, final-seat contention, rollback, replay, refunds, validation and proxy gate.
+Webhook: https://peakstateplaybook.com/.netlify/functions/camp-webhook
+Events: checkout.session.completed, checkout.session.async_payment_succeeded, checkout.session.async_payment_failed, checkout.session.expired, charge.refunded.
+API version: 2026-09-30.endive.
 
-## Before opening live bookings
-User chose to keep test mode while venue is pending. Confirm court and dates first. Review camp-specific cancellation/terms, arrival and what-to-bring instructions, and emergency-consent wording. The draft references existing site terms; no new cancellation policy has been invented. Launch requires a separate explicit live-mode implementation/configuration, live Stripe key and webhook, separate live capacity and a production-origin gate. Current proxy and backend force test mode and cannot accept live payments. Add public checkout abuse protection before live launch.
+Automatic approval review blocked native creation of this webhook, citing the previous test-only instruction. The later user brief explicitly requests live IDs and publishing. Do not bypass the review rejection; obtain explicit clarification/approval before retrying the native webhook creation.
 
-## Operational notes
-Unlinked held checkouts require owner review: retry the same request ID to recover Stripe's idempotent creation result. Do not manually delete a hold until Stripe confirms no payable session exists. Fully refunded bookings stay in the audit record, but release capacity. Parent details are write-once through the signed form; changes go via info@peakstateplaybook.com. Never put medical notes into Stripe metadata, email or public availability responses.
+## Capacity and lifecycle
+D1 transaction + insert trigger enforce nine places per date/group. Full block reserves all dates atomically. Holds are made before Checkout and confirmed only by verified Stripe payment events. Checkout expires after one hour; maintenance reconciles every ten minutes in production. Failed/expired sessions release holds. Uncertain session creation responses remain held until recovered from Stripe; a complete authoritative session search after two hours can release an unmatched hold. Full refunds release all places; partial refund amounts are recorded without cancelling dates.
+
+Payment verification checks live mode, booking ID, session ID, AUD total and every reserved date. The success page does not grant bookings. Payment events are replay-safe. Signed booking links connect the short athlete form to its paid booking. Parent email is taken from verified Checkout rather than re-entered. Optional photo consent is separate. Medical information remains private and is absent from Stripe metadata and emails.
+
+Confirmation emails have durable pending/retry/sent state, deterministic Resend idempotency keys and a lease to avoid duplicate concurrent sends. Automatic retries stop after 23 hours and flag review. Existing server-side Resend credentials are reused. Emails are transactional and include dates, time, venue, paid amount and the signed Complete Athlete Details link.
+
+## Validation
+Local automated coverage includes exact price combinations, automatic full-block conversion, single-line Summer Pass checkout mapping, rollback on capacity failure, final-seat contention, idempotent retries, paid-event replays, unpaid/expired/refunded handling, consent validation, encrypted configuration and proxy origin/mode guards. Both builds pass. The Hub has pre-existing unrelated TypeScript errors; no camp-route errors were introduced.
+
+Still pending before declaring the end-to-end checklist complete: server key + webhook connection, an owner-completed live payment, actual webhook delivery, confirmation email delivery and post-payment form completion. Do not claim these passed. Keep the public site draft until these required checks or an explicit revised launch instruction are resolved. No payment was made by the assistant.
