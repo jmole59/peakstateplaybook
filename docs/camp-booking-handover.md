@@ -4,7 +4,7 @@ Public source: `holiday-camps-current-site` / PR 38. Backend: Athlete Hub, new c
 
 ## Completed
 - One athlete and age group per booking, editable camp selections and full/day modes.
-- Server-authoritative prices. Two blocks add normally. Only three explicit full blocks receive $600 Summer Pass. Eight individual days cost $800.
+- Server-authoritative prices. Two blocks add normally. Selecting every day in a block automatically uses its full-block price. All three complete blocks, however selected, receive the $600 Summer Pass.
 - One Stripe Checkout Session for the order, with inline price_data. No combination payment links or discount codes.
 - Atomic D1 transaction and capacity trigger enforce nine reservations per date, group and environment. Full blocks reserve every included date. SQL failure rolls the entire order back.
 - Reservations happen before Checkout. Payment webhooks confirm a reservation, never the return page. Processing payments keep their reservation. Expired/failed sessions release it. Full refunds release dates; partial refund amounts are recorded without cancelling all dates.

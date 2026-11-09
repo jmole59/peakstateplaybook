@@ -7,7 +7,8 @@ export function quote(input){
  const seen=new Set(),items=[],dates=[];
  for(const s of input.selections){const c=CAMPS.find(c=>c.id===s.camp);if(!c||seen.has(s.camp)||!['full','days'].includes(s.mode))throw Error('INVALID_SELECTION');seen.add(s.camp);
  let chosen;if(s.mode==='full')chosen=c.dates;else{if(!Array.isArray(s.days)||!s.days.length||new Set(s.days).size!==s.days.length||s.days.some(d=>!c.dates.includes(d)))throw Error('INVALID_DAYS');chosen=[...s.days].sort();}
- items.push({camp:c.id,name:c.name,mode:s.mode,dates:chosen,amount:s.mode==='full'?c.price:chosen.length*10000});dates.push(...chosen);
+ const mode=chosen.length===c.dates.length?'full':s.mode;
+ items.push({camp:c.id,name:c.name,mode,dates:chosen,amount:mode==='full'?c.price:chosen.length*10000});dates.push(...chosen);
  }
  items.sort((a,b)=>CAMPS.findIndex(c=>c.id===a.camp)-CAMPS.findIndex(c=>c.id===b.camp));
  const summerPass=items.length===3&&items.every(i=>i.mode==='full'),subtotal=items.reduce((n,i)=>n+i.amount,0);
