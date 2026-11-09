@@ -6,7 +6,8 @@ import {fileURLToPath} from 'node:url';
 export const publicFiles=[
  'index.html','404.html','_redirects','robots.txt','sitemap.xml',
  'about-us/index.html','basketball-training/index.html','contact/index.html',
- 'camps/index.html','film-room/index.html','live-game-assessment/index.html','game-plan/index.html','login/index.html',
+ 'camps/index.html',
+  'camps/book/index.html','camps/confirmation/index.html','assets/camp-model.mjs','assets/camp-booking.css','assets/camp-booking.mjs','assets/camp-confirmation.mjs','film-room/index.html','live-game-assessment/index.html','game-plan/index.html','login/index.html',
  'peak-state-starter/index.html','privacy/index.html','school-team-workshops/index.html','terms/index.html',
  'assets/about-court-hero.webp','assets/about-hero-final.webp','assets/about-hero-v3.webp',
  'assets/about-hero.webp','assets/about-jarrod-portrait.webp','assets/chrome.css','assets/chrome.js',
