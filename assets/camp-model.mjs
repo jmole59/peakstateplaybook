@@ -1,4 +1,5 @@
-export const GROUPS=[{id:'u12-u14',label:'U12 & U14',time:'9:00–11:00 AM'},{id:'u16-u18',label:'U16 & U18',time:'11:30 AM–1:30 PM'}];
+export const CAMP_VENUES={christmas:'To be confirmed',refresh:'Mullum Mullum Stadium',tournament:'To be confirmed'};
+export const GROUPS=[{id:'u12-u14',label:'U12 & U14',time:'10:00 AM–12:00 PM'},{id:'u16-u18',label:'U16 & U18',time:'12:30–2:30 PM'}];
 export const CAMPS=[{id:'christmas',number:'01',name:'Pre-Christmas Tune-Up',dates:['2026-12-21','2026-12-22'],price:15000},{id:'refresh',number:'02',name:'New Year Refresh',dates:['2027-01-11','2027-01-12','2027-01-13'],price:25000},{id:'tournament',number:'03',name:'Ultimate Tournament Prep',dates:['2027-01-18','2027-01-19','2027-01-20'],price:25000}];
 export const money=cents=>new Intl.NumberFormat('en-AU',{style:'currency',currency:'AUD',maximumFractionDigits:0}).format(cents/100).replace('$','A$');
 export const dateLabel=date=>new Intl.DateTimeFormat('en-AU',{weekday:'short',day:'numeric',month:'short',timeZone:'Australia/Melbourne'}).format(new Date(date+'T12:00:00+11:00'));
