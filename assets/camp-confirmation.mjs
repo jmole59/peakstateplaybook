@@ -1,4 +1,4 @@
-import {GROUPS,dateLabel,money} from './camp-model.mjs';
+import {GROUPS,dateLabel,money,sessionTime} from './camp-model.mjs';
 const $=s=>document.querySelector(s),params=new URLSearchParams(location.search),preview=params.get('preview')==='1';let token=params.get('token')||'',booking=null;
 // Remove the bearer link from browser history/referrers after this page has read it.
 if(token)history.replaceState(null,'',location.pathname);
@@ -8,7 +8,7 @@ async function init(){if(preview){$('#confirmation-title').textContent='ATHLETE 
  try{for(let attempt=0;attempt<5;attempt++){const r=await fetch('/.netlify/functions/camp-bookings',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'status',token})});const data=await r.json();if(!r.ok||!data.ok)throw Error();booking=data.booking;if(booking.status==='paid')break;if(booking.status==='refunded'||booking.status==='cancelled')break;await new Promise(resolve=>setTimeout(resolve,1500));}
  if(booking.status!=='paid'){$('#confirmation-title').textContent=booking.status==='refunded'?'BOOKING REFUNDED':'PAYMENT NOT YET CONFIRMED';$('#confirmation-status').textContent='Your place is confirmed only once payment has been verified. If you have paid, use this link again shortly or email info@peakstateplaybook.com.';return;}
  $('#confirmation-title').textContent=booking.testMode?'TEST BOOKING CONFIRMED':'YOU’RE BOOKED';$('#confirmation-status').textContent=booking.testMode?'Test payment confirmed. This does not reserve a live camp place.':'Your place in the Peak State Holiday Camps is confirmed.';
- const g=GROUPS.find(g=>g.id===booking.quote.group),el=$('#confirmation-summary');el.className='booking-notice';el.textContent=`${g.label} · ${g.time} | ${booking.quote.dates.map(dateLabel).join(' · ')} | ${money(booking.quote.total)} paid | ${booking.venue}`;
+ const g=GROUPS.find(g=>g.id===booking.quote.group),el=$('#confirmation-summary');el.className='booking-notice';el.textContent=`${g.label} | ${money(booking.quote.total)} paid\n\n${booking.quote.items.map(i=>i.name+'\n'+i.dates.map(dateLabel).join(' · ')+'\n'+sessionTime(i.camp,g.id)+' (Melbourne time)\nVenue: '+(booking.venues?.find(v=>v.camp===i.camp)?.venue||'To be confirmed')).join('\n\n')}`;
  if(booking.formComplete){$('#confirmation-status').textContent+=' Athlete details have been received. For changes, email info@peakstateplaybook.com.';return;}showForm();
  }catch{$('#confirmation-title').textContent='WE COULDN’T LOAD YOUR BOOKING';$('#confirmation-status').textContent='Please reopen your email link or contact info@peakstateplaybook.com. This page has not confirmed a place.';}}
 $('#athlete-form').onsubmit=async e=>{e.preventDefault();if(preview){$('#form-error').hidden=false;$('#form-error').textContent='Preview only. Nothing has been sent or saved.';return;}
