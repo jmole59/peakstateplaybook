@@ -4,3 +4,5 @@
 .confirmation-details{white-space:pre-line;line-height:1.7}
 
 .booking-summer-pass{border:1px solid #d5af65;background:linear-gradient(135deg,#d5af651a,#11150e);margin-top:24px}.booking-summer-pass h3{color:#e6c482}.booking-summer-pass .camp-option-price{font-size:23px}.camp-pass-status{font-size:11px;font-weight:800;letter-spacing:.6px;color:#dfba71}.booking-summer-pass:focus-within{outline:2px solid #d5af65;outline-offset:3px}
+
+.booking-quantity{margin:24px 0;padding:20px;border:1px solid #665332;border-radius:12px}.booking-quantity>label{display:block;font-weight:700;letter-spacing:.08em;margin-bottom:12px}.quantity-controls{display:flex;align-items:center;gap:8px}.quantity-controls button,.quantity-controls input{height:48px;border:1px solid #8c7448;background:#171914;color:#f7f3e9;border-radius:8px;font-size:20px;text-align:center}.quantity-controls button{width:48px;cursor:pointer}.quantity-controls input{width:72px}.quantity-controls button:hover{background:#d5af65;color:#111}.booking-quantity p{font-size:14px;line-height:1.5;color:#b8b9b2;margin-bottom:0}

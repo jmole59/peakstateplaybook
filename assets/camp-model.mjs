@@ -6,6 +6,7 @@ export const money=cents=>new Intl.NumberFormat('en-AU',{style:'currency',curren
 export const dateLabel=date=>new Intl.DateTimeFormat('en-AU',{weekday:'short',day:'numeric',month:'short',timeZone:'Australia/Melbourne'}).format(new Date(date+'T12:00:00+11:00'));
 export function quote(input){
  if(!input||!GROUPS.some(g=>g.id===input.group)||!Array.isArray(input.selections)||input.selections.length<1||input.selections.length>3)throw Error('INVALID_SELECTION');
+ const quantity=input.quantity??1;if(!Number.isInteger(quantity)||quantity<1||quantity>CAMP_CAPACITY)throw Error('INVALID_QUANTITY');
  const seen=new Set(),items=[],dates=[];
  for(const s of input.selections){const c=CAMPS.find(c=>c.id===s.camp);if(!c||seen.has(s.camp)||!['full','days'].includes(s.mode))throw Error('INVALID_SELECTION');seen.add(s.camp);
  let chosen;if(s.mode==='full')chosen=c.dates;else{if(!Array.isArray(s.days)||!s.days.length||new Set(s.days).size!==s.days.length||s.days.some(d=>!c.dates.includes(d)))throw Error('INVALID_DAYS');chosen=[...s.days].sort();}
@@ -14,8 +15,8 @@ export function quote(input){
  }
  items.sort((a,b)=>CAMPS.findIndex(c=>c.id===a.camp)-CAMPS.findIndex(c=>c.id===b.camp));
  const summerPass=items.length===3&&items.every(i=>i.mode==='full'),subtotal=items.reduce((n,i)=>n+i.amount,0);
- return {group:input.group,items,dates:dates.sort(),subtotal,total:summerPass?60000:subtotal,summerPass,saving:summerPass?5000:0};
+ return {group:input.group,items,dates:dates.sort(),subtotal:subtotal*quantity,total:(summerPass?60000:subtotal)*quantity,summerPass,saving:(summerPass?5000:0)*quantity,...(quantity>1?{quantity,unitTotal:summerPass?60000:subtotal}:{})};
 }
-export function availabilityFor(camp,group,remaining){const days=Object.fromEntries(camp.dates.map(d=>[d,remaining[`${group}:${d}`]??null]));return {days,full:Object.values(days).every(n=>Number.isInteger(n)&&n>0),known:Object.values(days).every(n=>Number.isInteger(n))};}
+export function availabilityFor(camp,group,remaining,quantity=1){const days=Object.fromEntries(camp.dates.map(d=>[d,remaining[`${group}:${d}`]??null]));return {days,full:Object.values(days).every(n=>Number.isInteger(n)&&n>=quantity),known:Object.values(days).every(n=>Number.isInteger(n))};}
 
 export function sessionTime(camp,group){return CAMPS.find(c=>c.id===(typeof camp==='string'?camp:camp.id))?.times?.[group]||'To be confirmed';}
