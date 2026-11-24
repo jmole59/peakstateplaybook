@@ -13,3 +13,16 @@
 @media(max-width:760px){.camp-block{grid-template-columns:1fr;gap:20px;padding:27px 0 30px 20px}.camp-block h3{font-size:clamp(16px,4.4vw,30px);letter-spacing:-.04em;white-space:nowrap}.camp-date small{font-size:9px;letter-spacing:.65px}.camp-block-times{grid-template-columns:1fr;gap:8px;margin:16px 0}.camp-block-times>div{flex-direction:row;align-items:center;justify-content:space-between;gap:10px;padding:14px}.camp-block-times span{font-size:10px;flex-shrink:0}.camp-block-times strong{font-size:clamp(14px,3.8vw,18px)}.camp-block-copy>p{margin:12px 0 16px}}
 
 @media(max-width:760px){.camp-date{grid-template-columns:max-content minmax(0,1fr)}.camp-date strong{font-size:clamp(38px,11vw,46px);white-space:nowrap}.camp-date time{min-width:0;letter-spacing:.7px}}
+
+/* Availability comes from the Hub's shared booking inventory. */
+.camp-block-times .camp-availability,.camp-pass-availability .camp-availability{display:block;font-size:.875rem;font-weight:700;letter-spacing:0;line-height:1.5;color:#eee1c7;white-space:normal;margin:0}
+.camp-block-times .camp-availability[data-availability-state="low"],.camp-pass-availability .camp-availability[data-availability-state="low"]{color:#f4bd73}
+.camp-block-times .camp-availability[data-availability-state="sold-out"],.camp-pass-availability .camp-availability[data-availability-state="sold-out"]{color:#b9b9b1}
+.camp-page .camp-availability-note{font-size:.875rem;line-height:1.6;color:#bfc3b8;max-width:850px;margin:20px 0 0}
+.camp-pass-availability{display:grid;gap:12px;border-top:1px solid #2b352b40;padding-top:18px;margin-top:22px;text-align:left}
+.camp-pass-availability>div{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.camp-pass-availability>div>span:first-child{font-size:.875rem;font-weight:700;color:#344533;white-space:nowrap}
+.camp-pass-availability .camp-availability{color:#233521}
+.camp-pass-availability .camp-availability[data-availability-state="low"]{color:#653900}
+.camp-pass-availability .camp-availability[data-availability-state="sold-out"]{color:#4d5149}
+@media(max-width:760px){.camp-block-times>div{display:grid;grid-template-columns:auto 1fr;gap:8px 10px}.camp-block-times strong{text-align:right}.camp-block-times .camp-availability{grid-column:1/-1}}
