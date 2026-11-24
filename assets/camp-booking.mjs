@@ -30,6 +30,7 @@ function summary(){
 function showError(text){$('#booking-error').textContent=text;$('#booking-error').hidden=false;}
 function update(){ $('#athlete-quantity').value=state.quantity||1;$('#quantity-minus').disabled=(state.quantity||1)<=1;$('#quantity-plus').disabled=(state.quantity||1)>=8;store();renderGroups();renderCamps();summary();}
 function changeQuantity(value){const n=Number(value);if(!Number.isInteger(n)||n<1||n>8){$('#athlete-quantity').value=state.quantity||1;return;}state.quantity=n;$('#booking-error').hidden=true;update();}
+$('#athlete-quantity').addEventListener('input',e=>{const n=Number(e.target.value);if(Number.isInteger(n)&&n>=1&&n<=8)changeQuantity(n);});
 $('#athlete-quantity').addEventListener('change',e=>changeQuantity(e.target.value));$('#quantity-minus').onclick=()=>changeQuantity((state.quantity||1)-1);$('#quantity-plus').onclick=()=>changeQuantity((state.quantity||1)+1);
 $('#age-options').addEventListener('change',e=>{state.group=e.target.value;update();});
 $('#choose-camps').onclick=()=>{if(!state.group)return;$('#age-panel').hidden=true;$('#camps-panel').hidden=false;$('#step-age').classList.remove('active');$('#step-camps').classList.add('active');$('#camps-panel').scrollIntoView({behavior:'smooth',block:'start'});};
