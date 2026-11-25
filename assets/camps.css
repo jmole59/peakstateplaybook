@@ -25,7 +25,7 @@
 .camp-pass-availability .camp-availability{color:#233521}
 .camp-pass-availability .camp-availability[data-availability-state="low"]{color:#653900}
 .camp-pass-availability .camp-availability[data-availability-state="sold-out"]{color:#4d5149}
-@media(max-width:760px){.camp-block-times>div{display:grid;grid-template-columns:auto 1fr;gap:8px 10px}.camp-block-times strong{text-align:right}.camp-block-times .camp-availability{grid-column:1/-1}}
+
 
 /* Prominent availability badges, with stronger emphasis for the final places. */
 .camp-block-times .camp-availability,.camp-pass-availability .camp-availability{
@@ -46,6 +46,17 @@
  background:#182014;border-color:#182014;color:#ffe0a0;box-shadow:none;
 }
 .camp-pass-availability>div{align-items:center;flex-wrap:wrap;gap:8px 14px}
+/* Mobile sessions: age and time on the left, availability centred on the right. */
 @media(max-width:760px){
- .camp-block-times .camp-availability{margin-top:3px;padding:9px 14px;font-size:.9375rem}
+ .camp-block-times>div{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-areas:"age spots" "time spots";
+  gap:6px 14px;align-items:center;
+ }
+ .camp-block-times>div>span:first-child{grid-area:age;text-align:left}
+ .camp-block-times strong{grid-area:time;text-align:left;white-space:normal}
+ .camp-block-times .camp-availability{
+  grid-area:spots;align-self:center;justify-self:end;margin:0;
+  padding:9px 12px;font-size:.875rem;text-align:center;justify-content:center;
+ }
 }
