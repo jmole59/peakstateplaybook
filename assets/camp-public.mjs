@@ -11,7 +11,7 @@ export function spotsFor(campId,group,remaining){
 export function spotLabel(count){
  if(count===null)return 'Check availability when booking';
  if(count===0)return 'Full block sold out';
- return `${count<=3?'Only ':''}${count} ${count===1?'spot':'spots'} left`;
+ return `${count} ${count===1?'spot':'spots'} left`;
 }
 
 export function showAvailability(root,data){

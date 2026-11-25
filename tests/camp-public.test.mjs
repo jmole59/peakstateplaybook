@@ -24,8 +24,8 @@ test('missing or invalid inventory never becomes an advertised spot count',()=>{
  }
  assert.equal(spotsFor('unknown','u12-u14',inventory()),null);
  assert.equal(spotLabel(null),'Check availability when booking');
- assert.equal(spotLabel(1),'Only 1 spot left');
- assert.equal(spotLabel(3),'Only 3 spots left');
+ assert.equal(spotLabel(1),'1 spot left');
+ assert.equal(spotLabel(3),'3 spots left');
  assert.equal(spotLabel(8),'8 spots left');
 });
 
@@ -36,7 +36,7 @@ test('refresh replaces counts from the Hub and clears stale counts after failure
  assert.equal(el.textContent,'8 spots left');
  remaining['u12-u14:2027-01-12']=1;
  showAvailability(root,{ok:true,checkoutEnabled:true,remaining});
- assert.equal(el.textContent,'Only 1 spot left');assert.equal(el.dataset.availabilityState,'low');
+ assert.equal(el.textContent,'1 spot left');assert.equal(el.dataset.availabilityState,'low');
  showAvailability(root,null);assert.equal(el.textContent,'Check availability when booking');
  showAvailability(root,{ok:true,checkoutEnabled:false,remaining});assert.equal(el.textContent,'Bookings opening soon');
  remaining['u12-u14:2027-01-12']=0;
